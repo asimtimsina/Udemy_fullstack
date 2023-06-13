@@ -38,3 +38,7 @@ var runDistance = 26.2;
 
 Boolean
 True or False
+
+
+154. Introducing Strings
+let firstName = 'John';
