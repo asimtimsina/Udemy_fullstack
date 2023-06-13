@@ -77,3 +77,16 @@ str.slice(0,5) -> "super"
 str.slice(5) -> "califragilisticexpialidocious"
 str.slice(-3) -> "ous"
 str.slice(3,-5) -> "ercalifragilisticexpia"
+
+
+158. String Template Literals -SUPER USEFUL
+Must use backticks ` for template literals.
+let product = 'Artichoke';
+let price = 2.25;
+let qty = 5;
+
+let msg = 'You bought ' + qty + ' ' + product + 's. Total: $' + price*qty;
+msg -> "You bought 5 Artichokes. Total: $11.25"
+
+let msg = `You bought ${qty} ${product}s. Total: $${price*qty}`;
+msg -> "You bought 5 Artichokes. Total: $11.25"
