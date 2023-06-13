@@ -56,3 +56,11 @@ firstName.length -> 4
 
 "lol"+"lol" -> "lollol"
 1 + "lol" -> "1lol"
+
+156. String Methods
+let msg = "leave me alone";
+msg.toUpperCase() -> "LEAVE ME ALONE"
+uppermsg = msg.toUpperCase()
+
+let inputmsg = "    hello!   ";
+inputmsg.trim().toUpperCase(); -> "HELLO!"
