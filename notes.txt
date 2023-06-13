@@ -106,3 +106,14 @@ Math.floor(3.9999) -> 3 -> Chop off decimal
 Math.ceil(3.0001) -> 4 -> Round up
 Math.sqrt(4) -> 2
 Math.pow(2,5)  -> 32
+
+
+163. Comparison Operators
+> -> Greater Than
+< -> Less Than
+>= -> Greater Than or Equal To
+<= -> Less Than or Equal To
+== -> Equal To
+!= -> Not Equal To
+=== -> Strictly Equal
+!== -> Strictly Not Equal
