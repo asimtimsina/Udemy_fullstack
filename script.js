@@ -166,4 +166,14 @@
 
 let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-console.log(days.length);
+console.log(days.length); //7
+console.log(days[2][2]); //d
+console.log(days[8]); //undefined
+
+
+// 178. Array Random Access
+// Index starts with 0
+
+days[10] = "Funday";
+console.log(days.length); //11
+console.log(days); //["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", empty × 3, "Funday"]
