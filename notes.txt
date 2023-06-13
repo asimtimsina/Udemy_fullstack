@@ -64,3 +64,16 @@ uppermsg = msg.toUpperCase()
 
 let inputmsg = "    hello!   ";
 inputmsg.trim().toUpperCase(); -> "HELLO!"
+
+
+157. String Methods With Arguments
+let tvShow = "catdog";
+tvShow.indexOf('cat') -> 0
+tvShow.indexOf('dog') -> 3
+tvShow.indexOf('z') -> -1
+
+let str = "supercalifragilisticexpialidocious";
+str.slice(0,5) -> "super"
+str.slice(5) -> "califragilisticexpialidocious"
+str.slice(-3) -> "ous"
+str.slice(3,-5) -> "ercalifragilisticexpia"
