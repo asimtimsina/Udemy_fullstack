@@ -277,3 +277,17 @@ nums.pop(); //allowed
 //can change the contents but not the reference of the nums array
 
 //nums = 3;   //not allowed
+
+
+
+//185. Multi-Dimensional Arrays
+
+const gameBoard = [
+    ['X', 'O', null],
+    ['O', null, 'X'],
+    ['X', 'O', 'X']
+];
+console.log(gameBoard);
+console.log(gameBoard[1][1]); //null
+console.log(gameBoard[0][0]); //X
+
