@@ -120,3 +120,11 @@ Math.pow(2,5)  -> 32
 != -> Not Equal To
 === -> Strictly Equal   -> 1 === '1' -> false -> check if two values are equal and check type
 !== -> Strictly Not Equal
+
+
+165. Console, Alert, & Prompt
+console.log('hello world'); -> print to console
+alert('hello world'); -> pop up 
+let id = prompt('enter your id'); -> pop up with input box
+
+parseInt("191hello") -> 191
