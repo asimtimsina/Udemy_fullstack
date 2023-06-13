@@ -183,25 +183,25 @@
 // Push - add to the end
 // Pop - remove from the end
 
-let movieLine = ["Tom", "Nancy"];
-movieLine.push("Sally");
-movieLine.push("Oliver");
-movieLine.push("Oliver", 'Rama');
-console.log(movieLine); //["Tom", "Nancy", "Sally", "Oliver"]
-movieLine.pop();
-lastPerson = movieLine.pop();
-console.log(lastPerson); //Oliver
-console.log(movieLine); //["Tom", "Nancy", "Sally"] 
+// let movieLine = ["Tom", "Nancy"];
+// movieLine.push("Sally");
+// movieLine.push("Oliver");
+// movieLine.push("Oliver", 'Rama');
+// console.log(movieLine); //["Tom", "Nancy", "Sally", "Oliver"]
+// movieLine.pop();
+// lastPerson = movieLine.pop();
+// console.log(lastPerson); //Oliver
+// console.log(movieLine); //["Tom", "Nancy", "Sally"] 
 
 
 //180. Shift & Unshift
 // Shift - remove from the start
 // Unshift - add to the start
 
-let nextPerson = movieLine.shift();
-console.log(nextPerson); //Tom
-movieLine.unshift("Rama");
-console.log(movieLine); //["Rama", "Tom", "Nancy", "Sally"]
+// let nextPerson = movieLine.shift();
+// console.log(nextPerson); //Tom
+// movieLine.unshift("Rama");
+// console.log(movieLine); //["Rama", "Tom", "Nancy", "Sally"]
 
 
 //181. Concat, indexOf, includes & reverse
@@ -211,43 +211,60 @@ console.log(movieLine); //["Rama", "Tom", "Nancy", "Sally"]
 // reverse - reverse an array
 
 
-let cats = ["Blue", "Kitty", "Rocket"];
-let dogs = ["Rusty", "Wyatt"];
-let comboParty = cats.concat(dogs);
-console.log(comboParty); //["Blue", "Kitty", "Rocket", "Rusty", "Wyatt"]
+// let cats = ["Blue", "Kitty", "Rocket"];
+// let dogs = ["Rusty", "Wyatt"];
+// let comboParty = cats.concat(dogs);
+// console.log(comboParty); //["Blue", "Kitty", "Rocket", "Rusty", "Wyatt"]
 
-cats.includes('Blue'); //true
-cats.includes('blue'); //false
+// cats.includes('Blue'); //true
+// cats.includes('blue'); //false
 
-cats.indexOf('Blue'); //0 (found)
-cats.indexOf('blue'); //-1 (not found)
+// cats.indexOf('Blue'); //0 (found)
+// cats.indexOf('blue'); //-1 (not found)
 
-comboParty.reverse(); //["Wyatt", "Rusty", "Rocket", "Kitty", "Blue"]
-console.log(comboParty);
+// comboParty.reverse(); //["Wyatt", "Rusty", "Rocket", "Kitty", "Blue"]
+// console.log(comboParty);
 
 
 //182. Slice & Splice
 // Slice - copy portion of an array
 // Splice - remove/replace elements
 
-let color = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+// let color = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
 
-color.slice(); //["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
-color.slice(2); //["yellow", "green", "blue", "indigo", "violet"]   
-color.slice(2, 4); //["yellow", "green"]
-color.slice(-2); //["indigo", "violet"]
+// color.slice(); //["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+// color.slice(2); //["yellow", "green", "blue", "indigo", "violet"]   
+// color.slice(2, 4); //["yellow", "green"]
+// color.slice(-2); //["indigo", "violet"]
 
-//syntax of splice
-// array.splice(start, deleteCount, item1, item2, ...)
-color.splice(5, 1); //removes indigo
-console.log(color); //["red", "orange", "yellow", "green", "blue", "violet"]
+// //syntax of splice
+// // array.splice(start, deleteCount, item1, item2, ...)
+// color.splice(5, 1); //removes indigo
+// console.log(color); //["red", "orange", "yellow", "green", "blue", "violet"]
 
-color.splice(2, 0, "YELLOW", "GREEN"); //inserts YELLOW and GREEN
-console.log(color); //["red", "orange", "YELLOW", "GREEN", "yellow", "green", "blue", "violet"]
+// color.splice(2, 0, "YELLOW", "GREEN"); //inserts YELLOW and GREEN
+// console.log(color); //["red", "orange", "YELLOW", "GREEN", "yellow", "green", "blue", "violet"]
 
 
-//sort - sorts an array
-color.sort(); //["GREEN", "YELLOW", "blue", "green", "orange", "red", "violet", "yellow"]
+// //sort - sorts an array
+// color.sort(); //["GREEN", "YELLOW", "blue", "green", "orange", "red", "violet", "yellow"]
 
-let scores = [1, 70, 100, 2500, 9, 0, -10];
-scores.sort(); //[-10, 0, 1, 100, 2500, 70, 9] // sorts by first digit not by ascending order
+// let scores = [1, 70, 100, 2500, 9, 0, -10];
+// scores.sort(); //[-10, 0, 1, 100, 2500, 70, 9] // sorts by first digit not by ascending order
+
+
+//183. Reference Types & Equality Testing
+// Primitive types - stored directly in the variable
+// Reference types - accessed by reference
+// Arrays are reference types
+
+let num = [1, 2, 3];
+let numCopy = num;
+
+numCopy.push(4);
+console.log(numCopy); //[1, 2, 3, 4]
+console.log(num); //[1, 2, 3, 4]
+
+//both num and numCopy are pointing to the same array in memory
+//if we change one, the other will also change
+
