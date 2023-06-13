@@ -19,7 +19,7 @@
 
 //168. Else-If Statements
 
-dayOfWeek = "Monday";
+dayOfWeek = "Thursday";
 
 if (dayOfWeek === 'Monday') {
     console.log("Ugh, I hate Mondays!")
@@ -29,6 +29,8 @@ else if (dayOfWeek === 'Saturday') {
 }
 else if (dayOfWeek === 'Friday') {
     console.log("Fridays are decent, especially after work!")
+} else {
+    console.log("MEH")
 }
 
 
