@@ -19,19 +19,19 @@
 
 //168. Else-If Statements
 
-dayOfWeek = "Thursday";
+// dayOfWeek = "Thursday";
 
-if (dayOfWeek === 'Monday') {
-    console.log("Ugh, I hate Mondays!")
-}
-else if (dayOfWeek === 'Saturday') {
-    console.log("Yay, I love Saturdays!")
-}
-else if (dayOfWeek === 'Friday') {
-    console.log("Fridays are decent, especially after work!")
-} else {
-    console.log("MEH")
-}
+// if (dayOfWeek === 'Monday') {
+//     console.log("Ugh, I hate Mondays!")
+// }
+// else if (dayOfWeek === 'Saturday') {
+//     console.log("Yay, I love Saturdays!")
+// }
+// else if (dayOfWeek === 'Friday') {
+//     console.log("Fridays are decent, especially after work!")
+// } else {
+//     console.log("MEH")
+// }
 
 
 // 0-5 - Free
@@ -57,19 +57,19 @@ else if (dayOfWeek === 'Friday') {
 
 
 //170. Nesting Conditionals
-const password = prompt("Please enter a new password");
+// const password = prompt("Please enter a new password");
 
-if (password.length >= 6) {
-    // console.log("Long enough password!")
-    if (password.indexOf(' ') === -1) {
-        console.log("Valid Password!")
-    }
-    else {
-        console.log("Password cannot contain spaces!")
-    }
-} else {
-    console.log("Password too short! Must be 6+ characters")
-}
+// if (password.length >= 6) {
+//     // console.log("Long enough password!")
+//     if (password.indexOf(' ') === -1) {
+//         console.log("Valid Password!")
+//     }
+//     else {
+//         console.log("Password cannot contain spaces!")
+//     }
+// } else {
+//     console.log("Password too short! Must be 6+ characters")
+// }
 
 
 
@@ -83,23 +83,80 @@ if (password.length >= 6) {
 // undefined
 // NaN
 
-if (password) {
-    console.log("Truthy")
-} else {
-    console.log("Falsey")
-}
+// if (password) {
+//     console.log("Truthy")
+// } else {
+//     console.log("Falsey")
+// }
 
 
 //172. Logical AND
 //&& AND
 // 1<4 && age < 21 -> both must be true
 
+// if (password.length >= 6 && password.indexOf(' ') === -1) {
+//     console.log("Valid Password!")
+// } else {
+//     console.log("Incorrect format for password!")
+// }
+
+// 173. Logical OR
 // || OR
 // age === 10 || 0 === 0 -> one must be true
-//! NOT
 
-if (password.length >= 6 && password.indexOf(' ') === -1) {
-    console.log("Valid Password!")
-} else {
-    console.log("Incorrect format for password!")
+
+// 0-5 - Free
+// 5-10 - Child $10
+// 10-65 - Adult $20
+// 65+ - Senior $10
+
+// let age = 66;
+
+// if (age < 5) {
+//     console.log("You get in for free!")
+// }
+// else if (age < 10 || age > 65) {
+//     console.log(" You pay $10!")
+// }
+// else if (age < 65) {
+//     console.log(" You pay $20!")
+// }
+
+// //174. Logical NOT
+// // ! NOT
+
+// let babyage = 10;
+
+// if (babyage !== 90) {
+//     console.log("NOT EQUAL TO 90!")
+// }
+
+//175. The Switch Statement Is...A Lot
+
+let day = 3;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day");
 }
