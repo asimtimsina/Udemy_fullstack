@@ -202,3 +202,27 @@ let nextPerson = movieLine.shift();
 console.log(nextPerson); //Tom
 movieLine.unshift("Rama");
 console.log(movieLine); //["Rama", "Tom", "Nancy", "Sally"]
+
+
+//181. Concat, indexOf, includes & reverse
+// Concat - merge arrays
+// indexOf - find index of an item in the array
+// includes - look for a value
+// reverse - reverse an array
+
+
+let cats = ["Blue", "Kitty", "Rocket"];
+let dogs = ["Rusty", "Wyatt"];
+let comboParty = cats.concat(dogs);
+console.log(comboParty); //["Blue", "Kitty", "Rocket", "Rusty", "Wyatt"]
+
+cats.includes('Blue'); //true
+cats.includes('blue'); //false
+
+cats.indexOf('Blue'); //0 (found)
+cats.indexOf('blue'); //-1 (not found)
+
+comboParty.reverse(); //["Wyatt", "Rusty", "Rocket", "Kitty", "Blue"]
+console.log(comboParty);
+
+
