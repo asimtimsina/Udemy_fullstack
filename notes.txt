@@ -42,3 +42,17 @@ True or False
 
 154. Introducing Strings
 let firstName = 'John';
+
+155. Indices & Length
+Strings are indexed
+
+Hello
+01234
+
+firstName[2] -> h
+firstName[10]  -> undefined
+
+firstName.length -> 4
+
+"lol"+"lol" -> "lollol"
+1 + "lol" -> "1lol"
