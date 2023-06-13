@@ -28,3 +28,10 @@ let year = 1985;
 let numLives =9;
 numLives++
 numLives--
+
+const vs Var
+
+const pi = 3.14;
+
+var -> can be reassigned
+var runDistance = 26.2;
