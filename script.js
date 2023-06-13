@@ -192,3 +192,13 @@ movieLine.pop();
 lastPerson = movieLine.pop();
 console.log(lastPerson); //Oliver
 console.log(movieLine); //["Tom", "Nancy", "Sally"] 
+
+
+//180. Shift & Unshift
+// Shift - remove from the start
+// Unshift - add to the start
+
+let nextPerson = movieLine.shift();
+console.log(nextPerson); //Tom
+movieLine.unshift("Rama");
+console.log(movieLine); //["Rama", "Tom", "Nancy", "Sally"]
