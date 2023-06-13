@@ -95,3 +95,14 @@ msg -> "You bought 5 Artichokes. Total: $11.25"
 159. Undefined & Null
 let loggedInUser = null; -> explicitly cleared -> intentional lack of value
 let loggedInUser = undefined; -> implicitly cleared -> unintentional lack of value
+
+
+160. Random Numbers & The Math Object
+Math.random() -> 0.123456789 -> random number between 0 and 1
+Math.floor(Math.random()*10); -> 0-9
+Math.floor(Math.random()*10)+1; -> 1-10
+
+Math.floor(3.9999) -> 3 -> Chop off decimal
+Math.ceil(3.0001) -> 4 -> Round up
+Math.sqrt(4) -> 2
+Math.pow(2,5)  -> 32
