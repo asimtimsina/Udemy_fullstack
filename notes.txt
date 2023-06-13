@@ -8,3 +8,12 @@ Null
 Undefined
 
 REPL -> Read Evaluate Print Loop
+
+
+2**3 = 8
+27%2 = 1
+
+NaN -> Not a Number -> 0/0 -> 
+
+typeof 4    'number'
+typeof NaN  'number'
