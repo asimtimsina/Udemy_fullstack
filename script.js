@@ -226,3 +226,28 @@ comboParty.reverse(); //["Wyatt", "Rusty", "Rocket", "Kitty", "Blue"]
 console.log(comboParty);
 
 
+//182. Slice & Splice
+// Slice - copy portion of an array
+// Splice - remove/replace elements
+
+let color = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+color.slice(); //["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+color.slice(2); //["yellow", "green", "blue", "indigo", "violet"]   
+color.slice(2, 4); //["yellow", "green"]
+color.slice(-2); //["indigo", "violet"]
+
+//syntax of splice
+// array.splice(start, deleteCount, item1, item2, ...)
+color.splice(5, 1); //removes indigo
+console.log(color); //["red", "orange", "yellow", "green", "blue", "violet"]
+
+color.splice(2, 0, "YELLOW", "GREEN"); //inserts YELLOW and GREEN
+console.log(color); //["red", "orange", "YELLOW", "GREEN", "yellow", "green", "blue", "violet"]
+
+
+//sort - sorts an array
+color.sort(); //["GREEN", "YELLOW", "blue", "green", "orange", "red", "violet", "yellow"]
+
+let scores = [1, 70, 100, 2500, 9, 0, -10];
+scores.sort(); //[-10, 0, 1, 100, 2500, 70, 9] // sorts by first digit not by ascending order
