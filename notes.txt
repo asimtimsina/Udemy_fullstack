@@ -24,3 +24,7 @@ Variables are containers for storing data (values).
 
 let someName = value;
 let year = 1985;
+
+let numLives =9;
+numLives++
+numLives--
