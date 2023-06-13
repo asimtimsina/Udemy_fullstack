@@ -17,3 +17,10 @@ NaN -> Not a Number -> 0/0 ->
 
 typeof 4    'number'
 typeof NaN  'number'
+
+
+Variables
+Variables are containers for storing data (values).
+
+let someName = value;
+let year = 1985;
