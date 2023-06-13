@@ -71,3 +71,20 @@ if (password.length >= 6) {
     console.log("Password too short! Must be 6+ characters")
 }
 
+
+
+//171. Truth-y & False-y Values
+
+// Everything is truthy except for:
+// false
+// 0
+// "" (empty string)
+// null
+// undefined
+// NaN
+
+if (password) {
+    console.log("Truthy")
+} else {
+    console.log("Falsey")
+}
