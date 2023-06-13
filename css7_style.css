@@ -1,0 +1,206 @@
+/* * {
+    /* color: pink; 
+background-color: cyan;
+}
+
+*/
+
+body {
+    background-color: #bde0fe;
+}
+
+button {
+    font-size: 30px;
+    background-color: #2a9d8f;
+}
+
+/* Multiple Selector */
+
+h1,
+h2 {
+    color: darkslateblue;
+    color: #e76f51;
+}
+
+/* ID can provide hook to CSS */
+
+/* https://coolors.co/palettes/trending */
+
+/*  Use # for id 
+    Use . for class
+*/
+
+/* #signup {
+    background-color: #6d6875;
+    color: #f1faee;
+} */
+
+span{
+    color: #344e41;
+}
+
+.tag{
+    background-color: #9a031e;
+    color: #d9d9d9;
+    font-size: 20px;
+}
+
+/* 
+Descendent Selector
+
+li a --> all the anchor tags inside li 
+         but not li 
+         
+*/
+
+a[href*="google"]{
+    color:#6c757d;
+}
+
+
+
+span a {
+    color: #9b5de5;
+}
+
+footer a{
+    color: #ef476f;
+}
+
+
+/* Adjacent Combinator/ Selector
+h1+p {}  
+--> Select a paragrah immediately precedded by a h1.
+*/
+
+input + button {
+    background-color: #9a031e;
+    color:white;
+}
+
+h2+ button{
+    background-color: #6c757d;
+    color: #eff6e0;
+    font-size: 15px;
+}
+
+
+/* 
+Direct child 
+footer > a 
+--> selects only anchor tag that are direct children of footer element 
+*/
+
+
+footer > a{
+    color: #386641;
+}
+
+
+/* 
+Attribute Selector
+input[type="text"] {}
+--> Select all input elements where the type attribute is set to "text" 
+*/
+
+
+input[type="password"]{
+    color:red;
+
+}
+
+
+
+/* 
+PSEUDO CLASSES
+keyword added to a selector that specifies a special state of the selected element(s)
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+:checked
+:active
+:first
+:first-child
+:hover
+:notO
+:nth-child()
+:nth-of-type () 
+*/
+
+button:hover{
+    background-color:#264653;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* when clicked */
+button:active{ 
+    
+    background-color: #264653;
+}
+
+
+/* nth of type --> every nth one */
+
+.post:nth-of-type(2n){
+    background-color:#a2d2ff;
+}
+
+
+
+/* 
+PSEUDO ELEMENTS
+Keyword added to a selector that lets you style a particular part of selected element(s)
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+::after
+::before
+::first-letter
+::first-1ine
+::selection
+*/
+
+h2::first-letter{
+    font-size: 50px;
+}
+
+p::first-line{
+    color: #9a031e;
+}
+
+p::selection{
+
+    color: #ffffff;
+    background-color: #cad2c5;
+}
+
+
+/* 
+
+SPECIFICITY
+--> Specificity is how the browser decidees which rules to apply when multiple rules could apply to the same element.
+--> It is a measure of how specific a given selector is. The more specific selector "wins".
+
+ID> CLASS > ELEMENT
+Specific Level
+
+*/
+
+
+
+/* 
+!important
+ --> A ! delimiter followed by the important keyword marks the declaration as important. The !important flag alters the rules selecting declarations inside the cascade. A declaration that is not important is called normal. 
+ --> Overrides all other implementations
+ --> Ignoes/ Overrides Specificity
+ */
+
+
+button{
+    background-color: black !important; 
+}

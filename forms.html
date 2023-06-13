@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1> Forms</h1>
+
+    <!--
+        The form element "represents a document section containing interactive controls for submitting information."
+        The action attribute specifies WHERE the form data should be sent.
+        The method attribute specifies which HTTP method should be used
+
+        <input> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+        The input element is used to create a variety of different form controls.
+        We have 20+ possible types of inputs, ranging from date pickers to checkboxes.
+        The type attribute is where the magic  happens. Changing type dramatically alters the input's behavior and appearance.
+
+
+        id and for match to create relation between different element.
+    -->
+    <form action="/asim">
+        <input type="text" placeholder="username"> <br>
+        <input type="password" placeholder="password"><br>
+        <input type="checkbox"><br>
+        <input type="color" placeholder="422"><br>
+        <input type="number" min="0" max="10"><br>
+        <input type="time"><br>
+        <input type="tel"><br>
+        <input type="range"><br>
+        <input type="button"><br>
+    </form>
+
+    <hr>
+
+    <!-- Name attribute will be added to the URL-->
+
+    <form action="/asim">
+        <p>
+            <label for="id">Enter an ID:</label>
+            <input type="number" min="0" max="10" placeholder="id" id="id" name="id">
+            <br>
+            <label for="username">Enter a username:</label>
+            <input type="text" placeholder="username" id="username" name="username">
+        </p>
+
+        <p>
+            <label for="password">Enter your password:</label>
+            <input type="password" placeholder="password" id="password" name="password">
+        </p>
+
+        <p>
+            <label for="Remember">Remember me?</label>
+            <input type="checkbox" placeholder="1" id="Remember" name="remember">
+
+        </p>
+
+
+        <!--49. HTML Buttons-->
+        <button>Submit</button>
+        <button type="button">Do not Submit</button>
+
+        <!--
+            type: button: Donot submit the form
+        -->
+        <br>
+        <!-- Another way to create a submit button-->
+
+        <input type="submit">
+        <input type="submit" value="Click ME">
+
+
+    </form>
+
+    <hr>
+    <h2> Hijacking Reddit, Google and Youtube</h2>
+
+    <form action="https://www.reddit.com/search">
+        <label for="text"> Search in Reddit: </label>
+        <input type="text" name="q" id="text" placeholder="Search Reddit">
+        <button>Submit</button>
+    </form>
+
+    <hr>
+
+
+
+    <form action="https://google.com/search">
+        <label for="search">Search Google</label>
+        <input type="text" name="q" id="search" placeholder="Google">
+        <input type="submit" id="Submit">
+    </form>
+
+    <hr>
+    <form action="https://youtube.com/results">
+        <label for="ytsearch">Search Youtube</label>
+        <input type="text" name="search_query" id="ytsearch" placeholder="Search Youtube">
+        <input type="submit">
+    </form>
+    <hr>
+    <form action="https://youtube.com/results">
+        <label for="ytsearch">Search Youtube</label>
+        <input type="text" name="search_query" id="ytsearch" placeholder="Search Youtube">
+        <!-- Don't need Submit button. Just press enter to submit the form-->
+    </form>
+
+
+
+
+
+</body>
+
+</html>
