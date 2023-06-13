@@ -35,3 +35,6 @@ const pi = 3.14;
 
 var -> can be reassigned
 var runDistance = 26.2;
+
+Boolean
+True or False
