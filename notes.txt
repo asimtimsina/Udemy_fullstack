@@ -1,0 +1,10 @@
+Java Script
+
+Primitive Types
+Number
+String
+Boolean 
+Null
+Undefined
+
+REPL -> Read Evaluate Print Loop
