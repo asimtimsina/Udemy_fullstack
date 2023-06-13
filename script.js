@@ -88,3 +88,18 @@ if (password) {
 } else {
     console.log("Falsey")
 }
+
+
+//172. Logical AND
+//&& AND
+// 1<4 && age < 21 -> both must be true
+
+// || OR
+// age === 10 || 0 === 0 -> one must be true
+//! NOT
+
+if (password.length >= 6 && password.indexOf(' ') === -1) {
+    console.log("Valid Password!")
+} else {
+    console.log("Incorrect format for password!")
+}
