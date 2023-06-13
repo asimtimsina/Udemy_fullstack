@@ -113,7 +113,10 @@ Math.pow(2,5)  -> 32
 < -> Less Than
 >= -> Greater Than or Equal To
 <= -> Less Than or Equal To
-== -> Equal To
+
+
+164. Equality: Triple Vs. Double Equals
+== -> Equal To  -> check if two values are equal but doesn't check type -> 1 == '1' -> true
 != -> Not Equal To
-=== -> Strictly Equal
+=== -> Strictly Equal   -> 1 === '1' -> false -> check if two values are equal and check type
 !== -> Strictly Not Equal
