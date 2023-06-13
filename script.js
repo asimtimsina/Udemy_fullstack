@@ -164,16 +164,31 @@
 
 // 177. Introducing Arrays
 
-let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+// let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-console.log(days.length); //7
-console.log(days[2][2]); //d
-console.log(days[8]); //undefined
+// console.log(days.length); //7
+// console.log(days[2][2]); //d
+// console.log(days[8]); //undefined
 
 
-// 178. Array Random Access
-// Index starts with 0
+// // 178. Array Random Access
+// // Index starts with 0
 
-days[10] = "Funday";
-console.log(days.length); //11
-console.log(days); //["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", empty × 3, "Funday"]
+// days[10] = "Funday";
+// console.log(days.length); //11
+// console.log(days); //["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", empty × 3, "Funday"]
+
+
+// 179. Push & Pop
+// Push - add to the end
+// Pop - remove from the end
+
+let movieLine = ["Tom", "Nancy"];
+movieLine.push("Sally");
+movieLine.push("Oliver");
+movieLine.push("Oliver", 'Rama');
+console.log(movieLine); //["Tom", "Nancy", "Sally", "Oliver"]
+movieLine.pop();
+lastPerson = movieLine.pop();
+console.log(lastPerson); //Oliver
+console.log(movieLine); //["Tom", "Nancy", "Sally"] 
