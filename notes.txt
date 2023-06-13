@@ -90,3 +90,8 @@ msg -> "You bought 5 Artichokes. Total: $11.25"
 
 let msg = `You bought ${qty} ${product}s. Total: $${price*qty}`;
 msg -> "You bought 5 Artichokes. Total: $11.25"
+
+
+159. Undefined & Null
+let loggedInUser = null; -> explicitly cleared -> intentional lack of value
+let loggedInUser = undefined; -> implicitly cleared -> unintentional lack of value
