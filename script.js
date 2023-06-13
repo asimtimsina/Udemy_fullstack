@@ -268,3 +268,12 @@ console.log(num); //[1, 2, 3, 4]
 //both num and numCopy are pointing to the same array in memory
 //if we change one, the other will also change
 
+
+//184. Arrays + Const
+
+const nums = [1, 2, 3];
+nums.push(4); //allowed
+nums.pop(); //allowed
+//can change the contents but not the reference of the nums array
+
+//nums = 3;   //not allowed
