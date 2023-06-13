@@ -1,0 +1,77 @@
+ /*
+Color
+ 1. Color name
+ 2. RGB(R,G,B)
+ 3. #RRGGBB *
+    can shorten to 3 digit if RR GG BB are same/
+
+ /* https: //htmlcolorcodes.com/color-picker/ */
+
+
+
+ h1 {
+     color: rgb(156, 26, 26);
+ }
+
+
+ h2 {
+     color: blue;
+     background-color: rgb(255, 221, 234);
+
+ }
+
+
+
+
+
+ button {
+     color: rgb(255, 158, 158);
+     background-color: #555555;
+ }
+
+ p {
+     color: olive;
+     background-color: #ABC;
+ }
+
+
+ /* Text 
+ 1. text-align
+ 2. font-weight
+ 3. font-decoration (imp)
+ 4. line-height
+ 5. letter-spacing
+ 6. font-size
+ 7. font-family: primary, backup
+ */
+
+ h1 {
+     text-align: center;
+     font-weight: 400;
+     text-decoration: underline wavy red;
+     letter-spacing: 15px;
+     font-size: 50px;
+     font-family: Segoe UI, Arial;
+
+ }
+
+ p {
+     text-align: justify;
+     line-height: 1.5;
+
+ }
+
+
+
+ /* Test solution */
+
+ .purple {
+     text-transform: uppercase;
+     font-family: monospace;
+     text-align: center;
+     font-weight: 100;
+     font-size: 40px;
+     letter-spacing: 20px;
+     text-decoration: plum underline wavy;
+
+ }

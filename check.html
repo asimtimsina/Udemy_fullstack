@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Buttons, Checkboxes, & Selects</title>
+</head>
+
+<body>
+    <H1>52. Radio Buttons, Checkboxes, & Selects</H1>
+</body>
+
+
+<h3>Checkboxes</h3>
+
+<form action="birds/">
+    <input type="checkbox" name="Agree" id="agree_tos" checked>
+    <label for="agree_tos">I agree the terms and conditions.</label>
+    <button>Submit</button>
+</form>
+
+<hr>
+
+<p>Which phone do you prefer:
+
+    <!-- We have to add on a particular attribute called value. So whatever we have in this value is not going to be
+    displayed to a user. Instead, it's just what is sent through when the form is submitted. So as an example here I
+    could put value of lol like that I refresh this page. We don't see that anywhere, but if I select extra small and I
+    submit. 
+        value
+-->
+
+<form action="phone/">
+    <label for="Apple">Apple</label>
+    <input type="radio" name="phone" id="Apple" value="Apple"> <br>
+    <label for="Samsung">Samsung</label>
+    <input type="radio" name="phone" id="Samsung" value="Samsung"><br>
+    <label for="Google">Google</label>
+    <input type="radio" name="phone" id="Google" value="Google"><br>
+    <button>Submit</button>
+</form>
+</p>
+
+<hr>
+<form action="phoneselect/">
+    <label for="phone">Which phone do you prefer:</label>
+    <select name="phone" id="phone">
+        <option value="">Select an option</option> <!-- Dummy variable-->
+        <option value="apple">Apple</option>
+        <option value="samsung" selected>Samsung</option>
+        <option value="google">Google</option>
+        <submit>Submit</submit>
+    </select>
+    <button>Submit</button>
+</form>
+
+
+<hr>
+
+<form action="ranging/">
+    <label for="audio">Audio</label>
+    <input type="range" name="Audio" min="0" max="1000" value="230" step="10" id="audio">
+    <button>Submit</button>
+</form>
+
+
+<hr>
+
+<form action="text_area/">
+    <p>
+        Any comments or suggestions? <br>
+        <textarea name="Comment" id="comment" cols="40" rows="15" placeholder="Type here..."></textarea>
+    </p>
+    <button>Submit</button>
+</form>
+
+<hr>
+
+
+
+<form id="" action="" method="get" accept-charset="utf-8">
+    <pr>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" placeholder="username" /><br>
+    </pr>
+
+    <pr>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="password" /><br>
+    </pr>
+    <button>Register</button>
+</form>
+
+
+
+</html>

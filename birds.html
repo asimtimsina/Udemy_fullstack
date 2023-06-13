@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birds Table</title>
+</head>
+
+<body>
+    <h1>Birds Table</h1>
+
+
+    <!--
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+        table: create table
+        tr: table row
+        th: table header
+        td: table data
+
+
+    -->
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Avg weight</th>
+            <th>Max weight</th>
+            <th>Flighted</th>
+        </tr>
+        <tr>
+            <td>Ostrich</td>
+            <td>104</td>
+            <td>156</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Somali Ostrich</td>
+            <td>200</td>
+            <td></td>
+            <!--Blank to align data-->
+            <td>No</td>
+        </tr>
+
+        <tr>
+            <td>Turkey</td>
+            <td>39</td>
+            <td>56</td>
+            <td>Yes</td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <!--
+        thead: defines a set of rows defining the head of the columns
+        tbody: encapsulates a set of table rows (<tr> elements), indicating that they comprise the body of the table (<table>).
+        tfoot: defines a set of rows summarizing the columns of the table. (for total)
+    -->
+
+    <h2>V2</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Avg weight</th>
+                <th>Max weight</th>
+                <th>Flighted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ostrich</td>
+                <td>104</td>
+                <td>156</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Somali Ostrich</td>
+                <td>200</td>
+                <td></td>
+                <!--Blank to align data-->
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td>Turkey</td>
+                <td>39</td>
+                <td>56</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h2>V3 with rowspan and colspan</h2>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Name</th>
+                <th colspan="2">Mass</th>
+                <th rowspan="2">Flighted</th>
+            </tr>
+            <tr>
+                <th>Avg </th>
+                <th>Max </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ostrich</td>
+                <td>104</td>
+                <td>156</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <td>Somali Ostrich</td>
+                <td>200</td>
+                <td></td>
+                <!--Blank to align data-->
+                <td>No</td>
+            </tr>
+
+            <tr>
+                <td>Turkey</td>
+                <td>39</td>
+                <td>56</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+.one {
+    width: 200px;
+    height: 200px;
+    background-color: #f5cac3;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+
+}
+
+.two {
+    width: 200px;
+    height: 200px;
+    background-color: #f7ede2;
+    border: medium dashed rgba(82, 17, 235, 0.418);
+
+}
+
+.three {
+    width: 200px;
+    height: 200px;
+    background-color: #f28482;
+    border-width: 5px;
+    border-color: black;
+    border-style: outset;
+    box-sizing: border-box;
+    border-left-style: dashed;
+}
+
+/* box-sizing: border-box; --> keeps the element size same  */
+/* border-style --> none / hidden / dotted / dashed / solid / double / groove / ridge / inset / outset  */
+
+/* 
+border styling in same line
+border: width | style | color 
+border: medium dashed green; 
+*/
+
+/* border-radius:   property rounds the corners of an element's outer border edge   */
