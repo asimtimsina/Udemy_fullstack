@@ -98,53 +98,65 @@
 
 //196. Looping Over Arrays
 
-const animals = ['lions', 'tigers', 'bears'];
+// const animals = ['lions', 'tigers', 'bears'];
 
-for (let i = 0; i < animals.length; i++) {
-    console.log(i, animals[i]);
-}
+// for (let i = 0; i < animals.length; i++) {
+//     console.log(i, animals[i]);
+// }
 
-for (let i = animals.length - 1; i >= 0; i--) {
-    console.log(i, animals[i]);
-}
+// for (let i = animals.length - 1; i >= 0; i--) {
+//     console.log(i, animals[i]);
+// }
 
 
-//197. Nested Loops
+// //197. Nested Loops
 
-for (let i = 0; i < 10; i++) {
-    console.log(`i is: ${i}`);
-    for (let j = 1; j < 4; j++) {
-        console.log(`     j is: ${j}`);
+// for (let i = 0; i < 10; i++) {
+//     console.log(`i is: ${i}`);
+//     for (let j = 1; j < 4; j++) {
+//         console.log(`     j is: ${j}`);
+//     }
+// }
+
+
+// const seatingChart = [
+//     ['Kristen', 'Erik', 'Namita'],
+//     ['Geoffrey', 'Juanita', 'Antonio', 'Kevin'],
+//     ['Yuma', 'Sakura', 'Jack', 'Erika']
+// ];
+
+// for (let i = 0; i < seatingChart.length; i++) {
+//     const row = seatingChart[i];
+//     console.log(`ROW #${i + 1}`);
+//     for (let j = 0; j < row.length; j++) {
+//         console.log(row[j]);
+//     }
+// }
+
+
+// //198. Another Loop: The While Loop
+
+// let count = 0;
+// while (count < 10) {
+//     console.log(count++);
+//     // count++;
+// }
+
+
+// const SECRET = "BabyHippo";
+
+// while (prompt("Enter the secret code") !== SECRET) {
+//     console.log("TRY AGAIN!");
+// }
+
+
+
+// 199. The Break Keyword
+let i = 0;
+while (true) {
+
+    console.log(++i);
+    if (i == 8) {
+        break;
     }
-}
-
-
-const seatingChart = [
-    ['Kristen', 'Erik', 'Namita'],
-    ['Geoffrey', 'Juanita', 'Antonio', 'Kevin'],
-    ['Yuma', 'Sakura', 'Jack', 'Erika']
-];
-
-for (let i = 0; i < seatingChart.length; i++) {
-    const row = seatingChart[i];
-    console.log(`ROW #${i + 1}`);
-    for (let j = 0; j < row.length; j++) {
-        console.log(row[j]);
-    }
-}
-
-
-//198. Another Loop: The While Loop
-
-let count = 0;
-while (count < 10) {
-    console.log(count++);
-    // count++;
-}
-
-
-const SECRET = "BabyHippo";
-
-while (prompt("Enter the secret code") !== SECRET) {
-    console.log("TRY AGAIN!");
 }
