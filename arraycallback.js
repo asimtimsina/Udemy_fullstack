@@ -83,3 +83,23 @@ console.log(RollADie());
 
 let add = (x, y) => x + y
 console.log(add(5, 7));
+
+
+//228. Arrow Functions Wrapup
+
+const movies = [
+    {
+        name: "Alu",
+        rating: 90
+    },
+    {
+        name: "pidaulu",
+        rating: 80
+    }
+]
+
+const newMovies = movies.map((movie) => {
+    return `${movie.name}: ${movie.rating}/100.`;
+})
+
+console.log(newMovies);
