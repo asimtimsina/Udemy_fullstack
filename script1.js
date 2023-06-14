@@ -85,3 +85,12 @@ for (let i = 1; i <= 10; i++) {
 for (let i = 0; i <= 20; i += 2) {
     console.log(i); //0 2 4 6 8 10 12 14 16 18 20
 }
+
+//195. The Perils Of Infinite Loops :(
+
+
+//infinite loop
+
+// for (let i = 20; i >= 0; i++) {
+//     console.log(i);
+// }
