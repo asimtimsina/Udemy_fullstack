@@ -50,3 +50,25 @@ midterms['danielle'] = 97;
 midterms.ezra = 93;
 
 console.log(midterms); //{ danielle: 97, thomas: 79, ezra: 93 }
+
+
+//191. Nested Arrays And Objects
+// objects can hold arrays
+// arrays can hold objects
+
+const comments = [
+    {
+        username: 'Tammy',
+        text: 'lololol',
+        votes: 9
+    },
+    {
+        username: 'FishBoi',
+        text: 'glub glub',
+        votes: 123
+    }
+];
+
+
+comments[1].text;   //glub glub
+comments[0].votes;  //9
