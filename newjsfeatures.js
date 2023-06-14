@@ -85,4 +85,41 @@ const scores = [92, 90, 87, 83, 81, 75];
 const highestScore = scores[0];
 const secondHighestScore = scores[1];
 
-const [high, second, ...everyoneElse] = scores; 
+const [high, second, ...everyoneElse] = scores;  //destructuring
+// high = 92
+// second = 90
+// everyoneElse = [87, 83, 81, 75]
+
+//241. Destructuring Objects
+
+
+const user = {
+    email: 'harvey@gmail.com',
+    password: 'test123',
+    firstName: 'Harvey',
+    lastName: 'Specter',
+    born: 1972,
+    died: 2020,
+    bio: 'Harvey Reginald Specter was a former corporate attorney, and currently a senior partner at Specter Litt Wheeler Williams.',
+    city: 'New York City',
+    state: 'New York'
+}
+
+// const firstName = user.firstName;
+// const lastName = user.lastName;
+// const email = user.email;
+
+const { email, firstName, lastName, city, bio } = user;
+console.log(email, firstName, lastName, city, bio); // 
+
+const { born: birthYear, died: deathYear } = user;
+console.log(birthYear); //1972
+console.log(deathYear); //2020
+
+const { county } = user; //undefined
+console.log(county); //undefined
+
+const { country = 'USA' } = user; //default value
+console.log(county); //USA
+
+
