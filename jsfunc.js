@@ -14,3 +14,12 @@ function singSong() {
     console.log("CO");
     console.log("OK");
 }
+
+//209. Arguments Intro
+
+
+function greet(name = 'Asimo') {
+    console.log("Hi! ", name)
+}
+
+greet("Asim");
