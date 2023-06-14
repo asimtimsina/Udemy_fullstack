@@ -12,16 +12,16 @@
 //     console.log(number);
 // })
 
-const movies = [
-    {
-        name: "Alu",
-        rating: 90
-    },
-    {
-        name: "pidaulu",
-        rating: 80
-    }
-]
+// const movies = [
+//     {
+//         name: "Alu",
+//         rating: 90
+//     },
+//     {
+//         name: "pidaulu",
+//         rating: 80
+//     }
+// ]
 
 
 // movies.forEach(function (movie) {
@@ -33,16 +33,43 @@ const movies = [
 // 225. The map Method
 // map creates a new array from the return value
 
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const doublenum = numbers.map(function (num) {
-    return num * 2;
-})
+// const doublenum = numbers.map(function (num) {
+//     return num * 2;
+// })
 
-console.log(doublenum);
+// console.log(doublenum);
 
-const moviesName = movies.map(function (movie) {
-    return movie.name.toUpperCase();
-})
+// const moviesName = movies.map(function (movie) {
+//     return movie.name.toUpperCase();
+// })
 
-console.log(moviesName);
+// console.log(moviesName);
+
+///////////////////////////////
+//226. Intro to Arrow Functions
+//syntactically compact alternative to regular function expression
+
+
+const add = (x, y) => {
+    return x + y;
+}
+console.log(add(5, 6));
+
+let squrare = (n) => {
+    console.log(n ** 2);
+}
+squrare(20);
+
+let RollADie = () => {
+    console.log(Math.floor(Math.random() * 6) + 1);
+}
+RollADie();
+
+let greet = (name) => {
+    console.log(`Hey ${name}.`);
+}
+greet("Asim");
+
+return 
