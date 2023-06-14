@@ -23,4 +23,24 @@ function greet(firstName = 'Asimo', lastName) {
     console.log("Hi! ", firstName, lastName[0], ".")
 }
 
-greet("Asim");
+greet("Asim", 'Timsina');
+
+
+function isSnakeEyes(a, b) {
+    if (a === 1 && b == 1) {
+        console.log("Snake Eyes");
+    }
+    else {
+        console.log("Not Snake");
+    }
+}
+
+
+//211. The Return Keyword
+
+function add(x, y) {
+    return x + y;
+}
+
+let total = add(5, 6);
+console.log(total);
