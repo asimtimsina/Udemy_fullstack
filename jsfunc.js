@@ -110,5 +110,9 @@ const add = function (x, y) {
 }
 //functions are like values in JS
 
+const square = function (num) {
+    return num ** 2;
+}
 
+console.log(square(5));
 
