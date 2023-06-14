@@ -131,3 +131,36 @@ function rollDie() {
 }
 
 callTwice(rollDie);
+
+//218. Returning Functions
+
+function mystery() {
+    const rand = Math.random();
+
+    if (rand > 0.5) {
+        return function () {
+            console.log("Congrats, You win a million dollars.");
+
+        }
+    }
+    else {
+        return function () {
+            alert("You have been infected by a computer virus.");
+        }
+    }
+}
+
+let func = mystery();
+func();
+
+//////////////
+
+function makeBetweenFunc(a, b) {
+    return function (num) {
+        return num >= a && num <= b;
+    }
+}
+
+let newfunc = makeBetweenFunc(100, 200);
+console.log(newfunc(150));    //true
+console.log(newfunc(50));     //false
