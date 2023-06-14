@@ -33,3 +33,20 @@ const years = {
 console.log(years['1999']);  //good
 console.log(years[1999]);    //good
 // console.log(years.1999);     //error
+
+
+//190. Modifying Objects
+// objects are mutable
+// can change properties
+
+const midterms = {
+    danielle: 96,
+    thomas: 78
+};
+
+midterms.thomas = 79;
+midterms['danielle'] = 97;
+
+midterms.ezra = 93;
+
+console.log(midterms); //{ danielle: 97, thomas: 79, ezra: 93 }
