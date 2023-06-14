@@ -16,3 +16,13 @@ Math.max(...nums); //13 // spread out the array
 
 console.log(...nums); //13 4 5 6 7 8 9 10 11 12
 console.log(..."hello");   //h e l l o
+
+
+// 237. Spread with Array Literals
+
+const cats = ["Blue", "Scout", "Rocket"];
+const dogs = ["Rusty", "Wyatt"];
+
+const allPets = [...cats, ...dogs];
+console.log(allPets); //["Blue", "Scout", "Rocket", "Rusty", "Wyatt"]   
+
