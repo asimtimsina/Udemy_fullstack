@@ -16,3 +16,20 @@ const kitchenSink = {
 
 
 
+//189. Accessing Data Out Of Objects
+// dot notation
+// bracket notation
+
+console.log(person);
+console.log(person.firstName);
+console.log(person['lastName']);
+console.log(person.age);    //undefined
+
+const years = {
+    1999: 'good',
+    2020: 'bad'
+};
+
+console.log(years['1999']);  //good
+console.log(years[1999]);    //good
+// console.log(years.1999);     //error
