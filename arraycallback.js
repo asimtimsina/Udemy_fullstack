@@ -109,16 +109,66 @@ console.log(add(5, 7));
 
 // 229. setTimeout and setInterval
 
-console.log("Hello!....");
-setTimeout(() => {
-    console.log("...Still there ?")
-}, 3000)
-console.log("Goodbye!");
+// console.log("Hello!....");
+// setTimeout(() => {
+//     console.log("...Still there ?")
+// }, 3000)
+// console.log("Goodbye!");
 
-const id = setInterval(() => {
-    console.log(Math.floor(Math.random() * 6) + 1);
-}, 3000);
+// const id = setInterval(() => {
+//     console.log(Math.floor(Math.random() * 6) + 1);
+// }, 3000);
 
 //to stop the interval
 // clearInterval(id);
 
+
+//230. The filter Method
+//make subset from an arry
+
+const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+const even = num.filter(n => {
+    return n % 2 == 0
+})
+
+const odd = num.filter(n => {
+    return n % 2 == 1
+})
+
+
+const movies = [
+    {
+        title: "Amadeus",
+        score: 99,
+        year: 1984
+    },
+    {
+        title: "Stand By Me",
+        score: 85,
+        year: 1986
+    },
+    {
+        title: "Parasite",
+        score: 95,
+        year: 2019
+    },
+    {
+        title: "Alien",
+        score: 90,
+        year: 1979
+    }
+]
+const goodMovies = movies.filter(movie => movie.score > 80)
+console.log(goodMovies)
+
+const badMovies = movies.filter(movie => movie.score < 90)
+console.log(badMovies)
+
+const recentMovies = movies.filter(movie => movie.year > 2000)
+console.log(recentMovies)
+
+
+// title of goodMovies
+const goodMovieTitle = movies.filter(movie => movie.score > 90).map(m => m.title);
+console.log(goodMovieTitle);
