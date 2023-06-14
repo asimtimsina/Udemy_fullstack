@@ -52,24 +52,34 @@
 //syntactically compact alternative to regular function expression
 
 
-const add = (x, y) => {
-    return x + y;
-}
-console.log(add(5, 6));
+// const add = (x, y) => {
+//     return x + y;
+// }
+// console.log(add(5, 6));
 
-let squrare = (n) => {
-    console.log(n ** 2);
-}
-squrare(20);
+// let squrare = (n) => {
+//     console.log(n ** 2);
+// }
+// squrare(20);
 
-let RollADie = () => {
-    console.log(Math.floor(Math.random() * 6) + 1);
-}
-RollADie();
+// let RollADie = () => {
+//     console.log(Math.floor(Math.random() * 6) + 1);
+// }
+// RollADie();
 
-let greet = (name) => {
-    console.log(`Hey ${name}.`);
-}
-greet("Asim");
+// let greet = (name) => {
+//     console.log(`Hey ${name}.`);
+// }
+// greet("Asim");
 
-return 
+
+// 227. Arrow Function Implicit Returns
+// implicit returns - return is implied
+//
+let RollADie = () => (
+    Math.floor(Math.random() * 6) + 1
+)
+console.log(RollADie());
+
+let add = (x, y) => x + y
+console.log(add(5, 7));
