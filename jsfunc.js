@@ -52,3 +52,16 @@ function capitalize(word) {
 }
 
 console.log(capitalize('asim'));
+
+
+// 213. Function Scope
+
+// variables defined inside a scope {} are only availble inside the same scope
+
+let bird = 'Tota';
+function birdWatch() {
+    let bird = 'Maina';
+    console.log(bird);
+}
+birdWatch();
+console.log(bird);
