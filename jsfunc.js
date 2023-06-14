@@ -98,3 +98,17 @@ function bankRobbery() {
 }
 
 bankRobbery();
+
+
+//216. Function Expressions
+
+
+//storing a function in a variable
+
+const add = function (x, y) {
+    return x + y;
+}
+//functions are like values in JS
+
+
+
