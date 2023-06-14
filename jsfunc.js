@@ -75,92 +75,107 @@
 // var is not used anymore
 
 
-let radius = 8;
-if (radius > 0) {
-    const PI = 3.1415;
-    let msg = 'HOO';
-}
+// let radius = 8;
+// if (radius > 0) {
+//     const PI = 3.1415;
+//     let msg = 'HOO';
+// }
 
-// console.log(PI);
-// console.log(msg);
+// // console.log(PI);
+// // console.log(msg);
 
-//215. Lexical Scope
+// //215. Lexical Scope
 
-function bankRobbery() {
-    const heroes = ['Spiderman', 'Batman', 'Witch'];
+// function bankRobbery() {
+//     const heroes = ['Spiderman', 'Batman', 'Witch'];
 
-    function cryForHelp() {
-        for (let hero of heroes) {
-            console.log(`Please save us ${hero}.`)
-        }
+//     function cryForHelp() {
+//         for (let hero of heroes) {
+//             console.log(`Please save us ${hero}.`)
+//         }
+//     }
+//     // cryForHelp()
+// }
+
+// bankRobbery();
+
+
+// //216. Function Expressions
+
+
+// //storing a function in a variable
+
+// const add = function (x, y) {
+//     return x + y;
+// }
+// //functions are like values in JS
+
+// const square = function (num) {
+//     return num ** 2;
+// }
+
+// console.log(square(5));
+
+
+
+// //217. Higher Order Functions
+
+// function callTwice(func) {
+//     func();
+//     func();
+// }
+
+// function rollDie() {
+//     const roll = Math.floor(Math.random() * 6) + 1;
+//     console.log(roll);
+// }
+
+// callTwice(rollDie);
+
+// //218. Returning Functions
+
+// function mystery() {
+//     const rand = Math.random();
+
+//     if (rand > 0.5) {
+//         return function () {
+//             console.log("Congrats, You win a million dollars.");
+
+//         }
+//     }
+//     else {
+//         return function () {
+//             alert("You have been infected by a computer virus.");
+//         }
+//     }
+// }
+
+// let func = mystery();
+// func();
+
+// //////////////
+
+// function makeBetweenFunc(a, b) {
+//     return function (num) {
+//         return num >= a && num <= b;
+//     }
+// }
+
+// let newfunc = makeBetweenFunc(100, 200);
+// console.log(newfunc(150));    //true
+// console.log(newfunc(50));     //false
+
+
+//219. Defining Methods
+// function accessed using . method
+
+const myMath = {
+    Pi: 3.1415,
+    square: function (n) {
+        return n ** 2;
     }
-    // cryForHelp()
 }
 
-bankRobbery();
+console.log(myMath.square(2));
 
 
-//216. Function Expressions
-
-
-//storing a function in a variable
-
-const add = function (x, y) {
-    return x + y;
-}
-//functions are like values in JS
-
-const square = function (num) {
-    return num ** 2;
-}
-
-console.log(square(5));
-
-
-
-//217. Higher Order Functions
-
-function callTwice(func) {
-    func();
-    func();
-}
-
-function rollDie() {
-    const roll = Math.floor(Math.random() * 6) + 1;
-    console.log(roll);
-}
-
-callTwice(rollDie);
-
-//218. Returning Functions
-
-function mystery() {
-    const rand = Math.random();
-
-    if (rand > 0.5) {
-        return function () {
-            console.log("Congrats, You win a million dollars.");
-
-        }
-    }
-    else {
-        return function () {
-            alert("You have been infected by a computer virus.");
-        }
-    }
-}
-
-let func = mystery();
-func();
-
-//////////////
-
-function makeBetweenFunc(a, b) {
-    return function (num) {
-        return num >= a && num <= b;
-    }
-}
-
-let newfunc = makeBetweenFunc(100, 200);
-console.log(newfunc(150));    //true
-console.log(newfunc(50));     //false
