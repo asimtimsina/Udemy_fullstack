@@ -83,3 +83,18 @@ if (radius > 0) {
 
 // console.log(PI);
 // console.log(msg);
+
+//215. Lexical Scope
+
+function bankRobbery() {
+    const heroes = ['Spiderman', 'Batman', 'Witch'];
+
+    function cryForHelp() {
+        for (let hero of heroes) {
+            console.log(`Please save us ${hero}.`)
+        }
+    }
+    // cryForHelp()
+}
+
+bankRobbery();
