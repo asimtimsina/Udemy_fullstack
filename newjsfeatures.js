@@ -61,18 +61,28 @@
 // sum();
 // sum(1, 3, 5, 7, 9);
 
-function sum(...nums) {
-    //this is an actual array with all methods
-    return nums.reduce((total, num) => total + num)
-}
+// function sum(...nums) {
+//     //this is an actual array with all methods
+//     return nums.reduce((total, num) => total + num)
+// }
 
-// sum();
-console.log(sum(1, 3, 5, 7, 9));
+// // sum();
+// console.log(sum(1, 3, 5, 7, 9));
 
-function raceResults(gold, silver, ...everyoneElse) {
-    console.log(`Gold medal goes to: ${gold}`);
-    console.log(`Silver medal goes to: ${silver}`);
-    console.log(`And thanks to everyone else: ${everyoneElse}`);
-}
+// function raceResults(gold, silver, ...everyoneElse) {
+//     console.log(`Gold medal goes to: ${gold}`);
+//     console.log(`Silver medal goes to: ${silver}`);
+//     console.log(`And thanks to everyone else: ${everyoneElse}`);
+// }
 
-raceResults('Asim', 'Ali', 'Ahmed', 'Ahsan', 'Aamir'); //Gold medal goes to: Asim Silver medal goes to: Ali And thanks to everyone else: Ahmed,Ahsan,Aamir
+// raceResults('Asim', 'Ali', 'Ahmed', 'Ahsan', 'Aamir'); //Gold medal goes to: Asim Silver medal goes to: Ali And thanks to everyone else: Ahmed,Ahsan,Aamir
+
+// /////////////////////////////////////
+//240. Destructuring Arrays
+
+const scores = [92, 90, 87, 83, 81, 75];
+
+const highestScore = scores[0];
+const secondHighestScore = scores[1];
+
+const [high, second, ...everyoneElse] = scores; 
