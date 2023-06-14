@@ -173,9 +173,13 @@ const myMath = {
     Pi: 3.1415,
     square: function (n) {
         return n ** 2;
+    },
+    cube(n) {
+        return n ** 3;
     }
 }
 
 console.log(myMath.square(2));
+console.log(myMath.cube(2));
 
 
