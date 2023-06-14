@@ -44,3 +44,11 @@ function add(x, y) {
 
 let total = add(5, 6);
 console.log(total);
+
+function capitalize(word) {
+    first = word[0].toUpperCase();
+    newword = first + word.slice(1);
+    return newword;
+}
+
+console.log(capitalize('asim'));
