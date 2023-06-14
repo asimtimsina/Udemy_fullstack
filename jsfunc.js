@@ -17,9 +17,10 @@ function singSong() {
 
 //209. Arguments Intro
 
+// 210. Functions With Multiple Arguments
 
-function greet(name = 'Asimo') {
-    console.log("Hi! ", name)
+function greet(firstName = 'Asimo', lastName) {
+    console.log("Hi! ", firstName, lastName[0], ".")
 }
 
 greet("Asim");
