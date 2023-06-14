@@ -19,10 +19,30 @@ console.log(..."hello");   //h e l l o
 
 
 // 237. Spread with Array Literals
+// can be used to convert array to object
+//copy objects 
+//mutate objects
 
 const cats = ["Blue", "Scout", "Rocket"];
 const dogs = ["Rusty", "Wyatt"];
 
 const allPets = [...cats, ...dogs];
 console.log(allPets); //["Blue", "Scout", "Rocket", "Rusty", "Wyatt"]   
+
+//238. Spread with Objects
+
+const feline = { legs: 4, family: "Felidae" };
+const canine = { isFurry: true, family: "Caninae" };
+
+const catDog = { ...feline, ...canine };
+console.log(catDog);
+
+const dataFromUser = {
+    name: 'Asim',
+    email: 'test@gmail.com',
+    password: 'test123'
+}
+
+fullData = { ...dataFromUser, isActive: true, isAdmin: false };
+console.log(fullData);
 
