@@ -112,7 +112,7 @@ const user = {
 const { email, firstName, lastName, city, bio } = user;
 console.log(email, firstName, lastName, city, bio); // 
 
-const { born: birthYear, died: deathYear } = user;
+const { born: birthYear, died: deathYear } = user; //renaming
 console.log(birthYear); //1972
 console.log(deathYear); //2020
 
