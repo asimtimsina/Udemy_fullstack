@@ -123,3 +123,20 @@ const { country = 'USA' } = user; //default value
 console.log(county); //USA
 
 
+//242. Destructuring Params
+
+// function fullName(user) {
+//     return `${user.firstName} ${user.lastName}`
+// }
+
+// function fullName(user){
+//     const {firstName, lastName} = user;
+//     return `${firstName} ${lastName}`;
+// }
+
+//can give default values too
+function fullName({ firstName, lastName, country = "USA" }) {
+    return `${firstName} ${lastName} lives in ${country}`;
+}
+
+console.log(fullName(user)); //Harvey Specter
