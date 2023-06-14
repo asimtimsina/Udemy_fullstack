@@ -72,3 +72,10 @@ const comments = [
 
 comments[1].text;   //glub glub
 comments[0].votes;  //9
+
+
+// 193. Intro to For Loops
+
+for (let i = 1; i <= 10; i++) {
+    console.log('Hello:', i);
+}
