@@ -87,19 +87,38 @@ console.log(add(5, 7));
 
 //228. Arrow Functions Wrapup
 
-const movies = [
-    {
-        name: "Alu",
-        rating: 90
-    },
-    {
-        name: "pidaulu",
-        rating: 80
-    }
-]
+// const movies = [
+//     {
+//         name: "Alu",
+//         rating: 90
+//     },
+//     {
+//         name: "pidaulu",
+//         rating: 80
+//     }
+// ]
 
-const newMovies = movies.map((movie) => {
-    return `${movie.name}: ${movie.rating}/100.`;
-})
+// const newMovies = movies.map((movie) => {
+//     return `${movie.name}: ${movie.rating}/100.`;
+// })
 
-console.log(newMovies);
+// console.log(newMovies);
+
+
+/////////////////////////////////////
+
+// 229. setTimeout and setInterval
+
+console.log("Hello!....");
+setTimeout(() => {
+    console.log("...Still there ?")
+}, 3000)
+console.log("Goodbye!");
+
+const id = setInterval(() => {
+    console.log(Math.floor(Math.random() * 6) + 1);
+}, 3000);
+
+//to stop the interval
+// clearInterval(id);
+
