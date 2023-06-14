@@ -248,16 +248,16 @@
 //////////////////////
 //233. Arrow Functions & 'this'
 
-const person = {
-    firstName: 'Viggo',
-    lastName: 'Mortein',
-    fullName: function () {
-        return `${this.firstName} ${this.lastName}`
-    },
+// const person = {
+//     firstName: 'Viggo',
+//     lastName: 'Mortein',
+//     fullName: function () {
+//         return `${this.firstName} ${this.lastName}`
+//     },
 
-    shoutName: function () {
-        setTimeout(() =>
-            console.log(this.fullName()), 3000)
-    }
+//     shoutName: function () {
+//         setTimeout(() =>
+//             console.log(this.fullName()), 3000)
+//     }
 
-}
+// }
