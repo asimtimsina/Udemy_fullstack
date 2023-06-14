@@ -52,3 +52,28 @@ for (let row of seatingChart) {
 for (let char of "hello world") {
     console.log(char);
 }
+
+
+//203. Iterating Over Objects
+
+//cannot iterate over objects with key value pairs
+
+const testScores = {
+    keenan: 80,
+    damon: 67,
+    kim: 89,
+    shawn: 91,
+};
+
+// in gives the keys not the actual values. 
+
+for (let person in testScores) {
+    console.log(`${person} scored ${testScores[person]}`);
+}
+
+
+console.log(Object.values(testScores));   //gives all the values
+console.log(Object.keys(testScores));     //gives all the keys
+console.log(Object.entries(testScores));  //gives all the key value pairs
+
+
