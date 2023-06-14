@@ -94,3 +94,16 @@ for (let i = 0; i <= 20; i += 2) {
 // for (let i = 20; i >= 0; i++) {
 //     console.log(i);
 // }
+
+
+//196. Looping Over Arrays
+
+const animals = ['lions', 'tigers', 'bears'];
+
+for (let i = 0; i < animals.length; i++) {
+    console.log(i, animals[i]);
+}
+
+for (let i = animals.length - 1; i >= 0; i--) {
+    console.log(i, animals[i]);
+}
