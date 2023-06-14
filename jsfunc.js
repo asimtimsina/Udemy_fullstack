@@ -169,17 +169,51 @@
 //219. Defining Methods
 // function accessed using . method
 
-const myMath = {
-    Pi: 3.1415,
-    square: function (n) {
-        return n ** 2;
-    },
-    cube(n) {
-        return n ** 3;
+// const myMath = {
+//     Pi: 3.1415,
+//     square: function (n) {
+//         return n ** 2;
+//     },
+//     cube(n) {
+//         return n ** 3;
+//     }
+// }
+
+// console.log(myMath.square(2));
+// console.log(myMath.cube(2));
+
+
+//220. The Mysterious Keyword 'this'
+
+const cat = {
+    name: 'Blue',
+    color: 'grey',
+    breed: 'fold',
+    meow() {
+        console.log(this.name, "Meow!");
+        console.log(`${this.name}, Meow!`);
     }
 }
 
-console.log(myMath.square(2));
-console.log(myMath.cube(2));
+cat.meow();
+
+let meow2 = cat.meow;
+meow2(); // gets defined in window not in cat; so this won't work.
 
 
+const hen = {
+    name: 'Helen',
+    eggCount: 0,
+    layAnEgg() {
+        this.eggCount++;
+        // this.eggCount++;
+        return 'EGG';
+
+    }
+}
+
+console.log(hen.name); // "Helen"
+console.log(hen.eggCount); // 0
+hen.layAnEgg(); // "EGG"
+hen.layAnEgg();// "EGG"
+console.log(hen.eggCount); // 2
