@@ -66,3 +66,23 @@ window.getComputedStyle(h1).textAlign;
 h1.style.color = 'red';
 h1.style.backgroundColor = 'blue';
 h1.style.textAlign = 'center';
+
+
+252. ClassList
+classList is a read-only property that returns a DOMTokenList collection of the class attributes of the element.
+classList is not an array, it is a collection of strings (tokens).
+
+
+
+const h2 = document.querySelector('h2')
+h2.class //undefined
+h2.getAttribute('class') //undefined
+h2.setAttribute('class','purple') // class='purple'
+
+h2.classList.add('purple') // adds purple
+h2.classList.add('pink') // adds pink
+h2.classList.remove('red') //removes red
+h2.classList.contains('pink') // true
+h2.classList.contains('red') // false
+h2.classList.toggle('red') // true
+h2.classList.toggle('red') // false

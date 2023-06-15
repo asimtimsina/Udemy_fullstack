@@ -82,3 +82,19 @@ for (each of links) {
     each.style.color = "red";
     each.style.textDecorationColor = "magenta";
 }
+
+// 252. ClassList
+
+const h2 = document.querySelector('h2')
+h2.class //undefined
+h2.getAttribute('class') //undefined
+h2.setAttribute('class', 'purple') // class='purple'
+
+h2.classList.add('purple') // adds purple
+h2.classList.add('pink') // adds pink
+h2.classList.remove('red') //removes red
+h2.classList.contains('pink') // true
+h2.classList.contains('red') // false
+h2.classList.toggle('red') // true
+h2.classList.toggle('red') // false
+
