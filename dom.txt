@@ -30,8 +30,8 @@ document.querySelectorAll('.paragraph') // returns a NodeList of all the element
 249. innerHTML, textContent, & innerText
 Properties of DOM elements
 classList
-getAttribute()
-setAttribute()
+getAttribute() // returns the value of the attribute
+setAttribute() // sets the value of the attribute
 appendChild()
 append()
 prepend()

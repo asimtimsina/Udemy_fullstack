@@ -59,3 +59,10 @@ console.dir(h1);
 document.querySelector('h2').innerHTML = '<i> Asim </i>' // '<i> Asim </i>
 document.querySelector('h2').innerHTML += '<sub> Timsina </sub>' // '<i> Asim </i><sub> Timsina </sub>'
 
+// 250. Attributes
+
+const firstLink = document.querySelector('a')
+firstLink.getAttribute('href')
+
+firstLink.setAttribute('title', 'Asimo')
+
