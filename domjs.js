@@ -25,5 +25,26 @@
 // }
 
 
-const sqimages = document.getElementsByClassName('square');
-console.log(sqimages)
+// const sqimages = document.getElementsByClassName('square');
+// console.log(sqimages)
+
+////////////////////////////////////////////
+//248. querySelector & querySelectorAll
+
+document.querySelector('p') // returns the first element that matches the selector
+document.querySelectorAll('p') // returns a NodeList of all the elements that match the selector
+
+document.querySelector('#banner') // returns the first element with the id banner
+document.querySelector('.paragraph') // returns the first element with the class paragraph
+document.querySelectorAll('.paragraph') // returns a NodeList of all the elements with the class paragraph
+
+
+console.log(document.querySelector("a[title='Java']"))
+console.log(document.querySelectorAll("p"))
+console.log(document.querySelectorAll("p a"))
+
+const links = document.querySelectorAll("p a")
+
+for (let each in links) {
+    console.log(each);
+}
