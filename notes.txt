@@ -128,3 +128,20 @@ alert('hello world'); -> pop up
 let id = prompt('enter your id'); -> pop up with input box
 
 parseInt("191hello") -> 191
+
+
+202. For .. of Loops
+203. For .. in Loops
+204. Nested Loops
+224. forEach Array Method -> SUPER USEFUL
+225. Map Array Method -> SUPER USEFUL
+226. Arrow Functions -> SUPER USEFUL
+229. setTimeout & setInterval
+230. Filter Array Method -> SUPER USEFUL
+231. Some/ Every Array Methods
+232. Reduce Array Method -> SUPER USEFUL
+236. Spread Operator  ... -> SUPER USEFUL
+239. Rest Parameters ... -> SUPER USEFUL
+240. Destructuring Arrays -> SUPER USEFUL
+
+
