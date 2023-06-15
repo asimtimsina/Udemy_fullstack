@@ -9,3 +9,10 @@ selects an element by its id
 
 const banner = document.getElementById('banner')
 console.log(banner)
+
+
+247. getElementsByTagName & className
+
+document.getElementsByTagName('p') // returns an HTMLCollection of all the elements with the tag name p
+document.getElementsByClassName('paragraph') // returns an HTMLCollection of all the elements with the class name paragraph
+document.getElementByClassName('paragraph')[0] // returns the first element with the class name paragraph
