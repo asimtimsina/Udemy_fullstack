@@ -52,17 +52,33 @@
 ///////////////////////////////
 // 249. innerHTML, textContent, & innerText
 
+// const h1 = document.querySelector('h1');
+// console.dir(h1);
+
+
+// document.querySelector('h2').innerHTML = '<i> Asim </i>' // '<i> Asim </i>
+// document.querySelector('h2').innerHTML += '<sub> Timsina </sub>' // '<i> Asim </i><sub> Timsina </sub>'
+
+// // 250. Attributes
+
+// const firstLink = document.querySelector('a')
+// firstLink.getAttribute('href')
+
+// firstLink.setAttribute('title', 'Asimo')
+
+
+//251. Changing Styles
+//style only contain inline styles
+//to access all the styles use window.getComputedStyle(h1);
+// window.getComputedStyle(h1);
+
 const h1 = document.querySelector('h1');
-console.dir(h1);
+h1.style.fontSize = '50px'
 
 
-document.querySelector('h2').innerHTML = '<i> Asim </i>' // '<i> Asim </i>
-document.querySelector('h2').innerHTML += '<sub> Timsina </sub>' // '<i> Asim </i><sub> Timsina </sub>'
+const links = document.querySelectorAll('a')
 
-// 250. Attributes
-
-const firstLink = document.querySelector('a')
-firstLink.getAttribute('href')
-
-firstLink.setAttribute('title', 'Asimo')
-
+for (each of links) {
+    each.style.color = "red";
+    each.style.textDecorationColor = "magenta";
+}
