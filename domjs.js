@@ -72,49 +72,84 @@
 //to access all the styles use window.getComputedStyle(h1);
 // window.getComputedStyle(h1);
 
-const h1 = document.querySelector('h1');
-h1.style.fontSize = '50px'
+// const h1 = document.querySelector('h1');
+// h1.style.fontSize = '50px'
 
 
-const links = document.querySelectorAll('a')
+// const links = document.querySelectorAll('a')
 
-for (each of links) {
-    each.style.color = "red";
-    each.style.textDecorationColor = "magenta";
-}
+// for (each of links) {
+//     each.style.color = "red";
+//     each.style.textDecorationColor = "magenta";
+// }
 
 // 252. ClassList
 
-const h2 = document.querySelector('h2')
-h2.class //undefined
-h2.getAttribute('class') //undefined
-h2.setAttribute('class', 'purple') // class='purple'
+// const h2 = document.querySelector('h2')
+// h2.class //undefined
+// h2.getAttribute('class') //undefined
+// h2.setAttribute('class', 'purple') // class='purple'
 
-h2.classList.add('purple') // adds purple
-h2.classList.add('pink') // adds pink
-h2.classList.remove('red') //removes red
-h2.classList.contains('pink') // true
-h2.classList.contains('red') // false
-h2.classList.toggle('red') // true
-h2.classList.toggle('red') // false
+// h2.classList.add('purple') // adds purple
+// h2.classList.add('pink') // adds pink
+// h2.classList.remove('red') //removes red
+// h2.classList.contains('pink') // true
+// h2.classList.contains('red') // false
+// h2.classList.toggle('red') // true
+// h2.classList.toggle('red') // false
 
 
 // 253. Traversing Parent/Child/Sibling
 
 //each element can only have one parent
-const firstbold = document.querySelector('b')
-firstbold.parentElement
-firstbold.parentElement.parentElement
+// const firstbold = document.querySelector('b')
+// firstbold.parentElement
+// firstbold.parentElement.parentElement
 
-const paragraph = firstbold.parentElement
-paragraph.children
-paragraph.childElementCount
-paragraph.children[0]
+// const paragraph = firstbold.parentElement
+// paragraph.children
+// paragraph.childElementCount
+// paragraph.children[0]
 
-const sqrImg = document.querySelector('.square')
+// const sqrImg = document.querySelector('.square')
 
-sqrImg.nextSibling // returns the text node 
-sqrImg.previousSibling // returns the text node
+// sqrImg.nextSibling // returns the text node
+// sqrImg.previousSibling // returns the text node
 
-sqrImg.previousElementSibling // returns the previous element
-sqrImg.nextElementSibling // returns the next element
+// sqrImg.previousElementSibling // returns the previous element
+// sqrImg.nextElementSibling // returns the next element
+
+
+// 254. Append & AppendChild
+// creating a new element or appending new elements to the DOMTokenList
+// append is more flexible
+
+const newImg = document.createElement('img')
+newImg.src = ' '
+document.body.appendChild(newImg)
+newImg.classList.add('square')
+
+const h3 = document.createElement('h3')
+h3.innerText = 'Creating new element'
+document.body.appendChild(h3)
+
+
+const p = document.createElement('p')
+paragraph.append('I am a new text!!!!!')
+paragraph.appendChild('I am a new text!!!!!')   // this will not work //appendChild can only add nodes not plain text
+paragraph.append('I am a newer text!!!!!', 'I am the newest!!!') // this will work // add multiple elements and strings to the DOM
+
+Prepend & insertAdjacentElement
+paragraph.prepend('Starting')
+paragraph.prepend('Starting', 'Second') // add multiple elements and strings to the DOM
+
+const h2 = document.createElement('h2')
+h2.append("Asim is the best")
+const h1 = document.querySelector('h1')
+h1.insertAdjacentElement('afterend', h2)
+
+where -> beforebegin, afterbegin, beforeend, afterend
+
+const h3 = document.createElement('h3')
+h3.innerText = 'I am a new H3'
+h1.after(h3)
