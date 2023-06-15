@@ -142,3 +142,21 @@ where -> beforebegin, afterbegin, beforeend, afterend
 const h3 = document.createElement('h3')
 h3.innerText = 'I am a new H3'
 h1.after(h3)
+
+
+
+255. removeChild & remove
+cannot remove the element itself, only the child elements
+so need to call the parent element first to delete the child element
+
+const firstli = document.querySelector('li')
+const parentul = firstli.parentElement
+parentul.removeChild(firstli)
+
+const b = document.querySelector('b')
+b.parentElement.removeChild(b) // this will work in a single line. no need to create a variable for the parent element
+
+
+remove() can be called directly on the element itself
+const img= document.querySelector('img')
+img.remove()

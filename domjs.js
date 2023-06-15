@@ -124,32 +124,48 @@
 // creating a new element or appending new elements to the DOMTokenList
 // append is more flexible
 
-const newImg = document.createElement('img')
-newImg.src = ' '
-document.body.appendChild(newImg)
-newImg.classList.add('square')
+// const newImg = document.createElement('img')
+// newImg.src = ' '
+// document.body.appendChild(newImg)
+// newImg.classList.add('square')
 
-const h3 = document.createElement('h3')
-h3.innerText = 'Creating new element'
-document.body.appendChild(h3)
+// const h3 = document.createElement('h3')
+// h3.innerText = 'Creating new element'
+// document.body.appendChild(h3)
 
 
-const p = document.createElement('p')
-paragraph.append('I am a new text!!!!!')
-paragraph.appendChild('I am a new text!!!!!')   // this will not work //appendChild can only add nodes not plain text
-paragraph.append('I am a newer text!!!!!', 'I am the newest!!!') // this will work // add multiple elements and strings to the DOM
+// const p = document.createElement('p')
+// paragraph.append('I am a new text!!!!!')
+// paragraph.appendChild('I am a new text!!!!!')   // this will not work //appendChild can only add nodes not plain text
+// paragraph.append('I am a newer text!!!!!', 'I am the newest!!!') // this will work // add multiple elements and strings to the DOM
 
-Prepend & insertAdjacentElement
-paragraph.prepend('Starting')
-paragraph.prepend('Starting', 'Second') // add multiple elements and strings to the DOM
+// Prepend & insertAdjacentElement
+// paragraph.prepend('Starting')
+// paragraph.prepend('Starting', 'Second') // add multiple elements and strings to the DOM
 
-const h2 = document.createElement('h2')
-h2.append("Asim is the best")
-const h1 = document.querySelector('h1')
-h1.insertAdjacentElement('afterend', h2)
+// const h2 = document.createElement('h2')
+// h2.append("Asim is the best")
+// const h1 = document.querySelector('h1')
+// h1.insertAdjacentElement('afterend', h2)
 
-where -> beforebegin, afterbegin, beforeend, afterend
+// where -> beforebegin, afterbegin, beforeend, afterend
 
-const h3 = document.createElement('h3')
-h3.innerText = 'I am a new H3'
-h1.after(h3)
+// const h3 = document.createElement('h3')
+// h3.innerText = 'I am a new H3'
+// h1.after(h3)
+
+// 255. removeChild & remove
+// cannot remove the element itself, only the child elements
+// so need to call the parent element first to delete the child element
+
+const firstli = document.querySelector('li')
+const parentul = firstli.parentElement
+parentul.removeChild(firstli)
+
+const b = document.querySelector('b')
+b.parentElement.removeChild(b) // this will work in a single line. no need to create a variable for the parent element
+
+
+remove() can be called directly on the element itself
+const img = document.querySelector('img')
+img.remove()
