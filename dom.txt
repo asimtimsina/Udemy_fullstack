@@ -1,3 +1,11 @@
 245. The Document Object
 
 console.dir(document) // shows all the properties and methods of the document object
+
+
+246. getElementById
+
+selects an element by its id
+
+const banner = document.getElementById('banner')
+console.log(banner)
