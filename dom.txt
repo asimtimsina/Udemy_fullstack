@@ -86,3 +86,27 @@ h2.classList.contains('pink') // true
 h2.classList.contains('red') // false
 h2.classList.toggle('red') // true
 h2.classList.toggle('red') // false
+
+
+
+253. Traversing Parent/Child/Sibling
+
+//each element can only have one parent
+const firstbold = document.querySelector('b')
+firstbold.parentElement
+firstbold.parentElement.parentElement
+
+const paragraph = firstbold.parentElement
+paragraph.children
+paragraph.childElementCount
+paragraph.children[0]
+
+const sqrImg = document.querySelector('.square')
+
+sqrImg.nextSibling // returns the text node 
+sqrImg.previousSibling // returns the text node
+
+sqrImg.previousElementSibling // returns the previous element
+sqrImg.nextElementSibling // returns the next element
+
+
