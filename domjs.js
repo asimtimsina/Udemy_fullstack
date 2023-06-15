@@ -166,6 +166,6 @@ const b = document.querySelector('b')
 b.parentElement.removeChild(b) // this will work in a single line. no need to create a variable for the parent element
 
 
-remove() can be called directly on the element itself
+remove() //can be called directly on the element itself
 const img = document.querySelector('img')
 img.remove()
