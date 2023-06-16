@@ -141,13 +141,34 @@ const textid = document.querySelector('#text')
 
 // 268. Input & Change Events
 
-const input = document.querySelector('input')
+// const input = document.querySelector('input')
 
 
-// input.addEventListener('change', (e) => {
-//     console.log("Changed") //only checks for check when the user unblurs the text box
+// // input.addEventListener('change', (e) => {
+// //     console.log("Changed") //only checks for check when the user unblurs the text box
+// // })
+
+// input.addEventListener('input', (e) => {
+//     console.log("Changed") //checks whenever there is change in the text box
 // })
 
-input.addEventListener('input', (e) => {
-    console.log("Changed") //checks whenever there is change in the text box
+
+// 269. Event Bubbling
+
+
+const section = document.querySelector('section')
+const para = document.querySelector('p')
+const button = document.querySelector('button')
+
+section.addEventListener('click', (e) => {
+    alert("Section Clicked")
+})
+
+para.addEventListener('click', (e) => {
+    alert("Paragraph Clicked")
+})
+
+button.addEventListener('click', (e) => {
+    e.stopPropagation() // stops the next event // event bubbler
+    alert("Button Clicked")
 })

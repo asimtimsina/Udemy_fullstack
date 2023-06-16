@@ -283,3 +283,6 @@ input.addEventListener('change', (e) => {
 input.addEventListener('input', (e) => {
     console.log("Changed") //checks whenever there is change in the text box
 })
+
+
+269. Event Bubbling
