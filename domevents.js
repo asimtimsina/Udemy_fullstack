@@ -93,13 +93,26 @@ const textid = document.querySelector('#text')
 // })
 
 
-textid.addEventListener('keydown', (event) => { // listens to keydown
-    console.log(event)
-    console.log(event.key) // key in the keyboard
-    console.log(event.code) //location of key in the keyboard
-})
+// textid.addEventListener('keydown', (event) => { // listens to keydown
+//     console.log(event)
+//     console.log(event.key) // key in the keyboard
+//     console.log(event.code) //location of key in the keyboard
+// })
 
 
-window.addEventListener('keydown', (e) => { //listens to the keyboard event anywhere in the document
-    console.log(e.key)
+// window.addEventListener('keydown', (e) => { //listens to the keyboard event anywhere in the document
+//     console.log(e.key)
+// })
+
+
+// 265. NEW VERSION: Form Events & PreventDefault
+
+// const shelterform = document.querySelector('#shelterform');
+// shelterform.addEventListener('submit', (e) => {
+//     console.log("Submitted!")
+// })
+
+shelterform.addEventListener('submit', (e) => {
+    e.preventDefault(); //prevents the default behavior // not to reload the page after submission
+    console.log("Submitted!")
 })
