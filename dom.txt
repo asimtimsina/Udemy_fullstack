@@ -215,3 +215,15 @@ btncolor.addEventListener('click', function () {
     const b = Math.floor(Math.random() * 255);
     document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
 })
+
+
+263. Events & The Keyword This
+Can use this keyword to refer to the element that the event is added to
+const btn = document.querySelector('#btn')
+btn.addEventListener('click', function () {
+    console.log(this) // this refers to the button element
+    this.style.backgroundColor = 'red'
+})
+
+
+264. Keyboard Events & Event Objects
