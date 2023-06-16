@@ -187,3 +187,19 @@ printing
 
 
 260. The Onclick Property
+const btn = document.querySelector('#btn')
+btn.onclick = function () {
+    alert('You Clicked Me!')
+}
+Similar functions like onclick -> hover, mouseover, mouseout, dblclick, childElementCount
+
+
+261. addEventListener
+// addEventListener allows multiple functions to add to a element whereas onclick doesn't.
+addEventListener takes two arguments, the event and the callback function. Also has optional parameters like once, capture, passive
+
+const btnV4 = document.querySelector("#btnV4")
+
+btnV4.addEventListener('click', function () {
+    alert("You clicked V4.")
+})
