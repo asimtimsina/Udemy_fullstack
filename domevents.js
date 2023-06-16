@@ -108,11 +108,32 @@ const textid = document.querySelector('#text')
 // 265. NEW VERSION: Form Events & PreventDefault
 
 // const shelterform = document.querySelector('#shelterform');
+// // shelterform.addEventListener('submit', (e) => {
+// //     console.log("Submitted!")
+// // })
+
 // shelterform.addEventListener('submit', (e) => {
+//     e.preventDefault(); //prevents the default behavior // not to reload the page after submission
 //     console.log("Submitted!")
 // })
 
+
+// 266. NEW VERSION: Practice With Form Events & PreventDefault
+
+const shelterform = document.querySelector('#shelterform');
+const catName = document.querySelector('#name');
+const list = document.querySelector('#cats');
+
+
 shelterform.addEventListener('submit', (e) => {
     e.preventDefault(); //prevents the default behavior // not to reload the page after submission
-    console.log("Submitted!")
+
+    console.log(catName.value) //prints the value in text to console
+
+    const newli = document.createElement('li');
+    newli.innerText = catName.value;
+    list.appendChild(newli)
+    catName.value = ""
+
 })
+

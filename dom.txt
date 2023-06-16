@@ -254,3 +254,19 @@ shelterform.addEventListener('submit', (e) => {
     e.preventDefault(); //prevents the default behavior // not to reload the page after submission
     console.log("Submitted!")
 })
+
+
+266. NEW VERSION: Practice With Form Events & PreventDefault
+
+shelterform.addEventListener('submit', (e) => {
+    e.preventDefault(); //prevents the default behavior // not to reload the page after submission
+
+    console.log(catName.value) //prints the value in text to console
+
+    const newli = document.createElement('li'); // create new li element
+    newli.innerText = catName.value;    // add the value to the li element
+    list.appendChild(newli) // append the li element to the ul element
+    catName.value = "" // clear the input field after submission
+
+
+})
