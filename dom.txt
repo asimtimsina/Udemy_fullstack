@@ -286,3 +286,14 @@ input.addEventListener('input', (e) => {
 
 
 269. Event Bubbling
+
+herierchry of the elements and Event
+
+button.addEventListener('click', (e) => {
+    e.stopPropagation() // stops the next event // event bubbler 
+    stopPropagation() // stops the event from bubbling up
+    alert("Button Clicked")
+})
+
+270. Event Delegation
+CHeck the video again
