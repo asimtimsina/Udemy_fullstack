@@ -184,4 +184,6 @@ printing
 259. Inline Events
     <button id="btn" onclick="alert('You Clicked Me!')">Click Me</button>
     <button id="btn" onclick="console.log('You Clicked Me!')">Click Me</button>
-    
+
+
+260. The Onclick Property
