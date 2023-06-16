@@ -267,6 +267,19 @@ shelterform.addEventListener('submit', (e) => {
     newli.innerText = catName.value;    // add the value to the li element
     list.appendChild(newli) // append the li element to the ul element
     catName.value = "" // clear the input field after submission
+})
 
 
+268. Input & Change Events
+
+change event is fired when the element loses focus after the change
+input event is fired whenever there is a change in the input field
+
+
+input.addEventListener('change', (e) => {
+     console.log("Changed") //only checks for check when the user unblurs the text box
+ })
+
+input.addEventListener('input', (e) => {
+    console.log("Changed") //checks whenever there is change in the text box
 })

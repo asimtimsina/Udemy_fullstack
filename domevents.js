@@ -120,20 +120,34 @@ const textid = document.querySelector('#text')
 
 // 266. NEW VERSION: Practice With Form Events & PreventDefault
 
-const shelterform = document.querySelector('#shelterform');
-const catName = document.querySelector('#name');
-const list = document.querySelector('#cats');
+// const shelterform = document.querySelector('#shelterform');
+// const catName = document.querySelector('#name');
+// const list = document.querySelector('#cats');
 
 
-shelterform.addEventListener('submit', (e) => {
-    e.preventDefault(); //prevents the default behavior // not to reload the page after submission
+// shelterform.addEventListener('submit', (e) => {
+//     e.preventDefault(); //prevents the default behavior // not to reload the page after submission
 
-    console.log(catName.value) //prints the value in text to console
+//     console.log(catName.value) //prints the value in text to console
 
-    const newli = document.createElement('li');
-    newli.innerText = catName.value;
-    list.appendChild(newli)
-    catName.value = ""
+//     const newli = document.createElement('li');
+//     newli.innerText = catName.value;
+//     list.appendChild(newli)
+//     catName.value = ""
 
+// })
+
+
+
+// 268. Input & Change Events
+
+const input = document.querySelector('input')
+
+
+// input.addEventListener('change', (e) => {
+//     console.log("Changed") //only checks for check when the user unblurs the text box
+// })
+
+input.addEventListener('input', (e) => {
+    console.log("Changed") //checks whenever there is change in the text box
 })
-
