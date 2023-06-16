@@ -65,19 +65,41 @@
 
 // 263. Events & The Keyword This
 
-const btns = document.querySelectorAll('#btn')
+// const btns = document.querySelectorAll('#btn')
 
-function colorize() {
+// function colorize() {
 
-    const r = Math.floor(Math.random() * 255);
-    const g = Math.floor(Math.random() * 255);
-    const b = Math.floor(Math.random() * 255);
-    this.style.backgroundColor = `rgb(${r},${g},${b})`
-}
+//     const r = Math.floor(Math.random() * 255);
+//     const g = Math.floor(Math.random() * 255);
+//     const b = Math.floor(Math.random() * 255);
+//     this.style.backgroundColor = `rgb(${r},${g},${b})`
+// }
 
-for (let btn of btns) {
-    btn.addEventListener('click', colorize);
-}
+// for (let btn of btns) {
+//     btn.addEventListener('click', colorize);
+// }
 
 
 // 264. Keyboard Events & Event Objects
+
+const textid = document.querySelector('#text')
+
+// textid.addEventListener('keydown', () => { // listens to keydown
+//     console.log('Keydown')
+// })
+
+// textid.addEventListener('keyup', () => { //listens to keyup
+//     console.log('keyup')
+// })
+
+
+textid.addEventListener('keydown', (event) => { // listens to keydown
+    console.log(event)
+    console.log(event.key) // key in the keyboard
+    console.log(event.code) //location of key in the keyboard
+})
+
+
+window.addEventListener('keydown', (e) => { //listens to the keyboard event anywhere in the document
+    console.log(e.key)
+})

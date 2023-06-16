@@ -227,3 +227,15 @@ btn.addEventListener('click', function () {
 
 
 264. Keyboard Events & Event Objects
+const textid = document.querySelector('#text')
+
+textid.addEventListener('keydown', (event) => { // listens to keydown
+    console.log(event)
+    console.log(event.key) // key in the keyboard
+    console.log(event.code) //location of key in the keyboard
+})
+
+
+window.addEventListener('keydown', (e) => { //listens to the keyboard event anywhere in the document
+    console.log(e.key)
+})
