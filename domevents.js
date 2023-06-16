@@ -22,6 +22,7 @@ document.querySelector('h1').onclick = () => {
 }
 
 // 261. addEventListener
+// addEventListener allows multiple functions to add to a element whereas onclick doesn't.
 
 const btnV4 = document.querySelector("#btnV4")
 
@@ -43,4 +44,20 @@ btnV5.addEventListener('mouseup', () => {
     alert("You clicked V5.")
 })
 
-// addEventListener allows multiple functions to add to a element whereas onclick doesn't.
+
+
+// 262. Random Color Exercise
+
+const btncolor = document.querySelector("#btncolor");
+
+btncolor.addEventListener('click', function () {
+    // document.body.style.backgroundColor = 'olive'
+    document.body.style.backgroundColor = randomFunction();
+})
+
+const randomFunction = () => {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    return `rgb(${r},${g},${b})`
+}

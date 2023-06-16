@@ -203,3 +203,15 @@ const btnV4 = document.querySelector("#btnV4")
 btnV4.addEventListener('click', function () {
     alert("You clicked V4.")
 })
+
+
+262. Random Color Exercise
+
+const btncolor = document.querySelector("#btncolor");
+
+btncolor.addEventListener('click', function () {
+    const r = Math.floor(Math.random() * 255);
+    const g = Math.floor(Math.random() * 255);
+    const b = Math.floor(Math.random() * 255);
+    document.body.style.backgroundColor = `rgb(${r},${g},${b})`;
+})
