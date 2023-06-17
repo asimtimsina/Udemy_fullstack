@@ -43,28 +43,47 @@ const dog = {
 
 // 297. Using The Fetch API
 
-fetch("https://swapi.dev/api/people/1")
-    .then(res => {
-        console.log('Resolved')
-        console.log(res)
-        return res.json()
-    })
-    .then(data => {
-        console.log('JSON done', data)
+// fetch("https://swapi.dev/api/people/1")
+//     .then(res => {
+//         console.log('Resolved')
+//         console.log(res)
+//         return res.json()
+//     })
+//     .then(data => {
+//         console.log('JSON done', data)
+//     })
+//     .catch(err => {
+//         console.log('Error')
+//         console.log(err)
+//     })
+
+
+// const loadStarwarsPeople = async () => {
+//     const res = await fetch("https://swapi.dev/api/people/1");
+//     data = await res.json()
+//     console.log(data)
+
+// }
+
+// loadStarwarsPeople()
+
+
+// 298. Introducing Axios
+
+axios.get('https://swapi.dev/api/people/1')
+    .then(response => {
+        console.log(response)
     })
     .catch(err => {
-        console.log('Error')
+        console.log("Error")
         console.log(err)
     })
 
-
-const loadStarwarsPeople = async () => {
-    const res = await fetch("https://swapi.dev/api/people/1");
-    data = await res.json()
-    console.log(data)
+//no need to convert to json
+const getStarWarsPerson = async (id) => {
+    const res = await axios.get(`https://swapi.dev/api/people/${id}`)
+    console.log(res.data)
 
 }
 
-loadStarwarsPeople()
-
-
+getStarWarsPerson(3)

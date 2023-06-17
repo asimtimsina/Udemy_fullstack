@@ -106,3 +106,37 @@ const loadStarwarsPeople = async () => {
     data = await res.json()
     console.log(data)
 }
+
+
+
+298. Introducing Axios
+Axios is a library that makes it easy to make HTTP requests to external resources
+Axios is a JavaScript library
+Axios is a Promise-based library
+Axios is a modern replacement for XMLHttpRequest (XHR)
+Axios is not built into the global scope
+Axios is not built into the JavaScript language
+Axios is not built into web browsers
+
+https://github.com/axios/axios/blob/v1.x/README.md#installing
+<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+
+axios.get('https://swapi.dev/api/people/1')
+    .then(response => {
+        console.log(response)
+    })
+    .catch(err => {
+        console.log("Error")
+        console.log(err)
+    })
+
+//no need to convert to json
+
+use await and async to make the code more readable
+const getStarWarsPerson = async (id) => {
+    const res = await axios.get(`https://swapi.dev/api/people/${id}`)
+    console.log(res.data)
+
+}
+getStarWarsPerson(3)
