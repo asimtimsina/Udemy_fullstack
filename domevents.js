@@ -156,19 +156,49 @@ const textid = document.querySelector('#text')
 // 269. Event Bubbling
 
 
-const section = document.querySelector('section')
-const para = document.querySelector('p')
-const button = document.querySelector('button')
+// const section = document.querySelector('section')
+// const para = document.querySelector('p')
+// const button = document.querySelector('button')
 
-section.addEventListener('click', (e) => {
-    alert("Section Clicked")
+// section.addEventListener('click', (e) => {
+//     alert("Section Clicked")
+// })
+
+// para.addEventListener('click', (e) => {
+//     alert("Paragraph Clicked")
+// })
+
+// button.addEventListener('click', (e) => {
+//     e.stopPropagation() // stops the next event // event bubbler
+//     alert("Button Clicked")
+// })
+
+
+// 270. Event Delegation
+
+
+const shelterform = document.querySelector('#shelterform');
+const catName = document.querySelector('#name');
+const list = document.querySelector('#cats');
+
+
+shelterform.addEventListener('submit', (e) => {
+    e.preventDefault(); //prevents the default behavior // not to reload the page after submission
+
+    console.log(catName.value) //prints the value in text to console
+
+    const newli = document.createElement('li');
+    newli.innerText = catName.value;
+    list.appendChild(newli)
+    catName.value = ""
+
 })
 
-para.addEventListener('click', (e) => {
-    alert("Paragraph Clicked")
-})
 
-button.addEventListener('click', (e) => {
-    e.stopPropagation() // stops the next event // event bubbler
-    alert("Button Clicked")
-})
+const lis = document.querySelectorAll('li');
+for (let li of lis) {
+    li.addEventListener('click', (e) => {
+        e.target.remove();
+    })
+}
+

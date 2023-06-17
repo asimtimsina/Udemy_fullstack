@@ -10,13 +10,19 @@
 
 
 <body>
-    <!-- 269. Event Bubbling -->
 
-    <section>
-        <p>I am a paragraph.
-            <button> CLick me</button>
-        </p>
-    </section>
+    <!-- 270. Event Delegation -->
+
+
+    <h1>My Form</h1>
+    <form action="/shelter" id="shelterform">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <h2>Available Cats</h2>
+    <ul id="cats"> </ul>
 
     <script src="domevents.js"></script>
 </body>
