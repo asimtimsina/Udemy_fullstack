@@ -40,35 +40,60 @@
 
 // 281. Demo: fakeRequest Using Promises
 
-const request = fakeRequestPromise('yelp.com/api/coffee');
+// const request = fakeRequestPromise('yelp.com/api/coffee');
 
-request.then(() => {
-    //when request is sucess
-    //promise resolved
-    console.log("Sucess")
-})
+// request.then(() => {
+//     //when request is sucess
+//     //promise resolved
+//     console.log("Sucess")
+// })
 
-request.catach(() => {
-    //when request is unavailable
-    //promise rejected 
-    console.log("Error")
-})
+// request.catach(() => {
+//     //when request is unavailable
+//     //promise rejected 
+//     console.log("Error")
+// })
 
 
 // 282. The Magic Of Promises
 
-fakeRequestPromise('yelp.com/api/coffee/1')
-    .then(() => {
-        console.log("It worked Page(1)")
-        return fakeRequestPromise('yelp.com/api/coffee/2')
+// fakeRequestPromise('yelp.com/api/coffee/1')
+//     .then(() => {
+//         console.log("It worked Page(1)")
+//         return fakeRequestPromise('yelp.com/api/coffee/2')
+//     })
+//     .then(() => {
+//         console.log("It worked Page(2)")
+//         return fakeRequestPromise('yelp.com/api/coffee/3')
+//     })
+//     .then(() => {
+//         console.log("It worked Page(1)")
+//     })
+//     .catch(() => {
+//         console.log("Oh no, A request failed")
+//     })
+
+
+// 283. Creating Our Own Promises
+
+const fakeRequest = (url) => {
+    return new Promise((resolve, reject) => {
+        const rand = Math.random();
+
+        if (rand < 0.7) {
+            resolve('Your fake data here');
+        }
+        reject('Request error');
+
     })
-    .then(() => {
-        console.log("It worked Page(2)")
-        return fakeRequestPromise('yelp.com/api/coffee/3')
+}
+
+fakeRequest('/dogs/1')
+    .then((Data) => {
+        console.log("Done with Request.")
+        console.log(Data)
     })
-    .then(() => {
-        console.log("It worked Page(1)")
-    })
-    .catch(() => {
-        console.log("Oh no, A request failed")
+    .catch((Err) => {
+        console.log("Error with Request.")
+        console.log(Err)
     })

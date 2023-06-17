@@ -36,3 +36,35 @@ Callbacks you attach to a promise with then() will be called when the promise is
 
 
 282. The Magic Of Promises
+fakeRequestPromise('yelp.com/api/coffee/1')
+    .then(() => {
+        console.log("It worked Page(1)")
+        return fakeRequestPromise('yelp.com/api/coffee/2')
+    })
+    .then(() => {
+        console.log("It worked Page(2)")
+        return fakeRequestPromise('yelp.com/api/coffee/3')
+    })
+    .then(() => {
+        console.log("It worked Page(1)")
+    })
+    .catch(() => {
+        console.log("Oh no, A request failed")
+    })
+
+
+283. Creating Our Own Promises
+
+new Promise((resolve, reject) => {
+    resolve();
+})
+
+
+fakeRequest('/dogs/1')
+    .then((data) => {
+        console.log("Done with request")
+        console.log("data is:", data)
+    })
+    .catch((err) => {
+        console.log("Oh no!", err)
+    })
