@@ -17,3 +17,19 @@ JS is going to hand out some task to the browser, and the browser is going to ha
 //         //if fails
 //     }
 // })
+
+
+
+280. Demo: fakeRequest Using Callbacks
+
+
+281. Demo: fakeRequest Using Promises
+
+Promise is an object representing the eventual completion or failure of an asynchronous operation
+A promise is a returned object to which you attach callbacks, instead of passing callbacks into a function
+A promise is in one of these states: pending, fulfilled, rejected
+Callbacks you attach to a promise with then() will be called when the promise is fulfilled or rejected
+
+
+.then() -> if the promise is fulfilled, then do this
+.catch() -> if the promise is rejected, then do this
