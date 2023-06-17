@@ -44,3 +44,17 @@ Query strings start with a question mark (?)
 Query strings are made up of key-value pairs
 Query strings are separated by an ampersand (&)
 Query strings are formatted like this: ?key1=value1&key2=value2
+
+
+
+295. HTTP Headers
+HTTP headers are used to send data to the server as part of a GET request
+HTTP headers are added to the request
+HTTP headers are made up of key-value pairs
+HTTP headers are separated by a colon (:)
+HTTP headers are formatted like this: key1: value1
+
+https://icanhazdadjoke.com/
+Normally this endpoint returns HTML
+In order to get the JSON formatted data, Goto Headers tab
+Accept: application/json
