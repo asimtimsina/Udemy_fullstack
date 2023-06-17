@@ -7,3 +7,13 @@ Single JS thread is running in the browser at a time
 
 JS is going to hand out some task to the browser, and the browser is going to handle it
 
+279. Callback Hell :(
+
+    
+// searchMoviesAPI('amadeus', () => {
+//     savetomyDB(movies, () => {
+//         //if works // success
+//     }), () => {
+//         //if fails
+//     }
+// })
