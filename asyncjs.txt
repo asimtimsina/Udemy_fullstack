@@ -68,3 +68,18 @@ fakeRequest('/dogs/1')
     .catch((err) => {
         console.log("Oh no!", err)
     })
+
+
+284. The Async Keyword
+Async functions always return a promise
+If the function returns a value, the promise will be resolved with that value
+If the function throws an exception, the promise will be rejected
+
+const hi = async () => {
+    return 'Hi Hi HI'
+}
+
+async function hello() {
+    //if throw is used then the promise is rejected. Otherwise resolved
+    throw "Oh No."
+}

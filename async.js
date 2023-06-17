@@ -76,24 +76,59 @@
 
 // 283. Creating Our Own Promises
 
-const fakeRequest = (url) => {
-    return new Promise((resolve, reject) => {
-        const rand = Math.random();
+// const fakeRequest = (url) => {
+//     return new Promise((resolve, reject) => {
+//         const rand = Math.random();
 
-        if (rand < 0.7) {
-            resolve('Your fake data here');
-        }
-        reject('Request error');
+//         if (rand < 0.7) {
+//             resolve('Your fake data here');
+//         }
+//         reject('Request error');
 
-    })
+//     })
+// }
+
+// fakeRequest('/dogs/1')
+//     .then((Data) => {
+//         console.log("Done with Request.")
+//         console.log(Data)
+//     })
+//     .catch((Err) => {
+//         console.log("Error with Request.")
+//         console.log(Err)
+//     })
+
+
+// 284. The Async Keyword
+
+
+const hi = async () => {
+    return 'Hi Hi HI'
 }
 
-fakeRequest('/dogs/1')
-    .then((Data) => {
-        console.log("Done with Request.")
-        console.log(Data)
+hi().then((data) => {
+    console.log("data returned is ", data);
+})
+
+async function hello() {
+    //if throw is used then the promise is rejected. Otherwise resolved
+    throw "Oh No."
+}
+hello()
+
+const login = async (username, password) => {
+    if (!username || !password) throw 'Missing Credentials'
+
+    if (password === 'Asimo') return 'Welcome!'
+}
+
+
+login('Yo', 'Asimo')
+    .then((msg) => {
+        console.log('Logged in')
+        console.log(msg)
     })
-    .catch((Err) => {
-        console.log("Error with Request.")
-        console.log(Err)
-    })
+    .catch((msg) => {
+        console.log('Oh no')
+        console.log(msg)
+    }) 
