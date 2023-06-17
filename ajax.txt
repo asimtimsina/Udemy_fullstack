@@ -1,0 +1,15 @@
+AJAX -> Asynchronous JavaScript and XML
+AJAJ -> Asynchronous JavaScript and JSON
+JSON -> JavaScript Object Notation
+Key valuepairs with quotes around the keys and values
+
+
+290. WTF is JSON
+Json.parse() -> converts JSON to JS object
+Json.stringify() -> converts JS object to JSON
+
+291. Using Hoppscotch (or Postman)
+Hoppscotch -> https://hoppscotch.io/
+Postman -> https://www.postman.com/
+
+
