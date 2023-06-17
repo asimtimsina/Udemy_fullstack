@@ -53,3 +53,22 @@ request.catach(() => {
     //promise rejected 
     console.log("Error")
 })
+
+
+// 282. The Magic Of Promises
+
+fakeRequestPromise('yelp.com/api/coffee/1')
+    .then(() => {
+        console.log("It worked Page(1)")
+        return fakeRequestPromise('yelp.com/api/coffee/2')
+    })
+    .then(() => {
+        console.log("It worked Page(2)")
+        return fakeRequestPromise('yelp.com/api/coffee/3')
+    })
+    .then(() => {
+        console.log("It worked Page(1)")
+    })
+    .catch(() => {
+        console.log("Oh no, A request failed")
+    })

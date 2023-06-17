@@ -33,3 +33,6 @@ Callbacks you attach to a promise with then() will be called when the promise is
 
 .then() -> if the promise is fulfilled, then do this
 .catch() -> if the promise is rejected, then do this
+
+
+282. The Magic Of Promises
