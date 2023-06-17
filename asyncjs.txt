@@ -1,1 +1,9 @@
 277. The Call Stack
+    // 277. The Call Stack -> LIFO
+
+
+278. WebAPIs & Single Threaded
+Single JS thread is running in the browser at a time
+
+JS is going to hand out some task to the browser, and the browser is going to handle it
+
