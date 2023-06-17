@@ -22,20 +22,49 @@ const dog = {
 // 296. Making XHRs
 
 
-const req = new XMLHttpRequest();
+// const req = new XMLHttpRequest();
 
-req.onload = function () {
-    console.log("Loaded")
-    console.log(this.responseText)
-    const data = JSON.parse(this.responseText)
-    console.log('name:', data.name)
+// req.onload = function () {
+//     console.log("Loaded")
+//     console.log(this.responseText)
+//     const data = JSON.parse(this.responseText)
+//     console.log('name:', data.name)
+// }
+
+// req.onerror = function () {
+//     console.log("Error")
+//     console.log(this)
+// }
+
+// req.open("GET", "https://swapi.dev/api/people/1");
+// req.send();
+
+
+
+// 297. Using The Fetch API
+
+fetch("https://swapi.dev/api/people/1")
+    .then(res => {
+        console.log('Resolved')
+        console.log(res)
+        return res.json()
+    })
+    .then(data => {
+        console.log('JSON done', data)
+    })
+    .catch(err => {
+        console.log('Error')
+        console.log(err)
+    })
+
+
+const loadStarwarsPeople = async () => {
+    const res = await fetch("https://swapi.dev/api/people/1");
+    data = await res.json()
+    console.log(data)
+
 }
 
-req.onerror = function () {
-    console.log("Error")
-    console.log(this)
-}
+loadStarwarsPeople()
 
-req.open("GET", "https://swapi.dev/api/people/1");
-req.send();
 

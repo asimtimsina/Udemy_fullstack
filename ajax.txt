@@ -72,3 +72,37 @@ req.onload = function (){} // onload is an event handler
 req.onerror = function () {} // onerror is an error handler
 req.open("GET", "url") // open() initializes a newly-created request
 req.send() // send() sends the request to the server
+
+
+
+297. Using The Fetch API
+The Fetch API is a modern replacement for XMLHttpRequest (XHR)
+The Fetch API is built into the global scope
+The Fetch API uses Promises
+
+fetch("url")
+fetch returns as soon as it gets the headers so it might not have all the contents 
+so need to call res.json() to get the data which also returns the Promises.
+fetch("url").then((res) => res.json()).then((data) => console.log(data))
+
+fetch("https://swapi.dev/api/people/1")
+    .then(res => {
+        console.log('Resolved')
+        console.log(res)
+        return res.json()
+    })
+    .then(data => {
+        console.log('JSON done', data)
+    })
+    .catch(err => {
+        console.log('Error')
+        console.log(err)
+    })
+
+use await and async to make the code more readable
+
+const loadStarwarsPeople = async () => {
+    const res = await fetch("https://swapi.dev/api/people/1");
+    data = await res.json()
+    console.log(data)
+}
