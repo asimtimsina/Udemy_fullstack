@@ -148,3 +148,6 @@ async function login_info() {
 }
 
 login_info();
+
+
+// 286. Handling Errors In Async Functions
