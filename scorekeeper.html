@@ -6,15 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Keeper</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> -->
+
+    <style>
+        .winner {
+            color: green;
+        }
+
+        .loser {
+            color: red;
+        }
+    </style>
 </head>
 
 
 <body>
     <!-- 272. Score Keeper Pt. 1 -->
     <h1><span id="score1display">0</span> to <span id="score2display">0</span> </h1>
+
+    <!-- 273. Score Keeper Pt. 2 -->
+
+    <select id="playto" value='' name="">
+
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+        <option value='6'>6</option>
+        <option value='7'>7</option>
+        <option value='8'>8</option>
+        <option value='9'>9</option>
+        <option value='10'>10</option>
+        <option value='11'>11</option>
+        <option value='12'>12</option>
+    </select>
+
     <button id="button1">+1 Player One</button>
     <button id="button2">+1 Player Two</button>
     <button id="reset">Reset </button>
+
+
 
 
     <script src="scorekeeper.js"></script>
