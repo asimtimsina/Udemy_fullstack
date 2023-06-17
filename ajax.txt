@@ -58,3 +58,17 @@ https://icanhazdadjoke.com/
 Normally this endpoint returns HTML
 In order to get the JSON formatted data, Goto Headers tab
 Accept: application/json
+
+
+296. Making XHRs
+XMLHttpRequest (XHR) objects are used to interact with servers
+You can retrieve data from a URL without having to do a full page refresh
+This enables a more responsive user experience
+You can retrieve data in a background process without affecting the display and behavior of the existing page
+You can send data to a server in the background without affecting the display and behavior of the existing page
+
+new XMLHttpRequest(); // creates a new XHR object
+req.onload = function (){} // onload is an event handler
+req.onerror = function () {} // onerror is an error handler
+req.open("GET", "url") // open() initializes a newly-created request
+req.send() // send() sends the request to the server
