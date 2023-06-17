@@ -131,4 +131,20 @@ login('Yo', 'Asimo')
     .catch((msg) => {
         console.log('Oh no')
         console.log(msg)
-    }) 
+    })
+
+
+// 285. The Await Keyword
+
+// The await keyword can only be used inside of functions declared with async
+// await will pause the execution of the function, waiting for a promise to be resolved
+// await keyword can be used to assign the resolved value of a promise to a variable
+
+
+async function login_info() {
+    await login('yo', 'Asimo')
+    console.log('Login Process Complete')
+
+}
+
+login_info();
