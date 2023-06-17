@@ -13,3 +13,26 @@ Hoppscotch -> https://hoppscotch.io/
 Postman -> https://www.postman.com/
 
 
+
+
+292. HTTP Verbs
+GET -> Retrieve data from a server
+POST -> Send data to a server
+PUT -> Update data already on a server
+DELETE -> Delete data on a server
+
+Informational responses (100 – 199)
+Successful responses (200 – 299)
+Redirection messages (300 – 399)
+Client error responses (400 – 499)
+Server error responses (500 – 599)
+
+200 OK
+204 No Content
+301 Moved Permanently
+305 Use Proxy 
+400 Bad Request
+401 Unauthorized
+402 Payment Required
+403 Forbidden
+404 Not Found
