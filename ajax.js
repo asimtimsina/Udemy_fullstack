@@ -70,20 +70,49 @@ const dog = {
 
 // 298. Introducing Axios
 
-axios.get('https://swapi.dev/api/people/1')
-    .then(response => {
-        console.log(response)
-    })
-    .catch(err => {
-        console.log("Error")
-        console.log(err)
-    })
+// axios.get('https://swapi.dev/api/people/1')
+//     .then(response => {
+//         console.log(response)
+//     })
+//     .catch(err => {
+//         console.log("Error")
+//         console.log(err)
+//     })
 
-//no need to convert to json
-const getStarWarsPerson = async (id) => {
-    const res = await axios.get(`https://swapi.dev/api/people/${id}`)
-    console.log(res.data)
+// //no need to convert to json
+// const getStarWarsPerson = async (id) => {
+//     const res = await axios.get(`https://swapi.dev/api/people/${id}`)
+//     console.log(res.data)
 
+// }
+
+// getStarWarsPerson(3)
+
+
+
+// 299. Setting Headers With Axios
+
+const getDadJokes = async () => {
+    const headers = {
+        headers: {
+            Accept: 'application/json'
+        }
+    }
+    const joke = await axios.get('https://icanhazdadjoke.com/', headers)
+    console.log(joke.data.joke)
+    return joke.data.joke
 }
 
-getStarWarsPerson(3)
+
+const jokesBtn = document.querySelector('#jokeBtn')
+const jokesul = document.querySelector('#jokes')
+
+jokesBtn.addEventListener('click', async () => {
+    let joke = await getDadJokes();
+    const newli = document.createElement('li')
+    newli.innerText = joke
+    jokesul.appendChild(newli)
+})
+
+
+getDadJokes()

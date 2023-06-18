@@ -140,3 +140,13 @@ const getStarWarsPerson = async (id) => {
 
 }
 getStarWarsPerson(3)
+
+
+
+299. Setting Headers With Axios
+Axios is a library that makes it easy to make HTTP requests to external resources
+
+const config = { headers: { Accept: 'application/json' } }
+axios.get('api_url',config)
+
+
