@@ -92,27 +92,62 @@ const dog = {
 
 // 299. Setting Headers With Axios
 
-const getDadJokes = async () => {
-    const headers = {
-        headers: {
-            Accept: 'application/json'
-        }
-    }
-    const joke = await axios.get('https://icanhazdadjoke.com/', headers)
-    console.log(joke.data.joke)
-    return joke.data.joke
-}
+// const getDadJokes = async () => {
+//     const headers = {
+//         headers: {
+//             Accept: 'application/json'
+//         }
+//     }
+//     const joke = await axios.get('https://icanhazdadjoke.com/', headers)
+//     console.log(joke.data.joke)
+//     return joke.data.joke
+// }
 
 
-const jokesBtn = document.querySelector('#jokeBtn')
-const jokesul = document.querySelector('#jokes')
+// const jokesBtn = document.querySelector('#jokeBtn')
+// const jokesul = document.querySelector('#jokes')
 
-jokesBtn.addEventListener('click', async () => {
-    let joke = await getDadJokes();
-    const newli = document.createElement('li')
-    newli.innerText = joke
-    jokesul.appendChild(newli)
+// jokesBtn.addEventListener('click', async () => {
+//     let joke = await getDadJokes();
+//     const newli = document.createElement('li')
+//     newli.innerText = joke
+//     jokesul.appendChild(newli)
+// })
+
+
+// getDadJokes()
+
+
+// 300. TV Show Search App
+
+
+const link = 'https://api.tvmaze.com/search/shows?'
+
+const form = document.querySelector('form')
+console.log(form.elements.query.value)
+const photos = document.querySelector('#photos')
+
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    console.log(form.elements.query.value)
+    photos.innerHTML = ''
+    const searchData = form.elements.query.value
+    let params = { params: { q: searchData } }
+    let res = await axios.get(link, params)
+    console.log(res.data)
+    updatePhotos(res.data)
+    form.elements.query.value = ''
 })
 
 
-getDadJokes()
+let updatePhotos = (datas) => {
+    for (let each of datas) {
+        // console.log(each.show.image.medium)
+        let imgsrc = each.show.image.medium
+        const newimg = document.createElement('img')
+        newimg.src = imgsrc
+        photos.appendChild(newimg)
+    }
+
+}
