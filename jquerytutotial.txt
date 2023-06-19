@@ -10,3 +10,30 @@ Put every jQuery command in document ready function so that it will be executed 
    $("button").click(function () {
         $("h1").hide();
     })
+
+2. jQuery Events
+
+$(function(){
+    $("p").click(function(){
+        console.log("A paragraph was clicked.");
+    })
+})
+
+dblclick
+mouseenter
+mouseleave
+mousedown
+mouseup
+hover -> takes two functions as arguments, first is for mouseenter and second is for mouseleave
+
+form events
+focus
+blur
+change
+select
+
+remove a event handler
+$("p").off("click");
+
+running event only once
+$("div").one("click", function () { });
