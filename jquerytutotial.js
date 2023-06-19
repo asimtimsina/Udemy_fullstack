@@ -76,18 +76,35 @@
 ////////////////////////////////////////
 // 3. jQuery Effects
 
-$("h1").slideUp(2000);
-$("h1").slideDown(1000);
+// $("h1").slideUp(2000);
+// $("h1").slideDown(1000);
 
 
-$("button").on("click", function () {
-    $("button").slideUp(5000, function () {
-        $(this).remove();
-    });
-});
+// $("button").on("click", function () {
+//     $("button").slideUp(5000, function () {
+//         $(this).remove();
+//     });
+// });
 
-$("h1").on("click", function () {
-    $("button").stop();
-});
+// $("h1").on("click", function () {
+//     $("button").stop();
+// });
 
-$("div").fadeOut(2000).delay(2000).fadeIn(2000);
+// $("div").fadeOut(2000).delay(2000).fadeIn(2000);
+
+
+///////////////////////////////////////////////////
+// 4. jQuery Animations
+
+$("#go").click(function () {
+
+    $('#block').animate({
+        opacity: 0.5,
+        marginLeft: "+=50"
+    },
+        3000,
+        function () {
+            $(this).after("<div>Animation Complete </div>   ")
+        })
+
+})
