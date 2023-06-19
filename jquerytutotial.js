@@ -146,3 +146,13 @@ $("#target")
     .prepend("Hi in Child")
     .before("Hi in Sibling")
     .after("<div>Bye in Sibling </div>", "<div>New Sibling after target</div>")
+
+
+$("#target").css("backgroundColor")
+$("#target").css("backgroundColor", "white")
+$("#target").css({
+    fontSize: "50px",
+    color: "pink"
+})
+
+$("#target").hasClass('#big') //returns false

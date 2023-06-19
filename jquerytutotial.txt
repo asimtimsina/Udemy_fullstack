@@ -134,3 +134,23 @@ $("#btn1").click(function () {
 
 
 can add multiple content at once by passing in multiple arguments
+
+
+7. Changing CSS and classes
+
+.css() //get or set css properties
+.addClass() //add a class to the selection
+.removeClass() //remove a class from the selection
+.toggleClass() //toggle between adding and removing a class from the selection
+.hasClass() //check if an element has a specific class
+
+$("#btn").click(function () {
+    $("#newpara").css("color", "red")
+})
+
+.css() can also add multiple css properties at once by passing in an object
+$("#target").css({
+    fontSize: "50px",
+    color: "pink"
+})
+
