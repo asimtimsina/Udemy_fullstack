@@ -84,3 +84,37 @@ $("div").fadeOut(2000).delay(2000).fadeIn(2000);
 
 .animate(properties [, duration] [, easing] [, complete])
 .animate(properties [, options])
+
+
+5. Manupulating the DOM
+//get and set with http, text, val, and attr 
+
+.text()  //get the text of all elements in the selection
+.html() //get the html of the first element in the selection
+.val() //get or set the value of the input field
+.attr([options]) //get the value of the first element in the selection
+
+
+$("#btn").click(function () {
+    console.log($("#newpara").text())
+})
+
+$("#btn1").click(function () {
+    console.log($("#newpara").html())
+})
+
+$("#btn2").click(function () { //set content
+    $("#newpara").text("WOW new Text")
+})
+
+$("#btn").click(function () {
+    console.log($("#link").attr('href'))
+})
+
+$("#btn").click(function () {
+    console.log($("#testinput").val())
+})
+
+$("#btn1").click(function () {
+    $("#testinput").val('Asim Timsina')
+})

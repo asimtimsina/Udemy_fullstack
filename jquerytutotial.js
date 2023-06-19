@@ -96,15 +96,43 @@
 ///////////////////////////////////////////////////
 // 4. jQuery Animations
 
-$("#go").click(function () {
+// $("#go").click(function () {
 
-    $('#block').animate({
-        opacity: 0.5,
-        marginLeft: "+=50"
-    },
-        3000,
-        function () {
-            $(this).after("<div>Animation Complete </div>   ")
-        })
+//     $('#block').animate({
+//         opacity: 0.5,
+//         marginLeft: "+=50"
+//     },
+//         3000,
+//         function () {
+//             $(this).after("<div>Animation Complete </div>   ")
+//         })
 
+// })
+
+//////////////////////////////////
+// 5. Manupulating the DOM
+//get and set with http, text, val, and attr
+
+$("#btn").click(function () {
+    console.log($("#newpara").text())
+})
+
+$("#btn1").click(function () {
+    console.log($("#newpara").html())
+})
+
+$("#btn2").click(function () { //set content
+    $("#newpara").text("WOW new Text")
+})
+
+$("#btn").click(function () {
+    console.log($("#link").attr('href'))
+})
+
+$("#btn").click(function () {
+    console.log($("#testinput").val())
+})
+
+$("#btn1").click(function () {
+    $("#testinput").val('Asim Timsina')
 })
