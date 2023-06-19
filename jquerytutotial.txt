@@ -1,0 +1,12 @@
+1. Getting Started with jQuery
+
+$(selector).action()
+
+$(document).ready(function(){} 
+
+Put every jQuery command in document ready function so that it will be executed only after the DOM is fully loaded.
+
+
+   $("button").click(function () {
+        $("h1").hide();
+    })

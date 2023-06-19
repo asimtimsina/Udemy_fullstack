@@ -92,27 +92,27 @@ const dog = {
 
 // 299. Setting Headers With Axios
 
-// const getDadJokes = async () => {
-//     const headers = {
-//         headers: {
-//             Accept: 'application/json'
-//         }
-//     }
-//     const joke = await axios.get('https://icanhazdadjoke.com/', headers)
-//     console.log(joke.data.joke)
-//     return joke.data.joke
-// }
+const getDadJokes = async () => {
+    const headers = {
+        headers: {
+            Accept: 'application/json'
+        }
+    }
+    const joke = await axios.get('https://icanhazdadjoke.com/', headers)
+    console.log(joke.data.joke)
+    return joke.data.joke
+}
 
 
-// const jokesBtn = document.querySelector('#jokeBtn')
-// const jokesul = document.querySelector('#jokes')
+const jokesBtn = document.querySelector('#jokeBtn')
+const jokesul = document.querySelector('#jokes')
 
-// jokesBtn.addEventListener('click', async () => {
-//     let joke = await getDadJokes();
-//     const newli = document.createElement('li')
-//     newli.innerText = joke
-//     jokesul.appendChild(newli)
-// })
+jokesBtn.addEventListener('click', async () => {
+    let joke = await getDadJokes();
+    const newli = document.createElement('li')
+    newli.innerText = joke
+    jokesul.appendChild(newli)
+})
 
 
 // getDadJokes()
