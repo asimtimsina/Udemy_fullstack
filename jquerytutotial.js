@@ -113,26 +113,36 @@
 // 5. Manupulating the DOM
 //get and set with http, text, val, and attr
 
-$("#btn").click(function () {
-    console.log($("#newpara").text())
-})
+// $("#btn").click(function () {
+//     console.log($("#newpara").text())
+// })
 
-$("#btn1").click(function () {
-    console.log($("#newpara").html())
-})
+// $("#btn1").click(function () {
+//     console.log($("#newpara").html())
+// })
 
-$("#btn2").click(function () { //set content
-    $("#newpara").text("WOW new Text")
-})
+// $("#btn2").click(function () { //set content
+//     $("#newpara").text("WOW new Text")
+// })
 
-$("#btn").click(function () {
-    console.log($("#link").attr('href'))
-})
+// $("#btn").click(function () {
+//     console.log($("#link").attr('href'))
+// })
 
-$("#btn").click(function () {
-    console.log($("#testinput").val())
-})
+// $("#btn").click(function () {
+//     console.log($("#testinput").val())
+// })
 
-$("#btn1").click(function () {
-    $("#testinput").val('Asim Timsina')
-})
+// $("#btn1").click(function () {
+//     $("#testinput").val('Asim Timsina')
+// })
+
+
+//////////////////////////////
+// 6.  add and remove DOM elements
+
+$("#target")
+    .append("Bye in Child")
+    .prepend("Hi in Child")
+    .before("Hi in Sibling")
+    .after("<div>Bye in Sibling </div>", "<div>New Sibling after target</div>")

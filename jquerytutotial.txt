@@ -118,3 +118,19 @@ $("#btn").click(function () {
 $("#btn1").click(function () {
     $("#testinput").val('Asim Timsina')
 })
+
+
+6. add and remove DOM elements
+
+.append() //add content to the end of the selection ->child
+.prepend() //add content to the beginning of the selection ->child
+
+.after() //add content after the selection  ->sibling
+.before() //add content before the selection ->sibling
+
+.remove() //remove the selection
+.empty() //remove all child elements of the selection -> can add a parameter to remove only the child elements with that selector
+
+
+
+can add multiple content at once by passing in multiple arguments
