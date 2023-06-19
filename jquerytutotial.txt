@@ -76,3 +76,11 @@ $("h1").on("click", function () {
 
 create delay between animations
 $("div").fadeOut(2000).delay(2000).fadeIn(2000);
+
+
+4. jQuery Animations
+
+.animate({css properties}, duration, callback)
+
+.animate(properties [, duration] [, easing] [, complete])
+.animate(properties [, options])
