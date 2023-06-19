@@ -12,62 +12,82 @@
 
 // 2. jQuery Events
 
-$(function () {
-    $("p").click(function () {
-        console.log("A paragraph was clicked.");
-    })
-})
+// $(function () {
+//     $("p").click(function () {
+//         console.log("A paragraph was clicked.");
+//     })
+// })
 
-// dblclick
-// mouseenter
-// mouseleave
-// mousedown
-// mouseup
-//hover -> takes two functions as arguments, first is for mouseenter and second is for mouseleave
+// // dblclick
+// // mouseenter
+// // mouseleave
+// // mousedown
+// // mouseup
+// //hover -> takes two functions as arguments, first is for mouseenter and second is for mouseleave
 
-$(function () {
-    $("div").hover(
-        function () {
-            console.log('Enter')
-        },
-        function () {
-            console.log('Leave')
-        })
+// $(function () {
+//     $("div").hover(
+//         function () {
+//             console.log('Enter')
+//         },
+//         function () {
+//             console.log('Leave')
+//         })
 
+// });
+
+
+// //form events
+// // focus
+// // blur
+// // change
+// // select
+
+// $(function () {
+//     $("input").focus(function () {
+//         console.log("Focus on input field");
+//     })
+// })
+
+
+// // add multiple events on a single function
+
+// $(function () {
+//     $("p").on("click mouseenter", function () {
+//         console.log("Change on paragraph");
+//     })
+// })
+
+// //remove a event handler
+
+// $("p").off("click");
+
+
+// //running event only once
+// $("div").one("click", function () { });
+
+// $(function () {
+//     $("div").one("click", function () {
+//         console.log("Div clicked");
+//     })
+// });
+
+
+////////////////////////////////////////
+// 3. jQuery Effects
+
+$("h1").slideUp(2000);
+$("h1").slideDown(1000);
+
+
+$("button").on("click", function () {
+    $("button").slideUp(5000, function () {
+        $(this).remove();
+    });
 });
 
-
-//form events
-// focus
-// blur
-// change
-// select
-
-$(function () {
-    $("input").focus(function () {
-        console.log("Focus on input field");
-    })
-})
-
-
-// add multiple events on a single function
-
-$(function () {
-    $("p").on("click mouseenter", function () {
-        console.log("Change on paragraph");
-    })
-})
-
-//remove a event handler
-
-$("p").off("click");
-
-
-//running event only once
-$("div").one("click", function () { });
-
-$(function () {
-    $("div").one("click", function () {
-        console.log("Div clicked");
-    })
+$("h1").on("click", function () {
+    $("button").stop();
 });
+
+$("div").fadeOut(2000).delay(2000).fadeIn(2000);
