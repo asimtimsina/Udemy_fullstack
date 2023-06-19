@@ -141,18 +141,43 @@
 //////////////////////////////
 // 6.  add and remove DOM elements
 
-$("#target")
-    .append("Bye in Child")
-    .prepend("Hi in Child")
-    .before("Hi in Sibling")
-    .after("<div>Bye in Sibling </div>", "<div>New Sibling after target</div>")
+// $("#target")
+//     .append("Bye in Child")
+//     .prepend("Hi in Child")
+//     .before("Hi in Sibling")
+//     .after("<div>Bye in Sibling </div>", "<div>New Sibling after target</div>")
 
 
-$("#target").css("backgroundColor")
-$("#target").css("backgroundColor", "white")
-$("#target").css({
-    fontSize: "50px",
-    color: "pink"
-})
+// $("#target").css("backgroundColor")
+// $("#target").css("backgroundColor", "white")
+// $("#target").css({
+//     fontSize: "50px",
+//     color: "pink"
+// })
 
-$("#target").hasClass('#big') //returns false
+// $("#target").hasClass('#big') //returns false
+
+
+/////////////////////
+// 8. DOM Traversal
+
+$("li").parent().css({ "color": "choclate", "border": "border: 2px solid red" });
+$("li").parents().css({ "color": "choclate", "border": "border: 2px solid red" });
+$("li").parentsUntil("div").css({ "color": "choclate", "border": "border: 2px solid red" });
+
+
+$("span").children().css({ "color": "choclate", "border": "border: 2px solid red" });
+$("span").children("h2").css({ "color": "choclate", "border": "border: 2px solid red" });
+
+$("ul").find("span").css({ "color": "choclate", "border": "border: 2px solid red" });
+$("ul").find("*").css({ "color": "choclate", "border": "border: 2px solid red" });
+
+$("p").siblings().css({ "color": "choclate", "border": "border: 2px solid red" });
+
+$("p").next().css({ "color": "choclate", "border": "border: 2px solid red" });
+$("p").nextAll().css({ "color": "choclate", "border": "border: 2px solid red" });
+$("p").nextUntil("h3").css({ "color": "choclate", "border": "border: 2px solid red" });
+
+$("p").prev().css({ "color": "choclate", "border": "border: 2px solid red" });
+$("p").prevAll().css({ "color": "choclate", "border": "border: 2px solid red" });
+$("p").prevUntil("h3").css({ "color": "choclate", "border": "border: 2px solid red" });

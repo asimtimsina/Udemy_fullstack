@@ -154,3 +154,16 @@ $("#target").css({
     color: "pink"
 })
 
+
+
+8. DOM Traversal
+
+.parent() //get the parent of each element in the selection
+.parents() //get all ancestors of each element in the selection
+.children() //get all children of each element in the selection
+.find() //get all descendants of each element in the selection
+.siblings() //get all siblings of each element in the selection
+.next() //get the next sibling of each element in the selection
+.prev() //get the previous sibling of each element in the selection
+and much more...
+
