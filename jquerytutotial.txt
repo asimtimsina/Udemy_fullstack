@@ -37,3 +37,42 @@ $("p").off("click");
 
 running event only once
 $("div").one("click", function () { });
+
+
+
+3. jQuery Effects
+
+$("img").hide();
+$("img").show();
+
+can also pass in speed as argument -> slow, fast, normal, 1000 in ms
+$("img").hide("slow");
+$("img").hide(1000);
+
+$("img").slideUp();
+$("img").slideDown();
+$("img").fadeOut();
+$("img").fadeIn();
+
+$("img").toggle();
+
+can chain effects 
+$("h1").fadeIn(2000).addClass("blue");
+
+
+if you want to defer an action until after an animation has run to completion you need to use an animation callback function
+
+$("button").on("click", function () {
+    $("button").slideUp(1000, function () {
+        $(this).remove();
+    });
+});
+
+Also stop an animation before it is complete
+
+$("h1").on("click", function () {
+    $("button").stop();
+});
+
+create delay between animations
+$("div").fadeOut(2000).delay(2000).fadeIn(2000);
