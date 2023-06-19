@@ -167,3 +167,9 @@ $("#target").css({
 .prev() //get the previous sibling of each element in the selection
 and much more...
 
+9. ajax
+
+.load() //load data from the server and place the returned HTML into the matched element
+.get() //load data from the server using a HTTP GET request -> can also pass in data as second argument -> also add a callback function
+.post() //load data from the server using a HTTP POST request -> can also pass in data as second argument -> also add a callback function
+.ajax() //load data from the server using a HTTP request of your choice
