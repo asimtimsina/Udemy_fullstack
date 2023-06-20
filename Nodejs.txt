@@ -6,3 +6,27 @@
 .load     Load JS from a file into the REPL session
 .save     Save all evaluated commands in this REPL session to a file
 
+327. Process & Argv
+
+node >
+>Process
+
+>process.cwd() -> current working directory
+process.argv -> arguments passed to the process
+process.argv[0] -> node
+process.argv[1] -> file name with the path
+process.argv[2] -> first argument
+...
+
+$ node args.js asim nischal
+Hello from args folder
+[
+  'C:\\Program Files\\nodejs\\node.exe',
+  'C:\\Users\\14693\\args.js',
+  'asim',
+  'nischal'
+]
+
+328. File System Module Crash Course
+
+https://nodejs.org/docs/latest-v17.x/api/fs.html
