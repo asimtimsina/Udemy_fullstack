@@ -33,3 +33,33 @@ function makeColor(r, g, b) {
 const firstColor = makeColor(35, 355, 150);
 firstColor.rgb()
 firstColor.hex()
+
+
+305. Constructor Functions
+
+function Color(r, g, b) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+}
+
+creates a blank, plain JavaScript object;
+links (sets the constructor of) this object to another object;
+passes the newly created object from Step 1 as the this context;
+returns this if the function doesn't return an object.
+
+
+Must use new keyword
+define functions outside the constructor
+cannot use arrow functions as methods
+
+function Color(r, g, b) {
+    this.r = r;
+    this.g = g;
+    this.b = b;
+}
+
+Color.prototype.rgb = function () {
+    const { r, g, b } = this;
+    return `rgb(${r},${g},${b})`
+}
