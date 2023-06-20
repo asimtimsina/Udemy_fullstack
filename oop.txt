@@ -63,3 +63,26 @@ Color.prototype.rgb = function () {
     const { r, g, b } = this;
     return `rgb(${r},${g},${b})`
 }
+
+306. JavaScript Classes
+
+class Color{
+    constructor(r,g,b){
+        //runs immediately   
+    }
+    rgb(r, g, b) {
+
+        return `rgb(${this.r},${this.g},${this.b} )`
+    }
+
+    hex = function () {
+        const { r, g, b } = this;
+        return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    }
+}
+
+can define methods inside the class
+methods are automatically added to the prototype
+no commas between methods
+no function keyword before method names
+must use this keyword to set properties of the object or use the constructor function
