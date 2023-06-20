@@ -6,3 +6,6 @@
 
 const allCats = require('./shelter')
 console.log(allCats)
+
+
+// 332. Introducing NPM -> Node Package Manager
