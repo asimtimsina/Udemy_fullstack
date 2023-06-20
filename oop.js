@@ -95,37 +95,79 @@
 ///////////////////////////////////
 //306. JavaScript Classes
 
-class Color {
-    constructor(r, g, b, name = 'None') {
-        //runs immediately
-        this.r = r
-        this.g = g
-        this.b = b
-        this.name = name;
+// class Color {
+//     constructor(r, g, b, name = 'None') {
+//         //runs immediately
+//         this.r = r
+//         this.g = g
+//         this.b = b
+//         this.name = name;
+//     }
+
+//     greet() {
+
+//         return `Hello from Color ${this.name}`
+//     }
+
+//     rgb(r, g, b) {
+
+//         return `rgb(${this.r},${this.g},${this.b} )`
+//     }
+
+//     hex = function () {
+//         const { r, g, b } = this;
+//         return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+//     }
+
+//     rgba = function (a = 1.0) {
+//         return `rgba(${this.r},${this.g},${this.b},${a} )`
+
+//     }
+
+// }
+
+
+// const c1 = new Color(233, 111, 222, 'tomato');
+// const white = new Color(255, 255, 255, 'White');
+
+////////////////////////////////
+// 308. Extends and Super Keywords
+// Inheritance
+
+
+class Pet {
+    constructor(name, age) {
+        this.name = name
+        this.age = age
     }
-
-    greet() {
-
-        return `Hello from Color ${this.name}`
+    eat() {
+        return `${this.name} is eating.`
     }
-
-    rgb(r, g, b) {
-
-        return `rgb(${this.r},${this.g},${this.b} )`
-    }
-
-    hex = function () {
-        const { r, g, b } = this;
-        return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    }
-
-    rgba = function (a = 1.0) {
-        return `rgba(${this.r},${this.g},${this.b},${a} )`
-
-    }
-
 }
 
+class Cat extends Pet {
+    constructor(name, age, livesLeft) {
+        super(name, age)
+        this.livesLeft = livesLeft
+    }
+    meow() {
+        return "Meow!"
+    }
+}
 
-const c1 = new Color(233, 111, 222, 'tomato');
-const white = new Color(255, 255, 255, 'White');
+class Dog extends Pet {
+    bark() {
+        return "Woof"
+    }
+    eat() {
+        return `${this.name} if from Dog's class.`
+    }
+}
+
+const Wyatt = new Dog('Wyatt', 13)
+console.log(Wyatt.eat())
+console.log(Wyatt.bark())
+
+const suri = new Cat('suri', 1)
+console.log(suri.eat())
+console.log(suri.meow())

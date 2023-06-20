@@ -86,3 +86,11 @@ methods are automatically added to the prototype
 no commas between methods
 no function keyword before method names
 must use this keyword to set properties of the object or use the constructor function
+
+
+
+308. Extends and Super Keywords
+Inheritance is a mechanism that allows you to eliminate redundant code.
+
+extends -> keyword used in class declarations or class expressions to create a class as a child of another class.
+super -> keyword used to access and call functions on an object's parent.
