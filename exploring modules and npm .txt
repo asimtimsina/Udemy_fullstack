@@ -45,3 +45,8 @@ All commands:
     restart, root, run-script, search, set, set-script,
     shrinkwrap, star, stars, start, stop, team, test, token,
     uninstall, unpublish, unstar, update, version, view, whoami
+
+
+333. Installing Packages - Jokes & Rainbow
+
+npm install <package-name> --save
