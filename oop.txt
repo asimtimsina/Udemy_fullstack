@@ -1,1 +1,9 @@
 302. What On Earth Are Prototypes
+
+Create new prototypes with the Prototype tool
+
+String.prototype.yell = function () {
+    return (`OMG!!! ${this.toString().toUpperCase()}!!!`)
+}
+const test = "asimo"
+test.yell();
