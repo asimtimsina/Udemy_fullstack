@@ -6,3 +6,11 @@ need ./ to tell node that it is a file and not a package
 module.exports -> exoports the function or variable to the outside world
 exports -> is a shortcut to module.exports
 
+331. Requiring A Directory
+
+if we require a directory, node will look for index.js file in that directory
+all the files in that directory will be available in the index.js file
+Just need to call the directory name and not the file name
+
+const allCats = require('./shelter')
+console.log(allCats)
