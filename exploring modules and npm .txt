@@ -1,0 +1,8 @@
+330. Working With module.exports
+
+const math = require('./math');
+need ./ to tell node that it is a file and not a package
+
+module.exports -> exoports the function or variable to the outside world
+exports -> is a shortcut to module.exports
+
