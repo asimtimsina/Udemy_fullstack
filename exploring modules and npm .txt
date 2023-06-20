@@ -50,3 +50,32 @@ All commands:
 333. Installing Packages - Jokes & Rainbow
 
 npm install <package-name> --save
+
+
+334. Adding Global Packages
+use -g flag to install packages globally
+npm install cowsay -g
+Might need permission to install globally
+
+
+335. The All-Important Package.json
+
+npm init -> creates a package.json file
+npm init -y -> creates a package.json file with default values
+
+
+npm i figlet
+npm i colors
+
+const figlet = require('figlet');
+const colors = require('colors');
+
+
+figlet("Asim !!", function (err, data) {
+    if (err) {
+        console.log("Something went wrong...");
+        console.dir(err);
+        return;
+    }
+    console.log(data.rainbow);
+});
