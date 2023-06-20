@@ -94,3 +94,44 @@ Inheritance is a mechanism that allows you to eliminate redundant code.
 
 extends -> keyword used in class declarations or class expressions to create a class as a child of another class.
 super -> keyword used to access and call functions on an object's parent.
+
+
+Basics of Terminal
+
+Terminal -> A text based interface to the system. You are able to enter commands by typing them on the keyboard and feedback will be given to you similarly as text.
+Shell -> A program which processes commands and returns output , like Terminal.
+Bash -> One of the most popular shell for linux. It stands for Bourne Again SHell.
+Shell Script -> A script or program which is run by the shell, or a utility to automate programming tasks.
+
+
+ls -> list directory contents
+ls - l -> list directory contents in long format
+ls - a -> list directory contents including hidden files
+
+pwd -> print working directory
+
+cd -> change directory
+cd .. -> go up one directory
+cd ../.. -> go up two directories
+cd ~ -> go to home directory
+cd - -> go to previous directory
+
+Absolute Path -> A file or directory location in relation to the root of the file system. The root is the highest level directory, and all other directories can be reached by entering their path after the root.
+Relative Path -> A file or directory location relative to where we currently are in the file system.
+
+mkdir -> make directory
+mkdir -p -> make parent directories as needed
+touch -> create new file
+rm -> remove file
+rm -r -> remove directory
+rm -f -> force remove file
+rm -rf -> force remove directory
+cp -> copy file
+cp -r -> copy directory
+mv -> move/rename file
+mv -r -> move/rename directory
+cat -> output the contents of a file
+less -> view file contents in the terminal
+head -> output the first lines of a file
+
+man -> manual 
