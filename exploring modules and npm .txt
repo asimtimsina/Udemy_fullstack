@@ -79,3 +79,9 @@ figlet("Asim !!", function (err, data) {
     }
     console.log(data.rainbow);
 });
+
+
+
+336. Installing All Dependencies For A Project
+
+npm install -> installs all the dependencies in the package.json file
