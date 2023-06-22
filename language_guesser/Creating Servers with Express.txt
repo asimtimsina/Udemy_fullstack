@@ -80,3 +80,10 @@ app.get('/r/:subreddit', (req, res) => {
     const { subreddit } = req.params;
     res.send(`<h1>Youre at subreddit ${subreddit} page.</h1 > `)
 })
+
+
+
+345. Working With Query Strings
+Query Strings are the part of the url that comes after the question mark (?)
+Query Strings are used to pass data to the server.
+

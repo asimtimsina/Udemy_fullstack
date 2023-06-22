@@ -77,8 +77,15 @@ app.get('/r/:subreddit/:postId', (req, res) => {
     const { subreddit, postId } = req.params;
     res.send(`<h1>Youre at subreddit ${subreddit} postId ${postId} page.</h1 > `)
 })
+//////////////////////////////////////////
+// 345. Working With Query Strings
 
 
+app.get('/search', (req, res) => {
+    console.log(req.query)
+    const { q, color } = req.query
+    res.send(`<h1 color:'${color}'> Looking results for ${q} color ${color}</h1>`)
+})
 
 
 
