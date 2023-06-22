@@ -33,27 +33,59 @@ const app = express()
 
 // 343. Express Routing Basics
 
+// app.get('/', (req, res) => {
+//     res.send('<h1>Youre at Homepage</h1 > ')
+// })
+
+// app.get('/cats', (req, res) => {
+//     res.send('Meow')
+// })
+
+// app.get('*', (req, res) => {
+//     res.send('<h1>404 Page Not Found</h1 > ')
+// })
+
+// app.post('/cats', (req, res) => {
+//     res.send('This is a post request to Cats. THis is different that GET requestpos')
+// })
+
+
+// app.get('/dogs', (req, res) => {
+//     res.send('Woof')
+// })
+
+
+////////////////////////////////
+// 344. Express Path Parameters
+
+//define generic pattern with :variable
+
 app.get('/', (req, res) => {
     res.send('<h1>Youre at Homepage</h1 > ')
 })
 
-app.get('/cats', (req, res) => {
-    res.send('Meow')
+app.get('/r/:subreddit', (req, res) => {
+    console.log(req.params)
+    // res.send(`<h1>Youre at subreddit ${req.params.subreddit} page.</h1 > `)
+
+    const { subreddit } = req.params;
+    res.send(`<h1>Youre at subreddit ${subreddit} page.</h1 > `)
 })
 
-app.get('*', (req, res) => {
-    res.send('<h1>404 Page Not Found</h1 > ')
+app.get('/r/:subreddit/:postId', (req, res) => {
+    console.log(req.params)
+    const { subreddit, postId } = req.params;
+    res.send(`<h1>Youre at subreddit ${subreddit} postId ${postId} page.</h1 > `)
 })
 
-app.post('/cats', (req, res) => {
-    res.send('This is a post request to Cats. THis is different that GET requestpos')
-})
 
 
-app.get('/dogs', (req, res) => {
-    res.send('Woof')
-})
 
+
+
+
+
+////////////////
 
 app.listen(3000, () => {
     console.log("Listening in port 3000")
