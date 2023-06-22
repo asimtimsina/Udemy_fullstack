@@ -27,3 +27,22 @@ console.log(app)
 
 app.listen() -> starts a UNIX socket and listens for connections on the given path. This method is identical to Node’s http.Server.listen().
 app.use() -> Mounts the specified middleware function or functions at the specified path: the middleware function is executed when the base of the requested path matches path.
+
+
+
+342. The Request & Response Objects
+
+For every incoming request, we have a request object and a response object created by Express..
+The request object contains all the information about the request that was made to the server.
+The response object contains all the information about what we’re going to respond with.
+
+
+app.use((req, res) => {
+     console.dir(req)
+     console.dir(res)
+ })
+
+res.send() -> sends a response of various types. It can be a Buffer object, a String, an object, or an Array.
+res.send("Hello, we got your response!") -> sends a string
+res.send({ color: "red" }) -> sends an object
+res.send("<h1> Hello from Express.js </h1>") -> sends html
