@@ -1,0 +1,29 @@
+340. Introducing Express
+
+Difference between Library and Framework
+
+Frameworks and libraries are both code written by someone else that helps you perform some common tasks in a less verbose way.
+A framework inverts the control of the program. It tells the developer what they need. A library doesn’t. The programmer calls the library where and when they need it.
+The degree of freedom a library or framework gives the developer will dictate how “opinionated” it is.
+
+
+Express 
+Minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+
+
+341. Our Very First Express App
+
+https://expressjs.com/en/starter/hello-world.html
+
+npm init -y -> creates package.json file with default values // starting point of our app
+npm i express -> Install Express
+
+
+index.js
+const express = require('express');
+
+const app = express()
+console.log(app)
+
+app.listen() -> starts a UNIX socket and listens for connections on the given path. This method is identical to Node’s http.Server.listen().
+app.use() -> Mounts the specified middleware function or functions at the specified path: the middleware function is executed when the base of the requested path matches path.
