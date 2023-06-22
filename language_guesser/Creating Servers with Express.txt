@@ -46,3 +46,22 @@ res.send() -> sends a response of various types. It can be a Buffer object, a St
 res.send("Hello, we got your response!") -> sends a string
 res.send({ color: "red" }) -> sends an object
 res.send("<h1> Hello from Express.js </h1>") -> sends html
+
+
+
+343. Express Routing Basics
+
+Taking incoming requests and matching them to a particular route.
+
+
+app.get(path, callback) -> Routes HTTP GET requests to the specified path with the specified callback functions.))
+
+app.get('/', (req, res) => {
+    res.send('<h1>Youre at Homepage</h1 > ')
+}) 
+
+
+set a generic response for all other routes
+app.get('*', (req, res) => {
+    res.send('<h1>404 Page Not Found</h1 > ')
+})
