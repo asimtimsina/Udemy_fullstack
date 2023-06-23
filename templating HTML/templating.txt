@@ -99,3 +99,22 @@ all static files will be in the public folder
 Use public folder to store static files and serve them
 
 app.use(express.static(path.join(__dirname, 'public')))
+
+
+
+358. Bootstrap + Express
+Bootstrap needs to be installed in the public folder
+Bootstrap also needs jquery for some of its features
+ 
+359. EJS & Partials
+
+Partials are used to make the code more modular
+Partials are used to make the code more modular
+
+make a partial folder in the views folder
+make a file named header.ejs
+
+add the header code in the header.ejs file
+ 
+<%-  %> To add partials in the ejs file
+<%- include('partials/header') %>
