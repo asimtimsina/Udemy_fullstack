@@ -19,6 +19,13 @@ app.get('/random', (req, res) => {
 })
 
 
+// 353. Subreddit Template Demo
+
+app.get('/r/:subreddit', (req, res) => {
+    const { subreddit } = req.params
+    res.render('subreddit', { subreddit })
+})
+
 app.listen(3000, () => {
     console.log("Let's get started")
 })

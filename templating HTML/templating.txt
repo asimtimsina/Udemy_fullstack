@@ -52,3 +52,11 @@ Can use javascript inside the ejs file
 {rand} = {rand: rand}
 
     <h1>Another random number is <%= rand %> </h1>
+
+
+353. Subreddit Template Demo
+
+app.get('/r/:subreddit', (req, res) => {
+    const { subreddit } = req.params
+    res.render('subreddit', { subreddit })
+})
