@@ -19,3 +19,12 @@ and the extension will be .ejs
 app.get('/', (req, res) => {
     res.render('home')
 })
+
+
+350. Setting The Views Directory
+
+const path = require('path');
+app.set('views', path.join(__dirname, '/views'));
+
+__dirname is the current directory from where the code is being called
+and we are joining the views folder to it
