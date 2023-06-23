@@ -1,0 +1,21 @@
+349. Configuring Express For EJS
+
+create a new folder
+initiate the node
+install express
+install ejs
+create a new file index.js
+
+
+create a general app
+
+app.set to set the view engine to ejs
+app.set('view engine', 'ejs')
+
+
+all static files will be in the  folder named views
+and the extension will be .ejs
+
+app.get('/', (req, res) => {
+    res.render('home')
+})
