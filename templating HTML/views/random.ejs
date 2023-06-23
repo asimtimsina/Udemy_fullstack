@@ -9,12 +9,26 @@
 
 <body>
     <!-- 352. Passing Data To Templates -->
-    <h1>The random number is <%= Math.floor((Math.random() *10) +1) %>
-    </h1>
+    <% const ran=Math.floor((Math.random() *10) +1) %>
+        <h1>The random number is <%= ran %>
+                <% if (ran%2==0) {%>
+                    <h3>This number is even</h3>
+                    <% } else{ %>
+                        <h3>This number is odd</h3>
+                        <% } %>
+        </h1>
 
-    <h1>Another random number is <%= rand %>
-    </h1>
+        <h1>Another random number is <%= rand %>
+        </h1>
 
+
+        <!-- 354. Conditionals in EJS -->
+
+        <% if (rand> 5) { %>
+            <h3>This Random number is greater than 5</h3>
+            <% } else { %>
+                <h3>This Random number is less than 5</h3>
+                <% } %>
 
 
 </body>

@@ -60,3 +60,17 @@ app.get('/r/:subreddit', (req, res) => {
     const { subreddit } = req.params
     res.render('subreddit', { subreddit })
 })
+
+
+
+354. Conditionals in EJS
+
+<% %> for javascript code
+<%= %> for javascript code with output
+
+
+<% if (rand > 5) { %>
+    <h1>Random number is greater than 5</h1>
+<% } else { %>
+    <h1>Random number is less than 5</h1>
+<% } %>
