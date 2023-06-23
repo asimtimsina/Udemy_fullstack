@@ -13,6 +13,11 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
+app.get('/random', (req, res) => {
+    const rand = Math.floor((Math.random() * 10) + 1)
+    res.render('random', { rand }) // rand: rand
+})
+
 
 app.listen(3000, () => {
     console.log("Let's get started")

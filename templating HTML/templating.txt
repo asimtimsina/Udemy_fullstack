@@ -35,3 +35,20 @@ and we are joining the views folder to it
 <% %> for javascript
 <%= %> for javascript with output
 <%- %> for javascript with unescaped output
+
+
+352. Passing Data To Templates
+
+Can use javascript inside the ejs file 
+ <h1>The random number is <%= Math.floor((Math.random() *10) +1) %> </h1>
+
+ can also pass data from the index.js file to the ejs file
+
+ app.get('/random', (req, res) => {
+    const rand = Math.floor((Math.random() * 10) + 1)
+    res.render('random', { rand }) // rand: rand
+})
+
+{rand} = {rand: rand}
+
+    <h1>Another random number is <%= rand %> </h1>
