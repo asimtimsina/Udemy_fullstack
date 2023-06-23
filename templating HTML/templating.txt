@@ -87,3 +87,15 @@ app.get('/r/:subreddit', (req, res) => {
             <% } %>
 
 
+
+357. Serving Static Assets In Express
+
+app.use(express.static('public'))
+Middleware to serve static files
+
+all static files will be in the public folder
+
+
+Use public folder to store static files and serve them
+
+app.use(express.static(path.join(__dirname, 'public')))

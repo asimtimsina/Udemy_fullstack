@@ -5,9 +5,15 @@ const app = express()
 app.set('view engine', 'ejs')
 
 
+
 // 350. Setting The Views Directory
 const path = require('path');
 app.set('views', path.join(__dirname, '/views'));
+
+// 357. Serving Static Assets In Express
+// app.use(express.static('public'))
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.get('/', (req, res) => {
     res.render('home')
