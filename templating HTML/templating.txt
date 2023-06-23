@@ -74,3 +74,16 @@ app.get('/r/:subreddit', (req, res) => {
 <% } else { %>
     <h1>Random number is less than 5</h1>
 <% } %>
+
+
+
+355. Loops In EJS
+
+
+        <% for (let cat of cats) {%>
+            <li>
+                <%= cat %>
+            </li>
+            <% } %>
+
+
