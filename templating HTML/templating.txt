@@ -28,3 +28,10 @@ app.set('views', path.join(__dirname, '/views'));
 
 __dirname is the current directory from where the code is being called
 and we are joining the views folder to it
+
+
+351. EJS Interpolation Syntax
+
+<% %> for javascript
+<%= %> for javascript with output
+<%- %> for javascript with unescaped output
