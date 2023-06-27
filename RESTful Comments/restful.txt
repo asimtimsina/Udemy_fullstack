@@ -5,3 +5,12 @@ POST /comments - create a new comment
 GET /comments/{id} - get one specific comment
 PUT /comments/{id} - update one specific comment
 DELETE /comments/{id} - delete one specific comment
+
+
+367. RESTful Comments New
+
+
+368. Express Redirects
+
+res.redirect() - redirect to a route
+res.redirect(301, '/admin') - redirect to a route with a status code
