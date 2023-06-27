@@ -1,0 +1,7 @@
+365. RESTful Comments Overview
+
+GET /comments - list all comments
+POST /comments - create a new comment
+GET /comments/{id} - get one specific comment
+PUT /comments/{id} - update one specific comment
+DELETE /comments/{id} - delete one specific comment
