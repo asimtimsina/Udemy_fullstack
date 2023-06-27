@@ -34,6 +34,20 @@ app.get('/comments', (req, res) => {
     res.render('comments/index', { comments })
 })
 
+app.get('/comments/new', (req, res) => {
+    res.render('comments/new')
+
+})
+
+
+app.post('/comments', (req, res) => {
+    console.log(req.body)
+    const { username, comment } = req.body;
+    comments.push({ username, comment })
+    res.send('It worked')
+})
+
+////////////////////
 app.listen(5000, () => {
     console.log("Listening on Port 5000")
 })
