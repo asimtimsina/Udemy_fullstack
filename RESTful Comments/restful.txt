@@ -10,7 +10,13 @@ DELETE /comments/{id} - delete one specific comment
 367. RESTful Comments New
 
 
+
 368. Express Redirects
 
 res.redirect() - redirect to a route
 res.redirect(301, '/admin') - redirect to a route with a status code
+
+
+369. RESTful Comments Show
+
+// SHOW - shows more info about one campground

@@ -17,14 +17,17 @@ app.get('/', (req, res) => {
 
 const comments = [
     {
+        id: 1,
         username: 'SaiguniUS',
         comment: 'What about the second doctor who couldnt diagnose you properly.'
     },
     {
+        id: 2,
         username: 'redBatMan',
         comment: 'meniscus tear lmao, i feel you brother.'
     },
     {
+        id: 3,
         username: 'Kheman',
         comment: 'An X-Ray cannot properly outline a soft tissue injury, that is what your ligaments and tendons are.'
     }
@@ -45,6 +48,16 @@ app.post('/comments', (req, res) => {
     const { username, comment } = req.body;
     comments.push({ username, comment })
     res.redirect('/comments');
+})
+
+// 369. RESTful Comments Show
+
+app.get('/comments/:id', (req, res) => {
+    const { id } = req.params;
+    const comment = comments.find(c => c.id === parseInt(id));
+    console.log(comment)
+    res.render('comments/show', { comment })
+    // console.log()
 })
 
 ////////////////////
