@@ -15,10 +15,14 @@ app.get('/', (req, res) => {
     res.send("<h1> Welcome to the homepage </h1>")
 })
 
+// 371. RESTful Comments Update
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'));
+
 
 // 366. RESTful Comments Index
 
-const comments = [
+let comments = [
     {
         id: uuid(),
         username: 'SaiguniUS',
@@ -64,8 +68,27 @@ app.get('/comments/:id', (req, res) => {
 })
 
 
+app.get('/comments/:id/edit', (req, res) => {
+    const { id } = req.params;
+    const comment = comments.find(c => c.id === id);
+    res.render('comments/edit', { comment })
+    console.log(req.params.id, comment)
+})
+
 app.patch('/comments/:id', (req, res) => {
-    res.send("Updating something")
+    // res.send("Updating something")
+    const { id } = req.params;
+    const newComment = req.body.comment;
+    const foundComment = comments.find(c => c.id === id);
+    foundComment.comment = newComment;
+    res.redirect('/comments')
+})
+
+
+app.delete('/comments/:id/delete', (req, res) => {
+    const { id } = req.params;
+    comments = comments.filter(c => c.id !== id)
+    res.redirect('/comments')
 })
 
 ////////////////////
