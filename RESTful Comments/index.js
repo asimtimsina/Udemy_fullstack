@@ -2,6 +2,9 @@ const express = require('express')
 const app = express();
 const path = require('path');
 
+const { v4: uuid } = require('uuid');
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -17,17 +20,17 @@ app.get('/', (req, res) => {
 
 const comments = [
     {
-        id: 1,
+        id: uuid(),
         username: 'SaiguniUS',
         comment: 'What about the second doctor who couldnt diagnose you properly.'
     },
     {
-        id: 2,
+        id: uuid(),
         username: 'redBatMan',
         comment: 'meniscus tear lmao, i feel you brother.'
     },
     {
-        id: 3,
+        id: uuid(),
         username: 'Kheman',
         comment: 'An X-Ray cannot properly outline a soft tissue injury, that is what your ligaments and tendons are.'
     }
@@ -46,7 +49,7 @@ app.get('/comments/new', (req, res) => {
 app.post('/comments', (req, res) => {
     console.log(req.body)
     const { username, comment } = req.body;
-    comments.push({ username, comment })
+    comments.push({ id: uuid(), username, comment })
     res.redirect('/comments');
 })
 
@@ -54,10 +57,15 @@ app.post('/comments', (req, res) => {
 
 app.get('/comments/:id', (req, res) => {
     const { id } = req.params;
-    const comment = comments.find(c => c.id === parseInt(id));
+    const comment = comments.find(c => c.id === id);
     console.log(comment)
     res.render('comments/show', { comment })
     // console.log()
+})
+
+
+app.patch('/comments/:id', (req, res) => {
+    res.send("Updating something")
 })
 
 ////////////////////

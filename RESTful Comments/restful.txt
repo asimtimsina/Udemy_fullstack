@@ -20,3 +20,19 @@ res.redirect(301, '/admin') - redirect to a route with a status code
 369. RESTful Comments Show
 
 // SHOW - shows more info about one campground
+
+
+
+370. The UUID Package
+
+UUID - Universally Unique Identifier
+npm install uuid
+const { v4: uuidv4 } = require('uuid');
+UUID is a package that allows us to generate unique ids
+
+
+371. RESTful Comments Update
+
+
+need to use method override to make a put request/ delete request
+npm install method-override
