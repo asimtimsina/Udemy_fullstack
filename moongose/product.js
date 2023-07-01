@@ -21,6 +21,10 @@ const productSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: true
+    },
+    onSale: {
+        type: Boolean,
+        default: false
     }
 })
 
@@ -49,3 +53,14 @@ car.save()
         console.log(err)
     })
 
+// 399. Additional Schema Constraints
+
+
+const bikeHelmet = new Product({ name: 'Bike Helmet', price: 29.99 })
+bikeHelmet.save()
+    .then(res => {
+        console.log('It worked')
+    })
+    .catch(err => {
+        console.log('Error')
+    })
