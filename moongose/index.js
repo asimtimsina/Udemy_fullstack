@@ -65,3 +65,12 @@ Movie.find({ year: { $gt: 2010 } }).then(data => console.log(data));
 Movie.updateOne({ title: 'Amelie' }, { year: 1984 }).then(res => console.log(res))
 Movie.updateMany({ title: { $in: ['Amadeus', 'Stand by me'] } }, { score: 10 })
     .then(res => console.log(res))
+
+
+
+// 397. Deleting With Mongoose!
+
+Movie.deleteOne({ title: "Amelie" }).then(res => console.log(res))
+Movie.deleteMany({ year: { $gte: 1990 } }).then(res => console.log(res));
+
+Movie.findOneAndDelete({ title: 'Alien' }).then(res => console.log(res));
