@@ -53,3 +53,22 @@ Movie.insertMany([
     console.log('It worked!');
     console.log(data);
 })
+
+
+395. Finding With Mongoose
+
+Finding takes time so it returns a promise
+can use .then() or async/await
+
+.find()
+.findOne()
+.findById()
+
+
+Movie.find(); -> returns the object
+Movie.find().then(data => console.log(data)); -> returns all movies
+
+Movie.find({year : {$gt:2010}}).then(data => console.log(data)); -> returns movies with year greater than 2010
+Movie.findOne({year : {$gt:2010}}).then(data => console.log(data)); -> returns movies with year greater than 2010
+
+Movie.findById('64a061c24239a7296e679a77').then(data => console.log(data));

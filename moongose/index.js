@@ -38,14 +38,22 @@ const Herapheri_2 = new Movie({ title: 'Hera pheri 2', year: 2010, score: 7, rat
 
 // 394. Insert Many
 
-Movie.insertMany([
-    { title: 'Amelie', year: 2001, score: 8.3, rating: 'R' },
-    { title: 'Alien', year: 1979, score: 8.1, rating: 'R' },
-    { title: 'The Iron Giant', year: 1999, score: 7.5, rating: 'PG' },
-    { title: 'Stand By Me', year: 1986, score: 8.6, rating: 'R' },
-    { title: 'Moonrise Kingdom', year: 2012, score: 7.3, rating: 'PG-13' }
-])
-    .then(data => {
-        console.log('It worked!');
-        console.log(data);
-    })
+// Movie.insertMany([
+//     { title: 'Amelie', year: 2001, score: 8.3, rating: 'R' },
+//     { title: 'Alien', year: 1979, score: 8.1, rating: 'R' },
+//     { title: 'The Iron Giant', year: 1999, score: 7.5, rating: 'PG' },
+//     { title: 'Stand By Me', year: 1986, score: 8.6, rating: 'R' },
+//     { title: 'Moonrise Kingdom', year: 2012, score: 7.3, rating: 'PG-13' }
+// ])
+//     .then(data => {
+//         console.log('It worked!');
+//         console.log(data);
+// })
+
+
+// 395. Finding With Mongoose
+
+Movie.find();
+Movie.find().then(data => console.log(data));
+Movie.findById('64a061c24239a7296e679a77').then(data => console.log(data));
+Movie.find({ year: { $gt: 2010 } }).then(data => console.log(data)); -> returns movies with year greater than 2010
