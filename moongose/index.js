@@ -74,3 +74,6 @@ Movie.deleteOne({ title: "Amelie" }).then(res => console.log(res))
 Movie.deleteMany({ year: { $gte: 1990 } }).then(res => console.log(res));
 
 Movie.findOneAndDelete({ title: 'Alien' }).then(res => console.log(res));
+
+
+// 398. Mongoose Schema Validations
