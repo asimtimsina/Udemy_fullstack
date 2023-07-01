@@ -21,11 +21,15 @@ const productSchema = new mongoose.Schema({
     price: {
         type: Number,
         required: true,
-        min: 0
+        min: [0, 'Price Must be Postive Num']
     },
     onSale: {
         type: Boolean,
         default: false
+    },
+    size: {
+        type: String,
+        enum: ['S', 'M', 'L']
     }
 })
 
@@ -89,7 +93,30 @@ const Product = mongoose.model('Product', productSchema);
 //     })
 
 
-Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true, runValidators: true })
+// Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true, runValidators: true })
+//     .then(res => {
+//         console.log('It worked')
+//         console.log(res)
+//     })
+//     .catch(err => {
+//         console.log('Error')
+//         console.log(err)
+//     })
+
+// 401. Mongoose Validation Errors
+
+// Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true, runValidators: true })
+//     .then(res => {
+//         console.log('It worked')
+//         console.log(res)
+//     })
+//     .catch(err => {
+//         console.log('Error')
+//         console.log(err)
+//     }) //Error: Validation failed: price: Price Must be Postive Num
+
+
+Product.findOneAndUpdate({ name: 'Toyota' }, { size: 'LE' }, { new: true, runValidators: true })
     .then(res => {
         console.log('It worked')
         console.log(res)
@@ -97,4 +124,5 @@ Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true, run
     .catch(err => {
         console.log('Error')
         console.log(err)
-    })
+    })  //size: ValidatorError: `LE` is not a valid enum value for path `size`.
+

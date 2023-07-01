@@ -176,3 +176,21 @@ Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true, run
     })
 
 Error: Validation failed: price: Path `price` (-50) is less than minimum allowed value (0)
+
+
+401. Mongoose Validation Errors
+
+Can add custom error messages
+min: [0, 'Price must be positive!']
+
+
+Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true, runValidators: true })
+    .then(res => {
+        console.log('It worked')
+        console.log(res)
+    })
+    .catch(err => {
+        console.log('Error')
+        console.log(err)
+    })
+Error: Validation failed: price: Price Must be Postive Num
