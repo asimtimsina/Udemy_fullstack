@@ -145,3 +145,34 @@ immutable: boolean, mongoose >= 4.10.0 only. If true, Mongoose prevents you from
 transform: function, mongoose >= 4.10.0 only. Applies a transform function to the resulting document before returning the result from the db
 min: number, sets a minimum number validator
 max: number, sets a maximum number validator
+
+
+400. Validating Mongoose Updates
+
+Validation doesn't run on update() by default, only on save() and create()
+to run validators on update(), set the runValidators option for update() to true
+
+Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true })
+    .then(res => {
+        console.log('It worked')
+        console.log(res)
+    })
+    .catch(err => {
+        console.log('Error')
+        console.log(err)
+    })
+
+Price will be set to -50 even though it is less than 0
+
+
+Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true, runValidators: true })
+    .then(res => {
+        console.log('It worked')
+        console.log(res)
+    })
+    .catch(err => {
+        console.log('Error')
+        console.log(err)
+    })
+
+Error: Validation failed: price: Path `price` (-50) is less than minimum allowed value (0)

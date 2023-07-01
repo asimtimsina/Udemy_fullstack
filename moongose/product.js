@@ -20,7 +20,8 @@ const productSchema = new mongoose.Schema({
     },
     price: {
         type: Number,
-        required: true
+        required: true,
+        min: 0
     },
     onSale: {
         type: Boolean,
@@ -31,36 +32,69 @@ const productSchema = new mongoose.Schema({
 const Product = mongoose.model('Product', productSchema);
 
 
-const bike = new Product({ name: 'Bike', price: 599 });
+// const bike = new Product({ name: 'Bike', price: 599 });
 
-bike.save()
-    .then(res => {
-        console.log('It worked')
-    })
-    .catch(err => {
-        console.log('Error')
-    })
+// bike.save()
+//     .then(res => {
+//         console.log('It worked')
+//     })
+//     .catch(err => {
+//         console.log('Error')
+//     })
 
 
-const car = new Product({ name: 'Toyota', price: 59999, color: 'red' });
+// const car = new Product({ name: 'Toyota', price: 59999, color: 'red' });
 
-car.save()
-    .then(res => {
-        console.log('It worked')
-    })
-    .catch(err => {
-        console.log('Error')
-        console.log(err)
-    })
+// car.save()
+//     .then(res => {
+//         console.log('It worked')
+//     })
+//     .catch(err => {
+//         console.log('Error')
+//         console.log(err)
+//     })
 
 // 399. Additional Schema Constraints
 
 
-const bikeHelmet = new Product({ name: 'Bike Helmet', price: 29.99 })
-bikeHelmet.save()
+// const bikeHelmet = new Product({ name: 'Bike Helmet', price: 29.99 })
+// bikeHelmet.save()
+//     .then(res => {
+//         console.log('It worked')
+//     })
+//     .catch(err => {
+//         console.log('Error')
+//     })
+
+
+// // 400. Validating Mongoose Updates
+// const TirePump = new Product({ name: 'Tire Pump', price: 39.99 })
+// TirePump.save()
+//     .then(res => {
+//         console.log('It worked')
+//     })
+//     .catch(err => {
+//         console.log('Error')
+//     })
+
+
+// Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true })
+//     .then(res => {
+//         console.log('It worked')
+//         console.log(res)
+//     })
+//     .catch(err => {
+//         console.log('Error')
+//         console.log(err)
+//     })
+
+
+Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true, runValidators: true })
     .then(res => {
         console.log('It worked')
+        console.log(res)
     })
     .catch(err => {
         console.log('Error')
+        console.log(err)
     })
