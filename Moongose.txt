@@ -1,0 +1,6 @@
+391. Connecting Mongoose to Mongo
+
+npm i moongose
+
+
+393. Our First Mongoose Model
