@@ -72,3 +72,19 @@ Movie.find({year : {$gt:2010}}).then(data => console.log(data)); -> returns movi
 Movie.findOne({year : {$gt:2010}}).then(data => console.log(data)); -> returns movies with year greater than 2010
 
 Movie.findById('64a061c24239a7296e679a77').then(data => console.log(data));
+
+
+396. Updating With Mongoose
+
+.updateOne()
+.updateMany()
+.findOneAndUpdate()
+.findByIdAndUpdate()
+
+ Movie.updateOne({title:'Amelie'},{year:1984}).then(res => console.log(res))
+
+ Movie.updateMany({ title: { $in: ['Amadeus', 'Stand by me'] } }, { score: 10 })
+    .then(res => console.log(res))
+
+Movie.findOneAndUpdate({title:'The Iron Giant'},{score:7.8}, {new:true}).then(res => console.log(res))
+// new:true returns the updated object // new:false returns the old object (by default it is false)

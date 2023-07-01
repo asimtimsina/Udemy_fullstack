@@ -56,4 +56,12 @@ const Herapheri_2 = new Movie({ title: 'Hera pheri 2', year: 2010, score: 7, rat
 Movie.find();
 Movie.find().then(data => console.log(data));
 Movie.findById('64a061c24239a7296e679a77').then(data => console.log(data));
-Movie.find({ year: { $gt: 2010 } }).then(data => console.log(data)); -> returns movies with year greater than 2010
+Movie.find({ year: { $gt: 2010 } }).then(data => console.log(data));
+
+
+
+// 396. Updating With Mongoose
+
+Movie.updateOne({ title: 'Amelie' }, { year: 1984 }).then(res => console.log(res))
+Movie.updateMany({ title: { $in: ['Amadeus', 'Stand by me'] } }, { score: 10 })
+    .then(res => console.log(res))
