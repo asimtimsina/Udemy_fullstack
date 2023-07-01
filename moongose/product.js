@@ -33,7 +33,6 @@ const productSchema = new mongoose.Schema({
     }
 })
 
-const Product = mongoose.model('Product', productSchema);
 
 
 // const bike = new Product({ name: 'Bike', price: 599 });
@@ -116,13 +115,48 @@ const Product = mongoose.model('Product', productSchema);
 //     }) //Error: Validation failed: price: Price Must be Postive Num
 
 
-Product.findOneAndUpdate({ name: 'Toyota' }, { size: 'LE' }, { new: true, runValidators: true })
-    .then(res => {
-        console.log('It worked')
-        console.log(res)
-    })
-    .catch(err => {
-        console.log('Error')
-        console.log(err)
-    })  //size: ValidatorError: `LE` is not a valid enum value for path `size`.
+// Product.findOneAndUpdate({ name: 'Toyota' }, { size: 'LE' }, { new: true, runValidators: true })
+//     .then(res => {
+//         console.log('It worked')
+//         console.log(res)
+//     })
+//     .catch(err => {
+//         console.log('Error')
+//         console.log(err)
+//     })  //size: ValidatorError: `LE` is not a valid enum value for path `size`.
+
+
+
+// 402. Model Instance Methods
+
+productSchema.methods.toggleOnSale = function () {
+    console.log("Changing the OnSale ")
+    this.onSale = !this.onSale;
+    return this.save();
+}
+
+productSchema.methods.changePrice = function (newPrice) {
+    this.price = newPrice;
+    return this.save();
+}
+
+const Product = mongoose.model('Product', productSchema);
+
+
+const findProduct = async () => {
+    const foundProduct = await Product.findOne({ name: 'Bike Helmet' });
+    console.log(foundProduct);
+    await foundProduct.toggleOnSale();
+    console.log(foundProduct);
+}
+
+// findProduct();
+
+const changePriceItem = async (item, newPrice) => {
+    const foundItem = await Product.findOne({ name: item });
+    await foundItem.changePrice(newPrice);
+    console.log(foundItem);
+}
+
+changePriceItem('Bike Helmet', 50);
 

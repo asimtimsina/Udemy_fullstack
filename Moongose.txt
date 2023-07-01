@@ -194,3 +194,42 @@ Product.findOneAndUpdate({ name: 'Tire Pump' }, { price: -50 }, { new: true, run
         console.log(err)
     })
 Error: Validation failed: price: Price Must be Postive Num
+
+
+
+402. Model Instance Methods
+
+
+productSchema.methods.toggleOnSale = function () {
+    console.log("Changing the OnSale ")
+    this.onSale = !this.onSale;
+    this.save();
+}
+
+const Product = mongoose.model('Product', productSchema);
+
+
+const findProduct = async () => {
+    const foundProduct = await Product.findOne({ name: 'Bike Helmet' });
+    console.log(foundProduct);
+    await foundProduct.toggleOnSale();
+    console.log(foundProduct);
+}
+
+findProduct();
+
+{
+  _id: new ObjectId("64a0aac5109d1564c1c86917"),
+  name: 'Bike Helmet',
+  price: 29.99,
+  onSale: false,
+  __v: 0
+}
+Changing the OnSale
+{
+  _id: new ObjectId("64a0aac5109d1564c1c86917"),
+  name: 'Bike Helmet',
+  price: 29.99,
+  onSale: true,
+  __v: 0
+}
