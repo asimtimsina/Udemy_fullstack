@@ -19,9 +19,23 @@ personSchema.virtual('fullName').get(function () {
     return `${this.firstName} ${this.lastName}`;
 })
 
+
+// 405. Defining Mongoose Middleware
+
+personSchema.pre('save', async function () {
+    console.log("ABout to save!")
+    this.firstName = 'Asim'
+    this.lastName = 'Tim'
+})
+
+personSchema.post('save', async function () {
+    console.log("Just save!")
+})
+
+
 const Person = mongoose.model('Person', personSchema);
 
-const newPerson = new Person({ firstName: 'Nischal', lastName: 'Timsina' })
+const newPerson = new Person({ firstName: 'Chudamani', lastName: 'Timsina' })
 newPerson.save()
     .then(res => {
         console.log(res)

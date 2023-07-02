@@ -281,3 +281,36 @@ newPerson.save()
     })
 
 console.log(newPerson.fullName) // Nischal Timsina
+
+
+405. Defining Mongoose Middleware
+
+Middleware are functions that run at certain points in a given operation
+Mongoose middleware are written as functions that take a next parameter which is a function that tells the middleware to move on to the next middleware in the queue
+
+personSchema.pre('save', async function () {
+    console.log("ABout to save!")
+})
+
+personSchema.post('save', async function () {
+    console.log("Just save!")
+})
+
+const newPerson = new Person({ firstName: 'Chudamani', lastName: 'Timsina' })
+newPerson.save()
+    .then(res => {
+        console.log(res)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+
+ABout to save!
+Just save!
+{
+  firstName: 'Asim',
+  lastName: 'Tim',
+  _id: new ObjectId("64a0c35e31990b36858a6bbf"),
+  __v: 0
+}
