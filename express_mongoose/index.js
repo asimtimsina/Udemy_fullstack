@@ -2,13 +2,17 @@ const { log } = require('console');
 const express = require('express');
 const app = express();
 
+const methodoverride = require('method-override');
+
 const path = require('path');
 
+const category = ['fruit', 'vegetable', 'dairy']
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs')
 
 app.use(express.urlencoded({ extended: true }))
+app.use(methodoverride('_method'));
 
 ////////
 const Product = require('./models/product')
@@ -43,6 +47,23 @@ app.post('/products/add', async (req, res) => {
 })
 
 
+app.get('/products/:id/edit', async (req, res) => {
+    const { id } = req.params;
+    const foundProduct = await Product.findById(id);
+    console.log(foundProduct)
+    res.render('products/edit', { foundProduct, category });
+    // res.send('Building')
+})
+
+app.put('/products/edit/:id', async (req, res) => {
+    const { id } = req.params;
+    const editedItem = req.body;
+    console.log(editedItem);
+    const updatedProduct = await Product.findByIdAndUpdate(id, editedItem, { runValidators: true, new: true });
+    console.log(updatedProduct)
+    res.redirect(`/products/${updatedProduct._id}`)
+})
+
 
 app.get('/products', async (req, res) => {
     const products = await Product.find({})
@@ -56,6 +77,7 @@ app.get('/products/:id', async (req, res) => {
     // res.send("Hi")
     res.render('products/product', { product });
 })
+
 
 
 
