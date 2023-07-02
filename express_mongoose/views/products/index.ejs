@@ -13,7 +13,9 @@
     <ul>
         <% for (each of products){ %>
             <li>
-                <%= each.name %>
+                <a href="/products/<%= each.id %>">
+                    <%= each.name %>
+                </a>
             </li>
             <% } %>
     </ul>

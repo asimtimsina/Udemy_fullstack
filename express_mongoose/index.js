@@ -32,6 +32,15 @@ app.get('/products', async (req, res) => {
     res.render('products/index', { products })
 })
 
+app.get('/products/:id', async (req, res) => {
+    const { id } = req.params;
+    const product = await Product.findById(id);
+    // res.send("Hi")
+    res.render('products/product', { product });
+
+})
+
+
 
 // 409. Products Index
 
