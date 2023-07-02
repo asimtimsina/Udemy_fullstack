@@ -251,3 +251,33 @@ fireSale()
         console.log('It worked')
         console.log(res)
     })
+
+
+404. Mongoose Virtuals
+
+Virtuals are additional fields for a given model
+Their values can be set manually or automatically with defined functionality
+Virtual properties do NOT get persisted in the database
+
+
+const personSchema = mongoose.Schema({
+    firstName: String,
+    lastName: String
+})
+
+personSchema.virtual('fullName').get(function () {
+    return `${this.firstName} ${this.lastName}`;
+})
+
+const Person = mongoose.model('Person', personSchema);
+
+const newPerson = new Person({ firstName: 'Nischal', lastName: 'Timsina' })
+newPerson.save()
+    .then(res => {
+        console.log(res)
+    })
+    .catch(err => {
+        console.log(err)
+    })
+
+console.log(newPerson.fullName) // Nischal Timsina
