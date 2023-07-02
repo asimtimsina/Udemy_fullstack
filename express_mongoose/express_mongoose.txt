@@ -26,3 +26,15 @@ mongoose.connect('mongodb://127.0.0.1:27017/dogs')
 
 Can use a different js file to create a model and export it to the app.js file
 Can use a different js file to seed data to the database
+
+
+409. Products Index
+
+use async  and await to get data from the database
+
+
+app.get('/products', async (req, res) => {
+    const products = await Product.find({})
+    // console.log(products)
+    res.render('products/index', { products })
+})

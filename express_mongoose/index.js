@@ -26,12 +26,14 @@ mongoose.connect('mongodb://127.0.0.1:27017/farmStand')
 ////////
 
 
-app.get('/dogs', (req, res) => {
-    res.send('Woof')
+app.get('/products', async (req, res) => {
+    const products = await Product.find({})
+    // console.log(products)
+    res.render('products/index', { products })
 })
 
 
-
+// 409. Products Index
 
 
 
