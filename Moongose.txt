@@ -199,6 +199,7 @@ Error: Validation failed: price: Price Must be Postive Num
 
 402. Model Instance Methods
 
+model instance methods are methods that we can call on an instance of the model
 
 productSchema.methods.toggleOnSale = function () {
     console.log("Changing the OnSale ")
@@ -233,3 +234,20 @@ Changing the OnSale
   onSale: true,
   __v: 0
 }
+
+
+403. Adding Model Static Methods
+
+static methods are methods that we can call directly from the model itself
+
+
+productSchema.statics.changePrice = function () {
+    console.log("Here inside fireSale funcion")
+    return this.updateMany({}, { onSale: true, price: 0 });
+}
+
+fireSale()
+    .then(res => {
+        console.log('It worked')
+        console.log(res)
+    })

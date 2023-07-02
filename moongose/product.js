@@ -140,7 +140,15 @@ productSchema.methods.changePrice = function (newPrice) {
     return this.save();
 }
 
+// 403. Adding Model Static Methods
+
+productSchema.statics.changePrice = function () {
+    console.log("Here inside fireSale funcion")
+    return this.updateMany({}, { onSale: true, price: 0 });
+}
+
 const Product = mongoose.model('Product', productSchema);
+
 
 
 const findProduct = async () => {
@@ -160,3 +168,12 @@ const changePriceItem = async (item, newPrice) => {
 
 changePriceItem('Bike Helmet', 50);
 
+// 403. Adding Model Static Methods
+
+// const Product = mongoose.model('Product', productSchema);
+
+fireSale()
+    .then(res => {
+        console.log('It worked')
+        console.log(res)
+    })
