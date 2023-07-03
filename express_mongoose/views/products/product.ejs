@@ -20,12 +20,19 @@
             $<%=product.price %>
         </li>
         <li>
-            <%=product.category %>
+            <a href="/products?category=<%=product.category %>">
+                <%=product.category %>
+            </a>
         </li>
 
     </ul>
-    <a href="/products/<%= product.id %>/edit">Edit this Product</a>
-    <a href="/products">Back to Main Page</a>
+    <a href="/products/<%= product.id %>/edit">Edit this Product</a> <br>
+
+    <form action="/products/delete/<%= product.id %>?_method=Delete" method="post">
+        <button>Delete</button>
+    </form>
+
+    <a href="/products">Back to Main Page</a> <br>
 </body>
 
 </html>

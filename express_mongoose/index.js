@@ -19,6 +19,7 @@ const Product = require('./models/product')
 
 ////////
 const mongoose = require('mongoose');
+const { createDeflate } = require('zlib');
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/farmStand')
@@ -64,11 +65,36 @@ app.put('/products/edit/:id', async (req, res) => {
     res.redirect(`/products/${updatedProduct._id}`)
 })
 
+app.delete('/products/delete/:id', async (req, res) => {
+    const { id } = req.params;
+    await Product.findByIdAndDelete(id);
+    res.redirect(`/products`)
+})
+
 
 app.get('/products', async (req, res) => {
-    const products = await Product.find({})
-    // console.log(products)
-    res.render('products/index', { products })
+    const category = req.query;
+    if (category) {
+        console.log(category)
+        const products = await Product.find(category)
+
+        console.log(products)
+        res.render('products/index', { products, category })
+    }
+    else {
+        const products = await Product.find({})
+        // console.log(products)
+        res.render('products/index', { products, category: 'All' })
+    }
+
+    /////////////////////
+    // const category = req.query;
+    // if (category) {
+    //     console.log(category)
+    // }
+    // const products = await Product.find({})
+    // // console.log(products)
+    // res.render('products/index', { products })
 })
 
 app.get('/products/:id', async (req, res) => {
