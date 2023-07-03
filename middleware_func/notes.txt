@@ -1,0 +1,5 @@
+428. Using Morgan - Logger Middleware
+
+morgan('tiny') -> gets info about the request and logs it to the console
+
+app.use(morgan('tiny')); 
