@@ -21,3 +21,16 @@ app.use((req, res, next) => {
     next();
 
 })
+
+
+431. Setting Up A 404 Route
+
+can use path in app.use() to specify a route
+app.use('/dogs', () => {
+    console.log('I love dogs!');
+})
+
+app.use('/cats', (req, res) => {
+    res.send('MEW MEW!')
+})
+this will only run if the path is /cats and will catch all HTTP verbs (get, post, etc.)

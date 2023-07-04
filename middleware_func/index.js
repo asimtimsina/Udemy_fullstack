@@ -26,6 +26,10 @@ app.use((req, res, next) => {
 })
 
 
+app.use('/cats', (req, res) => {
+    res.send('MEW MEW!')
+}) // this will catch all HTTP verbs - GET, POST ...
+
 app.get('/', (req, res) => {
     res.send('HOME!')
 })
@@ -34,6 +38,10 @@ app.get('/', (req, res) => {
 
 app.get('/dogs', (req, res) => {
     res.send('WOOF WOOF!')
+})
+
+app.use((req, res) => {
+    res.status(404).send("404 Error Not Found")
 })
 
 
