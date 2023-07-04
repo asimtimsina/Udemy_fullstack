@@ -1,0 +1,21 @@
+463. One to Few
+
+{
+  first: 'Harry',
+  last: 'Bahadur',
+  _id: new ObjectId("64a475c0701d16b66686fcc8"),
+  addresses: [
+    {
+      street: '123 Main St',
+      city: 'NewYork',
+      state: 'NewYork',
+      country: 'USA',
+      _id: new ObjectId("64a475c0701d16b66686fcc9")
+    }
+  ],
+  __v: 0
+}
+
+
+Mongo will create a seperate ID for each address. This is called subdocument.
+Can avoid this by using _id: {id:false}
