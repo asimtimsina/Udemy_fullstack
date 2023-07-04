@@ -144,3 +144,11 @@ app.get('/products/:id, wrapAsync(async (req,res,next)=>{
     }
     res.render('products/show', {product})
 }))
+
+
+450. Differentiating Mongoose Errors
+
+err.name -> gives the type of error
+TypeError
+ValidationError
+CastError

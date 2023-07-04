@@ -119,7 +119,34 @@ app.get('/products/:id', async (req, res) => {
     res.render('products/product', { product });
 })
 
+// 450. Differentiating Mongoose Errors
 
+const handleValidationError = (err) => {
+    return new AppError(`Validation error ${err.message}`, 400);
+}
+const handleTypeError = (err) => {
+    return new AppError(`Type error ${err.message}`, 400);
+}
+const handleCastError = (err) => {
+    return new AppError(`Cast error ${err.message}`, 400);
+}
+
+app.use((err, req, res, next) => {
+    console.log(err.name);
+    if (err.name === 'ValidationError') err = handleValidationError(err)
+    if (err.name === 'TypeError') err = handleTypeError(err)
+    if (err.name === 'CastError') err = handleCastError(err)
+    next(err);
+})
+
+
+app.use((err, req, res, next) => {
+    const { status = 500 } = err;
+    const { message = 'Something is Wrong' } = err;
+
+    res.status(status).send(message);
+    // next() // built in error handling
+})
 
 
 // 409. Products Index
