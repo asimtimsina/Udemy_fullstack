@@ -27,7 +27,8 @@ app.use((req, res, next) => {
         next();
     }
     else {
-        res.send("Authenication error")
+        throw new Error("Password Required!")
+        // res.send("Authenication error")
     }
 
 })
@@ -73,12 +74,24 @@ app.get('/', (req, res) => {
 app.get('/dogs', (req, res) => {
     res.send('WOOF WOOF!')
 })
+app.get('/cats', (req, res) => {
+    cats.meow();
+})
 
 app.use((req, res) => {
     res.status(404).send("404 Error Not Found")
 })
 
 
+app.use((err, req, res, next) => {
+    console.log('*********************')
+    console.log('********ERROR********')
+    console.log('*********************')
+    res.status(500).send('Handling error!!')
+    // next() // built in error handling
+})
+
 app.listen(3000, () => {
     console.log("Listening on port 3000")
 })
+

@@ -87,3 +87,13 @@ app.use('/secret', verify, (req, res) => {
 
 throw new Error("Password Required!")
 -> will throw an error and stop the code from running
+
+
+445. Defining Custom Error Handlers
+
+Define error-handling middleware functions in the same way as other middleware functions, except error-handling functions have four arguments instead of three: (err, req, res, next). For example:
+
+app.use(function(err, req, res, next) {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
