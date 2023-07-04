@@ -13,3 +13,11 @@ we can define our own middleware function
 must have the req, res, and next arguments in that order
 next() -> must be called at the end of the function to move on to the next middleware function
 
+
+
+430. More Middleware Practice
+app.use((req, res, next) => {
+    console.log(req.method.toUpperCase(), req.path);
+    next();
+
+})
