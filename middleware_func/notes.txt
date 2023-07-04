@@ -81,3 +81,9 @@ app.use('/secret', verify, (req, res) => {
     res.send('The Secret is NOTHING!')
 })
 
+
+
+444. Express' Built-In Error Handler
+
+throw new Error("Password Required!")
+-> will throw an error and stop the code from running
