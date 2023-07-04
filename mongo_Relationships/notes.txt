@@ -28,3 +28,37 @@ Farm.findOne({ name: 'Tim Farm' })
     .then(farm => console.log(farm))
 
 .populate('products')  this will populate all the datas from the reference model
+
+
+466. One to "Bajillions"
+const findTweet = async () => {
+    const t = await Tweet.findOne({});
+    console.log(t)
+}
+
+{
+  _id: new ObjectId("64a4a0dcbc88690151dfc4ad"),
+  text: 'I love Nepal',
+  user: [ new ObjectId("64a4a0dcbc88690151dfc4aa") ],
+  __v: 0
+}
+
+
+const findTweet = async () => {
+    const t = await Tweet.findOne({}).populate('user');
+    console.log(t)
+}
+
+{
+  _id: new ObjectId("64a4a0dcbc88690151dfc4ad"),
+  text: 'I love Nepal',
+  user: [
+    {
+      _id: new ObjectId("64a4a0dcbc88690151dfc4aa"),
+      username: 'Asim',
+      age: 24,
+      __v: 0
+    }
+  ],
+  __v: 0
+}
