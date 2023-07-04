@@ -2,6 +2,8 @@ const { log } = require('console');
 const express = require('express');
 const app = express();
 
+// const AppError = require('./AppError')
+
 const methodoverride = require('method-override');
 
 const path = require('path');
@@ -20,6 +22,7 @@ const Product = require('./models/product')
 ////////
 const mongoose = require('mongoose');
 const { createDeflate } = require('zlib');
+const AppError = require('../middleware_func/AppError');
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/farmStand')
@@ -39,22 +42,34 @@ app.get('/products/new', (req, res) => {
     res.render('products/new');
 })
 
-app.post('/products/add', async (req, res) => {
+app.post('/products/add', wrapAsync(async (req, res) => {
     console.log(req.body);
     const newProduct = new Product(req.body);
     await newProduct.save();
+    if (!newProduct) {
+        throw new AppError('Couldnot save', 404)
+    }
     // res.redirect('/products')
     res.redirect(`/products/${newProduct.id}`)
-})
+}))
 
+// 449. Defining An Async Utility
+function wrapAsync(fn) {
+    return function (req, res, next) {
+        fn(req, res, next).catch(e => next(e));
+    }
+}
 
-app.get('/products/:id/edit', async (req, res) => {
+app.get('/products/:id/edit', wrapAsync(async (req, res) => {
     const { id } = req.params;
     const foundProduct = await Product.findById(id);
+    if (!foundProduct) {
+        throw new AppError('Product Not Found', 404)
+    }
     console.log(foundProduct)
     res.render('products/edit', { foundProduct, category });
     // res.send('Building')
-})
+}))
 
 app.put('/products/edit/:id', async (req, res) => {
     const { id } = req.params;

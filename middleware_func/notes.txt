@@ -110,3 +110,37 @@ const data = await Product.findOne({ name: 'Guitar' });
 if (!data) {
     next(new AppError('Product Not Found', 404));
 }
+
+
+448. Handling More Async Errors!
+
+handle  errors in the  try catch block of the async function
+
+try{
+    ....
+}
+catch(e){
+    next(e)
+}
+
+
+449. Defining An Async Utility Function
+define a function that takes in a function as an argument
+return a function that takes in req, res, and next
+and catch any errors and pass them to next
+
+
+
+function wrapAsync(fn){
+    return function(req, res, next){
+        fn(req, res, next).catch(e => next(e))
+    }
+}
+
+app.get('/products/:id, wrapAsync(async (req,res,next)=>{
+    const product = await Product.findById(req.params.id);
+    if(!product){
+        throw new AppError('Product Not Found', 404)
+    }
+    res.render('products/show', {product})
+}))
