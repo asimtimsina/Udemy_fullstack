@@ -58,3 +58,26 @@ Authenication
 http://localhost:3000/dogs?password=admin
 Authenication error
 
+
+433. Protecting Specific Routes
+
+
+can use multiple callback functions in app.use() or app.get() 
+
+const verify = (req, res, next) => {
+    console.log(req.query);
+    const { password } = req.query;
+    console.log(password);
+    if (password === 'admin') {
+        next();
+    }
+    else {
+        res.send("Authenication error")
+    }
+
+}
+
+app.use('/secret', verify, (req, res) => {
+    res.send('The Secret is NOTHING!')
+})
+

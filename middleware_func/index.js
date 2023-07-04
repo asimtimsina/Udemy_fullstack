@@ -40,6 +40,26 @@ app.use((req, res, next) => {
 })
 
 
+// 433. Protecting Specific Routes
+
+const verify = (req, res, next) => {
+    console.log(req.query);
+    const { password } = req.query;
+    console.log(password);
+    if (password === 'admin') {
+        next();
+    }
+    else {
+        res.send("Authenication error")
+    }
+
+}
+
+app.get('/secret', verify, (req, res) => {
+    res.send('The Secret is NOTHING!')
+})
+
+
 app.use('/cats', (req, res) => {
     res.send('MEW MEW!')
 }) // this will catch all HTTP verbs - GET, POST ...
