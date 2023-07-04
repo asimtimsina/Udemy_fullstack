@@ -51,16 +51,28 @@ const Farm = mongoose.model('Farm', farmSchema);
 // makeFarm()
 
 
-const addProduct = async () => {
-    const farm = await Farm.findOne({ name: 'Tim Farm' })
-    const melon = await Product.findOne({ name: 'Asparagus' })
+// const addProduct = async () => {
+//     const farm = await Farm.findOne({ name: 'Tim Farm' })
+//     const melon = await Product.findOne({ name: 'Asparagus' })
 
-    farm.products.push(melon)
-    await farm.save();
-    console.log(farm)
+//     farm.products.push(melon)
+//     await farm.save();
+//     console.log(farm)
 
-}
+// }
 
 
-addProduct()
+// addProduct()
 
+
+
+
+
+////////////////////////
+// 465. Mongoose Populate
+
+Farm.findOne({ name: 'Tim Farm' })
+    .populate('products')
+    .then(farm => console.log(farm))
+
+//this will populate all the datas from the reference.

@@ -19,3 +19,12 @@
 
 Mongo will create a seperate ID for each address. This is called subdocument.
 Can avoid this by using _id: {id:false}
+
+
+
+// 465. Mongoose Populate
+Farm.findOne({ name: 'Tim Farm' })
+    .populate('products')
+    .then(farm => console.log(farm))
+
+.populate('products')  this will populate all the datas from the reference model
