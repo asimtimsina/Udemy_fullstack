@@ -18,6 +18,20 @@ app.use(morgan('tiny'))
 //     next();
 // })
 
+
+app.use((req, res, next) => {
+    console.log(req.query);
+    const { password } = req.query;
+    console.log(password);
+    if (password === 'admin') {
+        next();
+    }
+    else {
+        res.send("Authenication error")
+    }
+
+})
+
 // 430. More Middleware Practice
 app.use((req, res, next) => {
     console.log(req.method.toUpperCase(), req.path);

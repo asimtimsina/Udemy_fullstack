@@ -34,3 +34,27 @@ app.use('/cats', (req, res) => {
     res.send('MEW MEW!')
 })
 this will only run if the path is /cats and will catch all HTTP verbs (get, post, etc.)
+
+
+432. Password Middleware Demo (NOT REAL AUTH)
+
+app.use((req, res, next) => {
+    console.log(req.query);
+    const { password } = req.query;
+    console.log(password);
+    if (password === 'admin') {
+        next();
+    }
+    else {
+        res.send("Authenication error")
+    }
+
+})
+
+
+http://localhost:3000/dogs?password=admin
+Authenication
+
+http://localhost:3000/dogs?password=admin
+Authenication error
+
