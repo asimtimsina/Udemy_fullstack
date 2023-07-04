@@ -3,6 +3,7 @@ const app = express();
 
 const morgan = require('morgan');
 
+const AppError = require('./AppError')
 app.use(morgan('tiny'))
 
 // 429. Defining Our Own Middleware
@@ -19,19 +20,19 @@ app.use(morgan('tiny'))
 // })
 
 
-app.use((req, res, next) => {
-    console.log(req.query);
-    const { password } = req.query;
-    console.log(password);
-    if (password === 'admin') {
-        next();
-    }
-    else {
-        throw new Error("Password Required!")
-        // res.send("Authenication error")
-    }
+// app.use((req, res, next) => {
+//     console.log(req.query);
+//     const { password } = req.query;
+//     console.log(password);
+//     if (password === 'admin') {
+//         next();
+//     }
+//     else {
+//         throw new Error("Password Required!")
+//         // res.send("Authenication error")
+//     }
 
-})
+// })
 
 // 430. More Middleware Practice
 app.use((req, res, next) => {
@@ -51,7 +52,8 @@ const verify = (req, res, next) => {
         next();
     }
     else {
-        res.send("Authenication error")
+        // res.send("Authenication error")
+        throw new AppError('Password Required!!!', 401);
     }
 
 }
@@ -74,7 +76,7 @@ app.get('/', (req, res) => {
 app.get('/dogs', (req, res) => {
     res.send('WOOF WOOF!')
 })
-app.get('/cats', (req, res) => {
+app.get('/catsmeow', (req, res) => {
     cats.meow();
 })
 
@@ -83,11 +85,19 @@ app.use((req, res) => {
 })
 
 
+// app.use((err, req, res, next) => {
+//     console.log('*********************')
+//     console.log('********ERROR********')
+//     console.log('*********************')
+//     res.status(500).send('Handling error!!')
+//     // next() // built in error handling
+// })
+
 app.use((err, req, res, next) => {
-    console.log('*********************')
-    console.log('********ERROR********')
-    console.log('*********************')
-    res.status(500).send('Handling error!!')
+    const { status = 500 } = err;
+    const { message = 'Something is Wrong' } = err;
+
+    res.status(status).send(message);
     // next() // built in error handling
 })
 
