@@ -97,3 +97,16 @@ app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
+
+
+
+447. Handling Async Errors
+
+must use next(err) to pass the error to the error handler
+
+
+const data = await Product.findOne({ name: 'Guitar' });
+
+if (!data) {
+    next(new AppError('Product Not Found', 404));
+}
