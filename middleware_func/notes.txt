@@ -3,3 +3,13 @@
 morgan('tiny') -> gets info about the request and logs it to the console
 
 app.use(morgan('tiny')); 
+
+
+
+429. Defining Our Own Middleware
+
+app.use() -> takes a function as an argument
+we can define our own middleware function
+must have the req, res, and next arguments in that order
+next() -> must be called at the end of the function to move on to the next middleware function
+
