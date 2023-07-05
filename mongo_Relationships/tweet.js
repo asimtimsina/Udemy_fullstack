@@ -44,7 +44,9 @@ const makeTweets = async () => {
 // makeTweets();
 
 const findTweet = async () => {
+    // const t = await Tweet.find({}); //-> populates all data of user
     const t = await Tweet.find({}).populate('user'); //-> populates all data of user
+    // const t = await Tweet.findOne({}).populate('user'); //-> populates all data of user
     // const t = await Tweet.find({}).populate('user', 'username'); //-> populates only the usernams
     console.log(t)
 }
