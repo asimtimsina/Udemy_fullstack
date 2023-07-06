@@ -3,7 +3,7 @@ const app = express()
 
 // npm i cookie-parser
 const cookieParser = require('cookie-parser');
-app.use(cookieParser());
+app.use(cookieParser('thisismysecret'));
 
 
 
@@ -21,8 +21,18 @@ app.get('/setname', (req, res) => {
 })
 
 
+app.get('/getsignedcookie', (req, res) => {
+    res.cookie('fruit', 'grape', { signed: true });
+    res.send('Sent the signed cookie');
+})
 
 
+app.get('/verifycookie', (req, res) => {
+    console.log(req.cookies); //doesn't contain signed cookies
+    console.log(req.signedCookies); // contain signed cookies
+
+    res.send(req.signedCookies);
+})
 
 
 
