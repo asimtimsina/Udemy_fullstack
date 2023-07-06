@@ -13,8 +13,8 @@ const session = require('express-session')
 
 app.use(session({
     secret: 'thisismynotagoodsecret',
-    resave: true,
-    saveUninitialized: true
+    resave: false,
+    saveUninitialized: false
 }))
 
 app.get('/viewcount', (req, res) => {
@@ -26,6 +26,18 @@ app.get('/viewcount', (req, res) => {
         console.log(req.session.count)
     }
     res.send(`You have viewed the page ${req.session.count} times`);
+})
+
+app.get('/register', (req, res) => {
+    const { username = 'Unknown' } = req.query;
+    req.session.username = username;
+    res.redirect('/greet')
+})
+
+app.get('/greet', (req, res) => {
+    const { username } = req.query;
+
+    res.send(`Hi  ${username}`)
 })
 
 
