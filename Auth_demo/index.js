@@ -86,6 +86,14 @@ app.post('/login', async (req, res) => {
 
 })
 
+/////////////////////
+
+app.post('/logout', (req, res) => {
+    // req.session.user_id = '';
+    delete req.session.user_id;
+    res.redirect('/');
+})
+
 
 //////////////////
 
