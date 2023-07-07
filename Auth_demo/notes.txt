@@ -1,1 +1,21 @@
 511. Auth Demo: Setup
+
+
+512. Auth Demo: Registering
+Take the username and password from form 
+Use decrypt to decrypt the password.
+
+
+app.post('/register', async (req, res) => {
+
+    const { user } = req.body;
+    const hashedPw = await bcrypt.hash(user.password, 12);
+
+    const newUser = new User({
+        username: user.username,
+        password: hashedPw
+    })
+
+    await newUser.save();
+    res.redirect('/');
+})
