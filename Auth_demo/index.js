@@ -7,6 +7,8 @@ const User = require('./models/user');
 
 const bcrypt = require('bcrypt')
 
+const session = require('express-session');
+
 mongoose.connect('mongodb://127.0.0.1:27017/authdemo')
     .then(() => {
         console.log("Mongo Coonection open")
@@ -19,7 +21,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/authdemo')
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 app.use(express.urlencoded({ extended: true }))
-
+app.use(session({ secret: 'Hardsecret' }))
 
 app.get('/', (req, res) => {
 
@@ -38,6 +40,7 @@ app.post('/register', async (req, res) => {
     // console.log(req.body);
     const { user } = req.body;
     const hashedPw = await bcrypt.hash(user.password, 12);
+    req.session.user_id = user._id;
 
     const newUser = new User({
         username: user.username,
@@ -70,7 +73,9 @@ app.post('/login', async (req, res) => {
         // console.log(user.password, finduser.password)
         const validPassword = await bcrypt.compare(user.password, finduser.password);
         if (validPassword) {
-            res.send("Welcome, You're logged in")
+            req.session.user_id = finduser._id;
+            // res.send("Welcome, You're logged in")
+            res.redirect('/secret')
         }
         else {
             res.send("Sorry, Incorrect username or password")
@@ -85,8 +90,13 @@ app.post('/login', async (req, res) => {
 //////////////////
 
 app.get('/secret', (req, res) => {
-    console.log('You cannot see me unless you are logged in')
-    res.send('You cannot see me unless you are logged in')
+    if (!req.session.user_id) {
+        res.redirect('/login');
+    } else {
+        console.log('You cannot see me unless you are logged in')
+        res.send('You cannot see me unless you are logged in')
+    }
+
 })
 
 
