@@ -47,17 +47,11 @@ app.get('/register', (req, res) => {
 app.post('/register', async (req, res) => {
     // console.log(req.body);
     const { user } = req.body;
-    const hashedPw = await bcrypt.hash(user.password, 12);
-    req.session.user_id = user._id;
+    const { username, password } = user;
 
-    const newUser = new User({
-        username: user.username,
-        password: hashedPw
-    })
+    const newUser = new User({ username, password })
     await newUser.save();
-
-
-
+    req.session.user_id = user._id;
     res.redirect('/');
 
     // res.send(req.body)
@@ -73,27 +67,36 @@ app.get('/login', (req, res) => {
 app.post('/login', async (req, res) => {
     const { user } = req.body;
 
-    const finduser = await User.findOne({ username: user.username })
-    // console.log(finduser);
-    if (!finduser) {
-        res.send("Incorrect username or password")
-    } else {
-        // console.log(user.password, finduser.password)
-        const validPassword = await bcrypt.compare(user.password, finduser.password);
-        if (validPassword) {
-            req.session.user_id = finduser._id;
-            // res.send("Welcome, You're logged in")
-            res.redirect('/secret')
-        }
-        else {
-            res.send("Sorry, Incorrect username or password")
-        }
-
+    const finduser = await User.findAndValidate(user.username, user.password);
+    console.log(finduser)
+    if (finduser) {
+        req.session.user_id = finduser._id;
+        res.redirect('/secret')
+    }
+    else {
+        res.redirect('/login');
     }
 
 
-})
 
+    // const finduser = await User.findOne({ username: user.username })
+
+    // console.log(finduser);
+    // if (!finduser) {
+    //     res.send("Incorrect username or password")
+    // } else {
+    //     // console.log(user.password, finduser.password)
+    //     const validPassword = await bcrypt.compare(user.password, finduser.password);
+    //     if (validPassword) {
+    //         req.session.user_id = finduser._id;
+    //         // res.send("Welcome, You're logged in")
+    //         res.redirect('/secret')
+    //     }
+    //     else {
+    //         res.send("Sorry, Incorrect username or password")
+    //     }
+
+})
 /////////////////////
 
 app.post('/logout', (req, res) => {
