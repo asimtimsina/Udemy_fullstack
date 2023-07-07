@@ -11,9 +11,14 @@ app.use(session({ secret: 'yoyo', unsave: false, saveUninitialized: false }))
 app.use(flash());
 app.set('view engine', 'ejs');
 
+// 497. Res.locals & Flash
+app.use((req, res, next) => {
+    res.locals.message = req.flash('success');
+    next();
+})
 
 app.get('/farms', (req, res) => {
-    res.render('farms', { message: req.flash('success') })
+    res.render('farms')
 })
 
 
