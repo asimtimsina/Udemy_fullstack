@@ -23,6 +23,14 @@ app.set('views', 'views');
 app.use(express.urlencoded({ extended: true }))
 app.use(session({ secret: 'Hardsecret' }))
 
+const requireLogin = (req, res, next) => {
+    if (!req.session.user_id) {
+        return res.redirect('/login');
+    }
+    next();
+}
+
+
 app.get('/', (req, res) => {
 
     // res.redirect('/secret')
@@ -97,13 +105,9 @@ app.post('/logout', (req, res) => {
 
 //////////////////
 
-app.get('/secret', (req, res) => {
-    if (!req.session.user_id) {
-        res.redirect('/login');
-    } else {
-        console.log('You cannot see me unless you are logged in')
-        res.send('You cannot see me unless you are logged in')
-    }
+app.get('/secret', requireLogin, (req, res) => {
+
+    res.send('You cannot see me unless you are logged in')
 
 })
 
