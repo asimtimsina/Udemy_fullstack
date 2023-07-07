@@ -1,0 +1,13 @@
+510. Intro to Bcrypt
+
+npm i bcrypt
+
+bcrypt and bcryptjs are the same thing. bcryptjs is a pure JavaScript implementation of bcrypt. bcrypt is a C++ binding for Node.js to bcrypt.
+
+
+bcrypt.gensalt(iteration) - generate a salt
+bcrypt.hash(password,salt) - generate a hash
+bcrypt.compare(password,hash) - compare a password with a hash, returns boolean
+
+
+Must use async/await or promises
