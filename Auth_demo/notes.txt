@@ -19,3 +19,29 @@ app.post('/register', async (req, res) => {
     await newUser.save();
     res.redirect('/');
 })
+
+
+
+513. Auth Demo: Login
+
+app.post('/login', async (req, res) => {
+    const { user } = req.body;
+
+    const finduser = await User.findOne({ username: user.username })
+    // console.log(finduser);
+    if (!finduser) {
+        res.send("Incorrect username or password")
+    } else {
+        // console.log(user.password, finduser.password)
+        const validPassword = await bcrypt.compare(user.password, finduser.password);
+        if (validPassword) {
+            res.send("Welcome, You're logged in")
+        }
+        else {
+            res.send("Sorry, Incorrect username or password")
+        }
+
+    }
+
+
+})

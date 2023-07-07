@@ -28,10 +28,8 @@ app.get('/', (req, res) => {
     res.send('This is the homepage');
 })
 
+//////////////
 app.get('/register', (req, res) => {
-
-    // res.redirect('/secret')
-
     res.render('register');
 })
 
@@ -54,7 +52,37 @@ app.post('/register', async (req, res) => {
     // res.send(req.body)
     // res.render('register');
 })
+//////////////////
 
+app.get('/login', (req, res) => {
+    res.render('login')
+
+})
+
+app.post('/login', async (req, res) => {
+    const { user } = req.body;
+
+    const finduser = await User.findOne({ username: user.username })
+    // console.log(finduser);
+    if (!finduser) {
+        res.send("Incorrect username or password")
+    } else {
+        // console.log(user.password, finduser.password)
+        const validPassword = await bcrypt.compare(user.password, finduser.password);
+        if (validPassword) {
+            res.send("Welcome, You're logged in")
+        }
+        else {
+            res.send("Sorry, Incorrect username or password")
+        }
+
+    }
+
+
+})
+
+
+//////////////////
 
 app.get('/secret', (req, res) => {
     console.log('You cannot see me unless you are logged in')
