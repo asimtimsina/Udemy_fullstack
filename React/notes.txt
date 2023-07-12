@@ -152,3 +152,20 @@ Use className instead of class.
 className is a reserved word in JS.
 Create a seperate css file and import it into the component file.
 import "./Die.css";
+
+
+605. Random PokeCard Exercise
+
+import "./RandomPokemon.css";
+
+export default function Pokemon() {
+  const rand = Math.floor(Math.random() * 150 + 1);
+  const url = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${rand}.png`;
+
+  return (
+    <div className="RandomPokemon">
+      <h1 className="h1"> Random #{rand} </h1>
+      <img className="pokeImg" alt="..." src={url} />
+    </div>
+  );
+}
