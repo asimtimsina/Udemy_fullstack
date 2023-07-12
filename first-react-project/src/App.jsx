@@ -16,7 +16,7 @@ function App() {
 
       <Die numSides={5} />
       <Die numSides={20} />
-      <Die numSides={6} />
+      <Die />
 
     </>
   )

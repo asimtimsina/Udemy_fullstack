@@ -224,3 +224,11 @@ export default function Greeter({person}) {
 
 611. Non-String Props
 Use {} to pass non-string props.
+
+
+612. Setting Default Prop Values
+
+export default function Die({ numSides =6 }) {
+    const roll = Math.floor(Math.random() * numSides + 1);
+    return <p>{numSides} sided die roll: {roll}</p>
+}
