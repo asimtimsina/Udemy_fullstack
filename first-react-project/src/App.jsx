@@ -1,17 +1,17 @@
 
-import './App.css'
-import Cow from './cow'
-import './cow.css'
+// import './App.css'
+// import Cow from './cow'
+// import './cow.css'
+
+import Greeter from './Greeter'
 
 function App() {
 
 
   return (
     <>
-      <Cow />
-      <Cow />
-      <Cow />
-
+      <Greeter person='Asim' />
+      <Greeter person='Nick' />
     </>
   )
 }

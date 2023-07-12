@@ -197,3 +197,25 @@ index.html is the entry point of the app.
 index.jsx is the entry point of the app.
 index.html has a div with id="app" which is the root div of the app.
 
+
+
+610. Introducing Props
+
+Props are a way to pass data from a parent component to a child component.
+Props are immutable.  They can't be changed by the child component.
+Props are passed as attributes to the child component.
+
+
+
+export default function Greeter(props) {
+    console.log(props)
+    return <h1>HELLO {props.person}!! </h1>
+}
+
+props is an object that contains all the props passed to the component.
+props.person is the value of the person prop passed to the component.
+can also destructure the props object
+
+export default function Greeter({person}) {
+    return <h1>HELLO {person}!! </h1>
+}
