@@ -353,3 +353,13 @@ export default function ShoppingList({ lists }) {
     )
 
 }
+
+
+
+620. The Key Prop
+Missing key prop for list items.
+React uses key prop to keep track of list items. Key prop should be unique for each list item.
+
+{lists.map((item) => (<li key={item.id} 
+...
+...

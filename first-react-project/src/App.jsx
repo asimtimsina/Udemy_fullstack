@@ -17,10 +17,10 @@ import ShoppingList from "./ShoppingList"
 function App() {
 
   const lists = [
-    { name: 'Milk', quantity: 5, picked: true },
-    { name: 'Oats', quantity: 1, picked: false },
-    { name: 'Carrot', quantity: 4, picked: true },
-    { name: 'Broccoli', quantity: 2, picked: false },
+    { id: 1, name: 'Milk', quantity: 5, picked: true },
+    { id: 2, name: 'Oats', quantity: 1, picked: false },
+    { id: 3, name: 'Carrot', quantity: 4, picked: true },
+    { id: 4, name: 'Broccoli', quantity: 2, picked: false },
   ]
 
   return (
