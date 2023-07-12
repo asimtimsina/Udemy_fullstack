@@ -38,3 +38,39 @@ export default function App() {
 
 
 598. Importing and Exporting Components
+One component per file.
+We can import and export components from one file to another.
+
+Use ES6 modules to import and export components.
+import Greeter from "./Greeter.js";
+
+But we first need to export something that can be imported
+
+export 
+default
+
+export default function Greeter() {
+  return <h1>HELLO! </h1>;
+}
+
+Can also do
+
+ function Greeter() {
+  return <h1>HELLO! </h1>;
+}
+export default Greeter;
+
+
+Can also export multiple things from a file
+export {dog, cat};
+But must import them like this
+import {dog, cat} from "./animals.js";
+
+
+function add(x, y) {
+  return x + y;
+}
+function multiple(x, y) {
+  return x * y;
+}
+export { add, multiple };
