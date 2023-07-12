@@ -144,3 +144,11 @@ export default function DiceHand() {
     </div>
   );
 }
+
+
+604. Styling Components
+
+Use className instead of class. 
+className is a reserved word in JS.
+Create a seperate css file and import it into the component file.
+import "./Die.css";
