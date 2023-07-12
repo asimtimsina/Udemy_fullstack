@@ -219,3 +219,8 @@ can also destructure the props object
 export default function Greeter({person}) {
     return <h1>HELLO {person}!! </h1>
 }
+
+
+
+611. Non-String Props
+Use {} to pass non-string props.

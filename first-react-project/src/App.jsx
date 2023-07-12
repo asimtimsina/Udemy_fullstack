@@ -4,14 +4,20 @@
 // import './cow.css'
 
 import Greeter from './Greeter'
+import Die from './Die'
 
 function App() {
 
 
   return (
     <>
-      <Greeter person='Asim' />
-      <Greeter person='Nick' />
+      {/* <Greeter person='Asim' from='Denton' />
+      <Greeter person='Nick' from='Asim' /> */}
+
+      <Die numSides={5} />
+      <Die numSides={20} />
+      <Die numSides={6} />
+
     </>
   )
 }
