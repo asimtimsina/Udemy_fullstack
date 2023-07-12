@@ -266,3 +266,22 @@ Use ternary operator to conditionally render JSX.
 
 615. The React Developer Tools
 https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
+
+
+616. Adding Dynamic Component Styles
+
+const styles = { color: num1 === num2 ? 'green' : 'red' }
+    return (
+        <div className="DoubleDice" style={styles}>
+            {num1 === num2 ? <h2>You Win</h2> : null}
+            <p>Num1: {num1}</p>
+            <p>Num2: {num2}</p>
+        </div>
+    )
+
+<Heading color='teal' text='Hi Everyone' />
+export default function Heading({ color = 'olive', text }) {
+    return (
+        <h1 style={{ color: color }}>{text}</h1>
+    )
+}

@@ -58,10 +58,12 @@ export default function DoubleDice() {
     const num1 = Math.floor(Math.random() * 3 + 1);
     const num2 = Math.floor(Math.random() * 3 + 1);
 
+    const isWinner = num1 === num2;
 
+    const styles = { color: isWinner ? 'green' : 'red' }
     return (
-        <div>
-            {num1 === num2 ? <h2>You Win</h2> : null}
+        <div className="DoubleDice" style={styles}>
+            {isWinner ? <h2>You Win</h2> : <h2>You Lose</h2>}
             <p>Num1: {num1}</p>
             <p>Num2: {num2}</p>
         </div>
