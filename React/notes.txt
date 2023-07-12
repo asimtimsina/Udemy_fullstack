@@ -112,3 +112,11 @@ export default function LoginForm() {
   );
 }
 
+601. Evaluating JS Expressions in JSX
+
+We can evaluate JS expressions inside of JSX using curly braces.
+{}
+We can't use if statements or for loops inside of JSX.  We can use ternary operators.
+ 
+const name = 'Bhusiya';
+return <p> {name} says WOOOF </p>; -> Bhusiya says WOOOF
