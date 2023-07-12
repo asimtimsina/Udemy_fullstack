@@ -180,3 +180,10 @@ npm create vite@latest
 Follow commands and create a react app.
 install all dependencies using npm install
 use npm run dev to start the server.
+
+
+
+608. A Note About Create React App
+
+Similar to vite but it's more mature and has more features.
+It's a bit more complicated to use.
