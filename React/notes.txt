@@ -18,3 +18,23 @@ App is the root component of our application. Top level component.
 App component is the parent of all other components.
 
 
+597. Our First React Component
+
+function Greeter() {
+  return <h1>HELLO! </h1>;
+}
+
+export default function App() {
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox!!</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <input type="text" />
+      <Greeter/> 
+      {/* Call the function */}
+    </div>
+  );
+}
+
+
+598. Importing and Exporting Components
