@@ -249,3 +249,16 @@ export default function ListPicker({ values }) {
             <p>Random value from the list is {values[randIndex]} </p>
         </div>
     )
+
+
+
+614. React Conditionals
+
+multiple way to use conditionals in JSX.
+
+Use ternary operator to conditionally render JSX.
+{condition ? <p>True</p> : <p>False</p>}
+
+<h2>{num1 === num2 ? 'You Win!!!' : 'You Lose!!!'}</h2>
+{num1 === num2 ? <h2>You Win</h2> : null}
+{num1 === num2 && <h2>You Win</h2>}
