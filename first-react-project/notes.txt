@@ -169,3 +169,14 @@ export default function Pokemon() {
     </div>
   );
 }
+
+
+
+607. Creating React Apps With Vite
+
+Vite is a build tool for modern web projects.
+
+npm create vite@latest
+Follow commands and create a react app.
+install all dependencies using npm install
+use npm run dev to start the server.
