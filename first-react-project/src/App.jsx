@@ -10,11 +10,18 @@ import DoubleDice from "./DoubleDice"
 import Heading from "./Heading"
 import ColorList from "./ColorList"
 import Slots from "./Slots"
+import ShoppingList from "./ShoppingList"
 
 
 
 function App() {
 
+  const lists = [
+    { name: 'Milk', quantity: 5, picked: true },
+    { name: 'Oats', quantity: 1, picked: false },
+    { name: 'Carrot', quantity: 4, picked: true },
+    { name: 'Broccoli', quantity: 2, picked: false },
+  ]
 
   return (
     <>
@@ -32,6 +39,7 @@ function App() {
       <ColorList color={['Olive', 'Orangered', 'Red', 'Magenta']} /> */}
 
       <Slots />
+      <ShoppingList lists={lists} />
 
     </>
   )
