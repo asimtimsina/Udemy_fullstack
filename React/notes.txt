@@ -74,3 +74,21 @@ function multiple(x, y) {
   return x * y;
 }
 export { add, multiple };
+
+
+599. The Rules of JSX
+
+You must explicityly close all tags.  like <br> must be <br />.
+You can only return a single element from a component.  You can't return two sibling elements.  You can wrap them in a div or a fragment.
+
+export default function LoginForm() {
+  return (
+    <form>
+      <label> ID </label>
+      <input type="text " />
+      <label> password </label>
+      <input type="password " />
+      <button> Submit </button>
+    </form>
+  );
+}
