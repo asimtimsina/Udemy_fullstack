@@ -1,0 +1,10 @@
+595. The Basics of JSX
+
+JSX is a syntax extension to JavaScript.
+It is similar to a template language, but it has full power of JavaScript. 
+JSX gets compiled to React.createElement() calls which return plain JavaScript objects called “React elements”. Babel compiles JSX down to React.createElement() calls.
+
+It allows us to write markup that looks like HTML directly inside of our HTML.
+It's not legal JS on it's own so it must be transpiled into JS.
+
+Babel behind the scenes will take the JSX and convert it into React.createElement() calls.
