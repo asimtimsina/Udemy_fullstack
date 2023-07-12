@@ -262,3 +262,7 @@ Use ternary operator to conditionally render JSX.
 <h2>{num1 === num2 ? 'You Win!!!' : 'You Lose!!!'}</h2>
 {num1 === num2 ? <h2>You Win</h2> : null}
 {num1 === num2 && <h2>You Win</h2>}
+
+
+615. The React Developer Tools
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi
