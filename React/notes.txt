@@ -129,3 +129,18 @@ export default function Die() {
   return <h1> Die Roll: {roll} </h1>;
 }
 
+
+
+603. Component Decomposition
+
+import Die from "./Die";
+
+export default function DiceHand() {
+  return (
+    <div>
+      <Die />
+      <Die />
+      <Die />
+    </div>
+  );
+}
