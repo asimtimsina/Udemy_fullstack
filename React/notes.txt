@@ -120,3 +120,12 @@ We can't use if statements or for loops inside of JSX.  We can use ternary opera
  
 const name = 'Bhusiya';
 return <p> {name} says WOOOF </p>; -> Bhusiya says WOOOF
+
+
+602. Creating. a Die Component
+
+export default function Die() {
+  const roll = Math.floor(Math.random() * 6 + 1);
+  return <h1> Die Roll: {roll} </h1>;
+}
+
