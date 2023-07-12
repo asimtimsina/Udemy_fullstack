@@ -92,3 +92,23 @@ export default function LoginForm() {
     </form>
   );
 }
+
+
+
+600. React Fragments
+
+Can use react fragments to wrap multiple elements.
+<> </> or <React.Fragment> </React.Fragment>
+
+export default function LoginForm() {
+  return (
+    <>
+      <label> ID </label>
+      <input type="text " />
+      <label> password </label>
+      <input type="password " />
+      <button> Submit </button>
+    </>
+  );
+}
+
