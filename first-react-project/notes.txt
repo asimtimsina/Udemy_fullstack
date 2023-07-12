@@ -187,3 +187,13 @@ use npm run dev to start the server.
 
 Similar to vite but it's more mature and has more features.
 It's a bit more complicated to use.
+
+
+609. A Tour of A Vite App
+
+New components are created in the src folder.
+.jsx files are used instead of .js files.
+index.html is the entry point of the app.
+index.jsx is the entry point of the app.
+index.html has a div with id="app" which is the root div of the app.
+
