@@ -232,3 +232,20 @@ export default function Die({ numSides =6 }) {
     const roll = Math.floor(Math.random() * numSides + 1);
     return <p>{numSides} sided die roll: {roll}</p>
 }
+
+
+613. Passing Arrays and Objects
+
+
+<ListPicker values={['Asim', 'Nick', 'Bish']} />
+<ListPicker values={{a:1,b:2}} /> 
+First {} is for JS expression and second {} is for object literal.
+
+export default function ListPicker({ values }) {
+    const randIndex = Math.floor(Math.random() * values.length);
+    console.log(randIndex)
+    return (
+        <div>
+            <p>Random value from the list is {values[randIndex]} </p>
+        </div>
+    )
