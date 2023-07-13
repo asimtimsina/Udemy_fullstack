@@ -396,8 +396,30 @@ Add  "react/prop-types": 'off', to .eslintrc.json file to disable prop-types war
 
 
 625. PropTypes Library Crash Course
+https://github.com/facebook/prop-types
 ShoppingListItem.propTypes = {
     name: PropTypes.string,
     quantity: PropTypes.number,
     picked: PropTypes.bool
+}
+
+
+626. Intro to React Events
+
+use OnClick event to handle click events.
+OnClick supports a function that will be called when the event occurs.
+
+
+
+function handleClick() {
+    console.log('Clicked')
+}
+
+export default function Clicker() {
+    return (
+        <div>
+            <p>Click Me</p>
+            <button onClick={handleClick}>Click {count}</button>
+        </div>
+    )
 }

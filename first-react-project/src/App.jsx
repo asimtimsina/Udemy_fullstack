@@ -3,15 +3,17 @@
 // import Cow from './cow'
 // import './cow.css'
 
+
 // import Greeter from './Greeter'
 // import Die from './Die'
 // import ListPicker from "../ListPicker"
-import DoubleDice from "./DoubleDice"
-import Heading from "./Heading"
-import ColorList from "./ColorList"
-import Slots from "./Slots"
-import ShoppingList from "./ShoppingList"
-import PropertyList from "./PropertyList"
+// import DoubleDice from "./DoubleDice"
+// import Heading from "./Heading"
+// import ColorList from "./ColorList"
+// import Slots from "./Slots"
+// import ShoppingList from "./ShoppingList"
+// import PropertyList from "./PropertyList"
+import Clicker from "./Clicker";
 
 
 
@@ -50,9 +52,11 @@ function App() {
       <ColorList color={['Olive', 'Orangered', 'Red', 'Magenta']} /> */}
 
       {/* {/* <Slots />  */}
-      <ShoppingList lists={lists} />
+      {/* <ShoppingList lists={lists} />
 
-      <PropertyList property={properties} />
+      <PropertyList property={properties} /> */}
+
+      <Clicker />
 
     </>
   )
