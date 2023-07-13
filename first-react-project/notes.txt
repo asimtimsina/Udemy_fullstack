@@ -458,3 +458,8 @@ export default function Forms() {
 
     )
 }
+
+
+629. Clicker Exercise
+
+<button onClick={() => alert(message)} > {buttonText}</button >

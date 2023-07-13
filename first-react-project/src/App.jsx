@@ -5,6 +5,7 @@
 
 
 
+
 // import Greeter from './Greeter'
 // import Die from './Die'
 // import ListPicker from "../ListPicker"
@@ -15,7 +16,8 @@
 // import ShoppingList from "./ShoppingList"
 // import PropertyList from "./PropertyList"
 // import Clicker from "./Clicker";
-import Forms from "./Forms"
+// import Forms from "./Forms"
+import ClickerExercise from "./ClickerExercise"
 
 
 
@@ -59,7 +61,9 @@ function App() {
       <PropertyList property={properties} /> */}
 
       {/* <Clicker /> */}
-      <Forms />
+      {/* <Forms /> */}
+      <ClickerExercise message={'HIIIII'} buttonText="LOL" />
+      <ClickerExercise message={'Dont Ever Click ME'} buttonText="Dont Click MEE" />
     </>
   )
 }
