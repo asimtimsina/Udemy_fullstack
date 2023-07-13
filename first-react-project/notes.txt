@@ -560,3 +560,15 @@ const handleClickThree = () => {
     setNum(c => c + 1)
     setNum(c => c + 1)
 }
+
+
+
+638. State Initializer Functions
+
+useState() can also take a function as an argument.
+This function will be called only once when the component is rendered for the first time.
+
+IMP: The function will be called everytime the set function is called. But the result is only used for the first time.
+
+const [bord, setBoard] = useState(generateGameBoard); -> generateGameBoard only runs for the first time
+const [bord, setBoard] = useState(generateGameBoard()); -> generateGameBoard runs everytime setBoard is called. But the value won't be used.
