@@ -634,3 +634,28 @@ export default function EmojiClicker() {
 
 
 
+643. Deleting From Arrays The React Way
+
+Use array function to call another function and pass the index to it.
+onClick={() => deleteEmoji(e.id)}
+
+use .filter() to filter out the element with the given id.
+
+const deleteEmoji = (id) => {
+    //delete emoji with id
+    // console.log(id)
+    // const newList = emojis.filter(e => e.id !== id);
+    // console.log(newList);
+    setEmoji(previousEmojis => {
+        return previousEmojis.filter(e => e.id !== id);
+    })
+}
+
+return (
+    <div>
+        {emojis.map(e => <span key={e.id} onClick={() => deleteEmoji(e.id)} style={{ fontSize: "4rem" }}>{e.emoji}</span>)}
+        <br /> <button onClick={addEmoji}>Add Emoji </button>
+    </div>
+)
+
+
