@@ -394,3 +394,10 @@ Can use spread operator to pass props to the component.
 624. Configuring ESLint
 Add  "react/prop-types": 'off', to .eslintrc.json file to disable prop-types warning.
 
+
+625. PropTypes Library Crash Course
+ShoppingListItem.propTypes = {
+    name: PropTypes.string,
+    quantity: PropTypes.number,
+    picked: PropTypes.bool
+}

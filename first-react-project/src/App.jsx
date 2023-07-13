@@ -49,8 +49,8 @@ function App() {
       <ColorList color={['Red', 'Green', 'Purple', 'Teal']} />
       <ColorList color={['Olive', 'Orangered', 'Red', 'Magenta']} /> */}
 
-      {/* <Slots />
-      <ShoppingList lists={lists} /> */}
+      {/* {/* <Slots />  */}
+      <ShoppingList lists={lists} />
 
       <PropertyList property={properties} />
 

@@ -1,4 +1,4 @@
-
+import PropTypes from 'prop-types';
 
 
 function ShoppingListItem({ name, quantity, picked }) {
@@ -10,6 +10,12 @@ function ShoppingListItem({ name, quantity, picked }) {
         <li style={styles}> {name} - {quantity}</li>
 
     )
+}
+
+ShoppingListItem.propTypes = {
+    name: PropTypes.string,
+    quantity: PropTypes.number,
+    picked: PropTypes.bool
 }
 
 
