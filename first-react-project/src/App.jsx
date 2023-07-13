@@ -4,6 +4,7 @@
 // import './cow.css'
 
 
+
 // import Greeter from './Greeter'
 // import Die from './Die'
 // import ListPicker from "../ListPicker"
@@ -13,27 +14,28 @@
 // import Slots from "./Slots"
 // import ShoppingList from "./ShoppingList"
 // import PropertyList from "./PropertyList"
-import Clicker from "./Clicker";
+// import Clicker from "./Clicker";
+import Forms from "./Forms"
 
 
 
 function App() {
 
-  const lists = [
-    { id: 1, name: 'Milk', quantity: 5, picked: true },
-    { id: 2, name: 'Oats', quantity: 1, picked: false },
-    { id: 3, name: 'Carrot', quantity: 4, picked: true },
-    { id: 4, name: 'Broccoli', quantity: 2, picked: false },
-  ]
+  // const lists = [
+  //   { id: 1, name: 'Milk', quantity: 5, picked: true },
+  //   { id: 2, name: 'Oats', quantity: 1, picked: false },
+  //   { id: 3, name: 'Carrot', quantity: 4, picked: true },
+  //   { id: 4, name: 'Broccoli', quantity: 2, picked: false },
+  // ]
 
-  const properties = [
-    { id: 129031, name: "Desert Yurt", rating: 4.9, price: 150 },
-    { id: 129331, name: "Lone Mountain Cabin", rating: 4.8, price: 250 },
-    { id: 129032, name: "Cactus Retreat", rating: 4.75, price: 300 },
-    { id: 129033, name: "Redwood Treehouse Escape", rating: 4.9, price: 120 },
-    { id: 129034, name: "Oceanview Condo", rating: 4.7, price: 140 },
-    { id: 129035, name: "Gold Miner Campground", rating: 4.69, price: 96 },
-  ];
+  // const properties = [
+  //   { id: 129031, name: "Desert Yurt", rating: 4.9, price: 150 },
+  //   { id: 129331, name: "Lone Mountain Cabin", rating: 4.8, price: 250 },
+  //   { id: 129032, name: "Cactus Retreat", rating: 4.75, price: 300 },
+  //   { id: 129033, name: "Redwood Treehouse Escape", rating: 4.9, price: 120 },
+  //   { id: 129034, name: "Oceanview Condo", rating: 4.7, price: 140 },
+  //   { id: 129035, name: "Gold Miner Campground", rating: 4.69, price: 96 },
+  // ];
 
 
   return (
@@ -56,8 +58,8 @@ function App() {
 
       <PropertyList property={properties} /> */}
 
-      <Clicker />
-
+      {/* <Clicker /> */}
+      <Forms />
     </>
   )
 }
