@@ -579,3 +579,20 @@ const [bord, setBoard] = useState(generateGameBoard()); -> generateGameBoard run
 Set function itself doesn't cause a re-render.
 React re-renders the component when the state changes.
 React compares the previous state with the new state and only re-renders the component if the state has changed.
+
+
+640. Working With Objects In State
+React doesn't notice the change inside of an object. 
+Must set new object everytime to re-render the component.
+
+
+function incP2Score() {
+    SetScores((oldScores) => {
+        return { ...oldScores, P2Score: oldScores.P2Score + 1 }
+    })
+}
+
+
+641. Arrays In State
+React doesn't notice the change inside of an array.
+Must set new array everytime to re-render the component.

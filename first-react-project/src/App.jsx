@@ -3,6 +3,8 @@
 // import Cow from './cow'
 // import './cow.css'
 
+import ScoreKeeper from "./ScoreKeeper";
+
 
 
 
@@ -26,7 +28,8 @@
 // import ToggleCounter from "./ToggleCounter"
 // import SingleBox from "./SingleBox"
 // import ColorArray from "./ColorArray";
-import UpdaterFUnc from "./UpdaterFUnc";
+// import UpdaterFUnc from "./UpdaterFUnc";
+
 
 
 function App() {
@@ -47,7 +50,7 @@ function App() {
   //   { id: 129035, name: "Gold Miner Campground", rating: 4.69, price: 96 },
   // ];
 
-  const colorlist = ['Red', 'Green', 'Purple', 'Teal', 'orange', 'orangered'];
+  // const colorlist = ['Red', 'Green', 'Purple', 'Teal', 'orange', 'orangered'];
   return (
     <>
       {/* /* <Heading color='teal' text='Hi Everyone' /> */}
@@ -76,7 +79,8 @@ function App() {
       {/* <Toggler /> */}
       {/* <ToggleCounter /> */}
       {/* <ColorArray colors={colorlist} /> */}
-      <UpdaterFUnc />
+      {/* <UpdaterFUnc /> */}
+      <ScoreKeeper />
 
 
 
