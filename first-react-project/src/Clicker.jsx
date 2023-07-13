@@ -5,6 +5,10 @@ function handleClick() {
     console.log('Clicked')
 }
 
+function handleHover() {
+    console.log('Handle Hover')
+}
+
 
 export default function Clicker() {
 
@@ -12,7 +16,7 @@ export default function Clicker() {
     return (
         <div>
 
-            <p>Click Me</p>
+            <p onMouseOver={handleHover}>Click Me</p>
             <button onClick={handleClick}>Click {count}</button>
 
         </div>

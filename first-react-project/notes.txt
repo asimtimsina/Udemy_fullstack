@@ -423,3 +423,17 @@ export default function Clicker() {
         </div>
     )
 }
+
+
+627. Non-Click Events
+Can use any event with React. Must use camelCase for event names.
+
+onMouseOver
+onMouseOut
+onFocus
+onBlur
+onChange
+onSubmit
+onKeyDown
+onKeyUp
+onKeyPress
