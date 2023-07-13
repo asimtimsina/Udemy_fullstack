@@ -463,3 +463,10 @@ export default function Forms() {
 629. Clicker Exercise
 
 <button onClick={() => alert(message)} > {buttonText}</button >
+
+
+
+
+630. Introducing State
+State is data that is managed inside a component. State can change over time.
+If the data needs to change over time, it is state.
