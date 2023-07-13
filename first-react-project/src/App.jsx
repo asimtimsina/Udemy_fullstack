@@ -3,6 +3,7 @@
 // import Cow from './cow'
 // import './cow.css'
 
+import EmojiClicker from "./EmojiClicker";
 import ScoreKeeper from "./ScoreKeeper";
 
 
@@ -80,8 +81,8 @@ function App() {
       {/* <ToggleCounter /> */}
       {/* <ColorArray colors={colorlist} /> */}
       {/* <UpdaterFUnc /> */}
-      <ScoreKeeper />
-
+      {/* <ScoreKeeper /> */}
+      <EmojiClicker />
 
 
     </>

@@ -596,3 +596,9 @@ function incP2Score() {
 641. Arrays In State
 React doesn't notice the change inside of an array.
 Must set new array everytime to re-render the component.
+
+
+const addEmoji = () => {
+    // setEmoji([...emojis, "😂"]) //works but not preferred
+    setEmoji(old => { return [...old, "😂"] })
+}
