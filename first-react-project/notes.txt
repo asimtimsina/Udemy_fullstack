@@ -549,3 +549,14 @@ export default function Toggler() {
 useState(initialState) only sets the initial state when the component is rendered for the first time.
 Eventhough the whole component is rendered everytime the state is updated, the useState() function is not called again.
 
+
+
+637. Setting State With An Updater Function
+Use updater function to update the state based on the previous state.
+Only necessary when the new state depends on the previous state.
+
+const handleClickThree = () => {
+    setNum(c => c + 1)
+    setNum(c => c + 1)
+    setNum(c => c + 1)
+}

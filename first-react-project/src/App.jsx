@@ -25,9 +25,8 @@
 // import Toggler from "./Toggler"
 // import ToggleCounter from "./ToggleCounter"
 // import SingleBox from "./SingleBox"
-import ColorArray from "./ColorArray";
-
-
+// import ColorArray from "./ColorArray";
+import UpdaterFUnc from "./UpdaterFUnc";
 
 
 function App() {
@@ -76,7 +75,8 @@ function App() {
       {/* <Counter /> */}
       {/* <Toggler /> */}
       {/* <ToggleCounter /> */}
-      <ColorArray colors={colorlist} />
+      {/* <ColorArray colors={colorlist} /> */}
+      <UpdaterFUnc />
 
 
 
