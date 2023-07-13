@@ -672,3 +672,15 @@ Use .findIndex() to find the index of an element in an array.
 Adding an element to an array -> use spread operator
 [...oldArray, newElement]
 
+
+645. Updating All Elements In An Array
+
+
+const makeHeart = () => {
+    setEmoji(previousEmojis => {
+        console.log(previousEmojis)
+        return previousEmojis.map(each => {
+            return { ...each, emoji: "❤️" }
+        })
+    })
+}

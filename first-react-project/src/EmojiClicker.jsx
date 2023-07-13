@@ -17,10 +17,24 @@ export default function EmojiClicker() {
         })
     }
 
+    const makeHeart = () => {
+
+        setEmoji(previousEmojis => {
+            console.log(previousEmojis)
+            return previousEmojis.map(each => {
+                return { ...each, emoji: "❤️" }
+
+            })
+
+        })
+
+    }
+
     return (
         <div>
             {emojis.map(e => <span key={e.id} onClick={() => deleteEmoji(e.id)} style={{ fontSize: "4rem" }}>{e.emoji}</span>)}
             <br /> <button onClick={addEmoji}>Add Emoji </button>
+            <br /> <button onClick={makeHeart}>Make them all hearts</button>
         </div>
     )
 
