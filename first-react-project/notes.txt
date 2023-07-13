@@ -387,3 +387,5 @@ Can use spread operator to pass props to the component.
 <ShoppingListItem key={item.id} {...item} />
 
 
+622. Rental Property Exercise
+
