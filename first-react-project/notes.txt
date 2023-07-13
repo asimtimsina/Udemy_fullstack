@@ -541,3 +541,11 @@ export default function Toggler() {
         </>
     )
 }
+
+
+
+634. useState() and Rendering
+
+useState(initialState) only sets the initial state when the component is rendered for the first time.
+Eventhough the whole component is rendered everytime the state is updated, the useState() function is not called again.
+
