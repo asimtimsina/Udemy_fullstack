@@ -503,3 +503,20 @@ export default function Counter() {
     )
 
 }
+
+
+632. Creating a Toggler Component
+
+isHappy is set to True by default.
+setIsHappy is a function that is used to update the state.
+Toggle is a function that is used to update the state.
+
+import { useState } from "react"
+
+export default function Toggler() {
+    const [isHappy, setIsHappy] = useState(true);
+    const Toggle = () => setIsHappy(!isHappy)
+    return (
+        <h1 onClick={Toggle}>{isHappy ? '😊' : "😭"}</h1>
+    )
+}

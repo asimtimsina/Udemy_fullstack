@@ -7,6 +7,7 @@
 
 
 
+
 // import Greeter from './Greeter'
 // import Die from './Die'
 // import ListPicker from "../ListPicker"
@@ -19,7 +20,8 @@
 // import Clicker from "./Clicker";
 // import Forms from "./Forms"
 // import ClickerExercise from "./ClickerExercise"
-import Counter from "./Counter"
+// import Counter from "./Counter"
+import Toggler from "./Toggler"
 
 
 
@@ -67,7 +69,8 @@ function App() {
       {/* <Forms /> */}
       {/* <ClickerExercise message={'HIIIII'} buttonText="LOL" />
       <ClickerExercise message={'Dont Ever Click ME'} buttonText="Dont Click MEE" /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <Toggler />
 
 
 
