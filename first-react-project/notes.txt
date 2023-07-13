@@ -659,3 +659,16 @@ return (
 )
 
 
+
+644. Common Array Updating Patterns
+
+https://react.dev/learn/updating-arrays-in-state
+
+Use .map() to update an array.
+Use .filter() to delete an element from an array.
+Use .find() to find an element in an array.
+Use .findIndex() to find the index of an element in an array.
+
+Adding an element to an array -> use spread operator
+[...oldArray, newElement]
+
