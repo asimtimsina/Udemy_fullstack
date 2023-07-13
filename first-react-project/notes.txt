@@ -470,3 +470,36 @@ export default function Forms() {
 630. Introducing State
 State is data that is managed inside a component. State can change over time.
 If the data needs to change over time, it is state.
+
+
+
+631. Working With The useState() Hook
+
+useState is a function that returns an array with two elements.
+
+const [count, setCount] = useState(0);
+count is the current value of the state.
+setCount is a function that is used to update the state.
+0 -> initial value of the state.
+
+
+must import useState from react.
+useSetNum to update the state.
+setNum(num + 1) to update the state.
+
+import { useState } from "react";
+
+export default function Counter() {
+    const [num, setNum] = useState(5);
+    const handleClick = () => {
+        setNum(num + 1)
+        console.log(num)
+    }
+    return (
+        <>
+            <p>The count is: {num} </p>
+            <button onClick={handleClick}>Increment </button>
+        </>
+    )
+
+}

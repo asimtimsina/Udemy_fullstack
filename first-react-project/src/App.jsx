@@ -6,6 +6,7 @@
 
 
 
+
 // import Greeter from './Greeter'
 // import Die from './Die'
 // import ListPicker from "../ListPicker"
@@ -17,7 +18,9 @@
 // import PropertyList from "./PropertyList"
 // import Clicker from "./Clicker";
 // import Forms from "./Forms"
-import ClickerExercise from "./ClickerExercise"
+// import ClickerExercise from "./ClickerExercise"
+import Counter from "./Counter"
+
 
 
 
@@ -62,8 +65,14 @@ function App() {
 
       {/* <Clicker /> */}
       {/* <Forms /> */}
-      <ClickerExercise message={'HIIIII'} buttonText="LOL" />
-      <ClickerExercise message={'Dont Ever Click ME'} buttonText="Dont Click MEE" />
+      {/* <ClickerExercise message={'HIIIII'} buttonText="LOL" />
+      <ClickerExercise message={'Dont Ever Click ME'} buttonText="Dont Click MEE" /> */}
+      <Counter />
+
+
+
+
+
     </>
   )
 }
