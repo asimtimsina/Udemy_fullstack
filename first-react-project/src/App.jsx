@@ -8,6 +8,7 @@
 
 
 
+
 // import Greeter from './Greeter'
 // import Die from './Die'
 // import ListPicker from "../ListPicker"
@@ -22,7 +23,9 @@
 // import ClickerExercise from "./ClickerExercise"
 // import Counter from "./Counter"
 // import Toggler from "./Toggler"
-import ToggleCounter from "./ToggleCounter"
+// import ToggleCounter from "./ToggleCounter"
+// import SingleBox from "./SingleBox"
+import ColorArray from "./ColorArray";
 
 
 
@@ -45,7 +48,7 @@ function App() {
   //   { id: 129035, name: "Gold Miner Campground", rating: 4.69, price: 96 },
   // ];
 
-
+  const colorlist = ['Red', 'Green', 'Purple', 'Teal', 'orange', 'orangered'];
   return (
     <>
       {/* /* <Heading color='teal' text='Hi Everyone' /> */}
@@ -72,8 +75,8 @@ function App() {
       <ClickerExercise message={'Dont Ever Click ME'} buttonText="Dont Click MEE" /> */}
       {/* <Counter /> */}
       {/* <Toggler /> */}
-      <ToggleCounter />
-
+      {/* <ToggleCounter /> */}
+      <ColorArray colors={colorlist} />
 
 
 
