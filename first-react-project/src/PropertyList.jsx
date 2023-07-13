@@ -1,10 +1,10 @@
 import PropertyListSingle from "./PropertyListSingle"
-
+import './PropertyList.css'
 
 
 export default function PropertyList({ property }) {
     return (
-        <>
+        <div className="PropertyList">
 
             <ul>
 
@@ -14,7 +14,7 @@ export default function PropertyList({ property }) {
                 )}
 
             </ul>
-        </>
+        </div>
 
 
     )
