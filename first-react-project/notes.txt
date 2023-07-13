@@ -572,3 +572,10 @@ IMP: The function will be called everytime the set function is called. But the r
 
 const [bord, setBoard] = useState(generateGameBoard); -> generateGameBoard only runs for the first time
 const [bord, setBoard] = useState(generateGameBoard()); -> generateGameBoard runs everytime setBoard is called. But the value won't be used.
+
+
+
+639. When Does React Re-Render?
+Set function itself doesn't cause a re-render.
+React re-renders the component when the state changes.
+React compares the previous state with the new state and only re-renders the component if the state has changed.
