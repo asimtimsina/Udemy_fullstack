@@ -21,7 +21,8 @@
 // import Forms from "./Forms"
 // import ClickerExercise from "./ClickerExercise"
 // import Counter from "./Counter"
-import Toggler from "./Toggler"
+// import Toggler from "./Toggler"
+import ToggleCounter from "./ToggleCounter"
 
 
 
@@ -70,8 +71,8 @@ function App() {
       {/* <ClickerExercise message={'HIIIII'} buttonText="LOL" />
       <ClickerExercise message={'Dont Ever Click ME'} buttonText="Dont Click MEE" /> */}
       {/* <Counter /> */}
-      <Toggler />
-
+      {/* <Toggler /> */}
+      <ToggleCounter />
 
 
 
