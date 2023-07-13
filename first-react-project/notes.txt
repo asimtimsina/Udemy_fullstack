@@ -389,3 +389,8 @@ Can use spread operator to pass props to the component.
 
 622. Rental Property Exercise
 
+
+
+624. Configuring ESLint
+Add  "react/prop-types": 'off', to .eslintrc.json file to disable prop-types warning.
+
