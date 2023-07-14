@@ -684,3 +684,11 @@ const makeHeart = () => {
         })
     })
 }
+
+
+648. Formulating Our Component Gameplan
+
+Generally, aim to have components be one of two types:
+Presentational -> Doesn't have state. Only renders JSX.
+Logical -> Has state or related logic and isn't concerned with the UI.
+
