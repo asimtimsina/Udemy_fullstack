@@ -692,3 +692,7 @@ Generally, aim to have components be one of two types:
 Presentational -> Doesn't have state. Only renders JSX.
 Logical -> Has state or related logic and isn't concerned with the UI.
 
+
+649. Building Die and Dice Components
+
+App -> LuckyN -> Dice -> Die *2

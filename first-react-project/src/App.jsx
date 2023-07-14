@@ -3,10 +3,12 @@
 // import Cow from './cow'
 // import './cow.css'
 
+import Dice from "./Dice"
+
 // import EmojiClicker from "./EmojiClicker";
 // import ScoreKeeper from "./ScoreKeeper";
-import ScoreKeeperGame from "./ScoreKeeperGame";
-
+// import DieGame from "./DieGame";
+// import ScoreKeeperGame from "./ScoreKeeperGame";
 
 
 
@@ -84,7 +86,12 @@ function App() {
       {/* <UpdaterFUnc /> */}
       {/* <ScoreKeeper /> */}
       {/* <EmojiClicker /> */}
-      <ScoreKeeperGame numPlayer={3} target={3} />
+      {/* <ScoreKeeperGame numPlayer={3} target={3} /> */}
+
+      {/* <DieGame val={2} /> */}
+
+      <Dice dice={[3, 4, 2]} />
+      <Dice dice={[3, 4, 2]} />
     </>
   )
 }
