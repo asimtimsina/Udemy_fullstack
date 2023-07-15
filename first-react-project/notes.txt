@@ -892,3 +892,24 @@ https://react-hook-form.com/
 
 
 <input {...register("name", { required: "Product name is required" })} />
+
+
+We can also create a seperate object for validation rules and pass it to the register function.
+
+const registerOptions = {
+    name: { required: "Name cannot be blank" },
+    quantity: {
+        required: "Quantity cannot be blank.",
+        min: { value: 0, message: "Quanitity cannot be less than 0." },
+        max: { value: 100, message: "Quanitity cannot be greater than 0." }
+    }
+}
+
+Call the validation object like this
+<input {...register("name", registerOptions.name)} />
+
+
+ <label htmlFor="quantity">Quantity: </label>
+
+  <input {...register("quantity", registerOptions.quantity)} /> // checks for any error 
+  <p>{errors.quantity && errors.quantity.message}</p> // prints if any error
