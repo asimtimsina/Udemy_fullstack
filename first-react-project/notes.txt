@@ -696,3 +696,13 @@ Logical -> Has state or related logic and isn't concerned with the UI.
 649. Building Die and Dice Components
 
 App -> LuckyN -> Dice -> Die *2
+
+
+
+650. The LuckyN Component
+
+Control the state in the parent component.
+Pass the state and the function to update the state to the child component as props.
+
+<LuckyN numDice={2} />
+      <LuckyN numDice={3} goal={11} />

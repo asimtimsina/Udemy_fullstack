@@ -4,6 +4,7 @@
 // import './cow.css'
 
 import Dice from "./Dice"
+import LuckyN from "./LuckyN"
 
 // import EmojiClicker from "./EmojiClicker";
 // import ScoreKeeper from "./ScoreKeeper";
@@ -89,9 +90,12 @@ function App() {
       {/* <ScoreKeeperGame numPlayer={3} target={3} /> */}
 
       {/* <DieGame val={2} /> */}
+      {/* 
+      <Dice dice={[3, 4, 2]} />
+      <Dice dice={[3, 4, 2]} /> */}
 
-      <Dice dice={[3, 4, 2]} />
-      <Dice dice={[3, 4, 2]} />
+      <LuckyN numDice={2} />
+      <LuckyN numDice={3} goal={11} />
     </>
   )
 }
