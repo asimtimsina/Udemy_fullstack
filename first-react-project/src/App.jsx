@@ -39,8 +39,7 @@ import SignupForm from "./SignupForm";
 // import { d6, sum, getRolls } from "./utils"
 // import Username from "./Username";
 
-
-
+import SignupFormBetter from "./SignupFormBetter"
 
 // function lessThan4(dice) {
 //   return sum(dice) < 4;
@@ -113,7 +112,8 @@ function App() {
       {/* <Box/> */}
       {/* <BoxGrid /> */}
       {/* <Username /> */}
-      <SignupForm />
+      {/* <SignupForm /> */}
+      <SignupFormBetter />
 
     </>
   )

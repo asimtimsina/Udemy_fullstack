@@ -809,3 +809,30 @@ in JSX we use htmlFor - id to associate a label with an input field.
 
 Need to make seperate state for each input field.
 Need to make seperate onChange function for each input field.
+
+
+
+658. A Better Signup Form
+
+event.target.name stores which input field is being updated.
+event.target.value stores the value of the input field. 
+
+const [formData, setFormData] = useState({ firstName: "", lastName: "" });
+
+
+<div>
+
+    <label htmlFor="firstName">FirstName: </label>
+    <input type="text" onChange={handleChange} name="firstName" value={formData.firstName} id="firstName" />
+    <br />
+    <label htmlFor="firstName">LastName: </label>
+    <input type="text" onChange={handleChange} name="lastName" value={formData.lastName} id="lastName" />
+
+
+    <button onClick={handleSubmit}>Submit</button>
+</div>
+
+name will be available in the event.target.name
+value will be available in the event.target.value
+
+After submission, we will instantenously have access to form data
