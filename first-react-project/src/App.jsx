@@ -35,17 +35,18 @@ import BoxGrid from "./BoxGrid";
 // import SingleBox from "./SingleBox"
 // import ColorArray from "./ColorArray";
 // import UpdaterFUnc from "./UpdaterFUnc";
-import { d6, sum, getRolls } from "./utils"
+// import { d6, sum, getRolls } from "./utils"
+import Username from "./Username";
 
 
 
-function lessThan4(dice) {
-  return sum(dice) < 4;
-}
+// function lessThan4(dice) {
+//   return sum(dice) < 4;
+// }
 
-function allSameValue(dice) {
-  return dice.every((v) => v === dice[0]);
-}
+// function allSameValue(dice) {
+//   return dice.every((v) => v === dice[0]);
+// }
 
 
 function App() {
@@ -108,7 +109,8 @@ function App() {
       {/* <LuckyN numDice={2} winCheck={lessThan4} />
       <LuckyN numDice={2} winCheck={allSameValue} /> */}
       {/* <Box/> */}
-      <BoxGrid />
+      {/* <BoxGrid /> */}
+      <Username />
 
 
     </>
