@@ -34,7 +34,16 @@ import LuckyN from "./LuckyN"
 // import SingleBox from "./SingleBox"
 // import ColorArray from "./ColorArray";
 // import UpdaterFUnc from "./UpdaterFUnc";
+import { d6, sum, getRolls } from "./utils"
 
+
+function lessThan4(dice) {
+  return sum(dice) < 4;
+}
+
+function allSameValue(dice) {
+  return dice.every((v) => v === dice[0]);
+}
 
 
 function App() {
@@ -94,8 +103,8 @@ function App() {
       <Dice dice={[3, 4, 2]} />
       <Dice dice={[3, 4, 2]} /> */}
 
-      <LuckyN numDice={2} />
-      <LuckyN numDice={3} goal={11} />
+      <LuckyN numDice={2} winCheck={lessThan4} />
+      <LuckyN numDice={2} winCheck={allSameValue} />
     </>
   )
 }

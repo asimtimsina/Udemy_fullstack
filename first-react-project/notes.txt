@@ -705,4 +705,28 @@ Control the state in the parent component.
 Pass the state and the function to update the state to the child component as props.
 
 <LuckyN numDice={2} />
-      <LuckyN numDice={3} goal={11} />
+<LuckyN numDice={3} goal={11} />
+
+
+651. State As Props
+
+Can pass state as props to child components.
+
+
+
+652. Passing Functions As Props
+ 
+Can pass functions as props to child components. 
+
+
+function lessThan4(dice) {
+  return sum(dice) < 4;
+}
+
+function allSameValue(dice) {
+  return dice.every((v) => v === dice[0]);
+}
+
+
+<LuckyN numDice={2} winCheck={lessThan4} />
+<LuckyN numDice={2} winCheck={allSameValue} />

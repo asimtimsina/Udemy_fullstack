@@ -2,10 +2,10 @@ import { useState } from "react";
 import { d6, sum, getRolls } from "./utils"
 import Dice from "./Dice";
 
-function LuckyN({ numDice = 2, goal = 7 }) {
+function LuckyN({ numDice = 2, winCheck }) {
 
     const [dice, setDice] = useState(getRolls(numDice));
-    const isWinner = sum(dice) === goal;
+    const isWinner = winCheck(dice)
 
     const reRollFunc = () => {
         setDice(getRolls(numDice));
@@ -15,7 +15,7 @@ function LuckyN({ numDice = 2, goal = 7 }) {
 
         <main className="LuckyN">
 
-            <h1>Lucky{goal} {isWinner && "You Win"}</h1>
+            <h1>Lucky {isWinner && "You Win"}</h1>
 
             <Dice dice={dice} />
 
