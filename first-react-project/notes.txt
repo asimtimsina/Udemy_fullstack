@@ -940,3 +940,29 @@ useEffect(myCallbackFunc, [productId, userId]) -> runs only if productId and use
 
 [count] -> only runs if count has changed.
 doesn't run if name is changed.
+
+
+
+668. Fetching Initial Data From an API
+
+useState(func) -> useState can take a function but not async function.
+Therefore must use useEffect to fetch data fir the first time from an API. 
+
+useEffect cannot take async function therefore must use a wrapper function.
+
+
+useEffect(() => {
+    async function getInitialQuote() {
+        const res = await fetch(quoteURL);
+        const resJson = await res.json();
+        // console.log(resJson.quote.text)
+        setQuote(resJson.quote)
+    }
+    getInitialQuote();
+}, [])
+
+Don't actually need to rewrite the same function. Just call the fetchQuote (which is already async) function from useEffect.
+
+useEffect(() => {
+    fetchQuote();
+}, [])

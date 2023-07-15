@@ -5,6 +5,7 @@
 
 import BoxGrid from "./BoxGrid";
 import CounterNew from "./CounterNew";
+import QuoteFetcher from "./QuoteFetcher";
 import SignupForm from "./SignupForm";
 // import Dice from "./Dice"
 // import LuckyN from "./LuckyN"
@@ -122,7 +123,9 @@ function App() {
       {/* <SignupFormBetter /> */}
       {/* <ShoppingListForm /> */}
       {/* <ShoppingListExercise /> */}
-      <CounterNew />
+      {/* <CounterNew /> */}
+
+      <QuoteFetcher />
     </>
   )
 }
