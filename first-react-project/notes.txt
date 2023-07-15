@@ -836,3 +836,14 @@ name will be available in the event.target.name
 value will be available in the event.target.value
 
 After submission, we will instantenously have access to form data
+
+
+
+659. Computed Property Names in HandleChange()
+
+ setFormData(currData => {
+            return { ...currData, [changedField]: newValue }
+        })
+
+can also rewrite as
+return { ...currData, [event.target.name]: event.target.value }
