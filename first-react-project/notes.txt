@@ -802,3 +802,10 @@ we use for - id in html to associate a label with an input field.
 in JSX we use htmlFor - id to associate a label with an input field.
 
   <label htmlFor="username">Username</label>
+
+
+
+657. Working With Multiple Inputs
+
+Need to make seperate state for each input field.
+Need to make seperate onChange function for each input field.

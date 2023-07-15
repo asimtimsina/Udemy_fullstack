@@ -4,6 +4,7 @@
 // import './cow.css'
 
 import BoxGrid from "./BoxGrid";
+import SignupForm from "./SignupForm";
 // import Dice from "./Dice"
 // import LuckyN from "./LuckyN"
 
@@ -36,7 +37,8 @@ import BoxGrid from "./BoxGrid";
 // import ColorArray from "./ColorArray";
 // import UpdaterFUnc from "./UpdaterFUnc";
 // import { d6, sum, getRolls } from "./utils"
-import Username from "./Username";
+// import Username from "./Username";
+
 
 
 
@@ -110,8 +112,8 @@ function App() {
       <LuckyN numDice={2} winCheck={allSameValue} /> */}
       {/* <Box/> */}
       {/* <BoxGrid /> */}
-      <Username />
-
+      {/* <Username /> */}
+      <SignupForm />
 
     </>
   )
