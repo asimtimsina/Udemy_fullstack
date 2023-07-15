@@ -873,3 +873,13 @@ Also use preventDefault() to prevent the page from reloading after form submissi
 After submitting the form, reset the form by setting the form state to empty values.
   setShoppingForm({ name: "", quantity: 0 });
 
+
+663. Form Validation From Scratch
+
+Make a seperate state to check if the input name is valid or not.
+
+const validate = (name) => {
+      if (name.length === 0) { setProductIsValid(false); }
+      else { setProductIsValid(true); }
+  }
+if true then can add the item to the list.
