@@ -883,3 +883,12 @@ const validate = (name) => {
       else { setProductIsValid(true); }
   }
 if true then can add the item to the list.
+
+
+
+664. Validations using React Hook Form
+
+https://react-hook-form.com/
+
+
+<input {...register("name", { required: "Product name is required" })} />
