@@ -730,3 +730,19 @@ function allSameValue(dice) {
 
 <LuckyN numDice={2} winCheck={lessThan4} />
 <LuckyN numDice={2} winCheck={allSameValue} />
+
+
+
+653. Passing Functions That Update State
+
+Making a seperate button component can be useful. 
+Need to pass the onclick function as a prop to the button component.
+Also need to pass the text to be displayed on the button as a prop to the button component.
+
+A common pattern in React (How data flows):
+
+A parent component defines a function
+The function is passed as a prop to a child component
+The child component invlokes the prop function
+The parent function is called, usually setting new state
+The parent component is re-rendered along with its children.
