@@ -865,3 +865,11 @@ Also use preventDefault() to prevent the page from reloading after form submissi
     }
 
 // <form onSubmit={(evt) => { evt.preventDefault(); add_func(shoppingForm); }}>
+
+
+
+662. Finishing The Shopping List Component
+
+After submitting the form, reset the form by setting the form state to empty values.
+  setShoppingForm({ name: "", quantity: 0 });
+

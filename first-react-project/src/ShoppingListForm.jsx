@@ -16,6 +16,7 @@ export default function ShoppingListForm({ add_func }) {
     const handleSubmit = (evt) => {
         evt.preventDefault(); // prevent page to reload after form submission
         add_func(shoppingForm);
+        setShoppingForm({ name: "", quantity: 0 });
     }
 
 
@@ -23,7 +24,6 @@ export default function ShoppingListForm({ add_func }) {
 
         <form onSubmit={handleSubmit}>
 
-            <h1>Product is: {shoppingForm.name}</h1>
             <label htmlFor="name">Product Name: </label>
             <input onChange={handleChange} type="text" id='name' name="name" placeholder="name" value={shoppingForm.name} />
 

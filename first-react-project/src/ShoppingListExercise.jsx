@@ -1,5 +1,6 @@
 import { useState } from "react"
 import ShoppingListForm from "./ShoppingListForm";
+import { v4 as uuid } from "uuid";
 
 
 export default function ShoppingListExercise() {
@@ -10,9 +11,9 @@ export default function ShoppingListExercise() {
     ])
 
     const addItem = (item) => {
-
+        if (!item.name) { return }
         setItems(currData => {
-            return [...currData, { ...item, id: 9 }]
+            return [...currData, { ...item, id: uuid() }]
 
         })
     }
