@@ -793,3 +793,12 @@ value of the input is set to the username state.
 
 evt.target.value is the value of the input field.
 must set that value to the setUsername state.
+
+
+
+656. The htmlFor Property
+
+we use for - id in html to associate a label with an input field.
+in JSX we use htmlFor - id to associate a label with an input field.
+
+  <label htmlFor="username">Username</label>
