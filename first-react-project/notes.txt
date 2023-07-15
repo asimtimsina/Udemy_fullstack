@@ -913,3 +913,14 @@ Call the validation object like this
 
   <input {...register("quantity", registerOptions.quantity)} /> // checks for any error 
   <p>{errors.quantity && errors.quantity.message}</p> // prints if any error
+
+
+
+
+665. Introducing Effects
+
+
+666. The useEffect Hook
+
+useEffect is a hook that allows us to run side effects in a functional component.
+useEffect is called after the component is rendered for the first time and after every update.

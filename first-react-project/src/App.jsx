@@ -4,6 +4,7 @@
 // import './cow.css'
 
 import BoxGrid from "./BoxGrid";
+import CounterNew from "./CounterNew";
 import SignupForm from "./SignupForm";
 // import Dice from "./Dice"
 // import LuckyN from "./LuckyN"
@@ -41,7 +42,8 @@ import SignupForm from "./SignupForm";
 
 // import SignupFormBetter from "./SignupFormBetter"
 // import ShoppingListForm from "./ShoppingListForm";
-import ShoppingListExercise from "./ShoppingListExercise";
+// import ShoppingListExercise from "./ShoppingListExercise";
+
 
 
 
@@ -119,7 +121,8 @@ function App() {
       {/* <SignupForm /> */}
       {/* <SignupFormBetter /> */}
       {/* <ShoppingListForm /> */}
-      <ShoppingListExercise />
+      {/* <ShoppingListExercise /> */}
+      <CounterNew />
     </>
   )
 }
