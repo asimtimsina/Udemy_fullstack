@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-export default function ShoppingListForm() {
+export default function ShoppingListForm({ add_func }) {
 
     const [shoppingForm, setShoppingForm] = useState({ name: "", quantity: 0 })
 
@@ -13,10 +13,16 @@ export default function ShoppingListForm() {
 
     }
 
+    const handleSubmit = (evt) => {
+        evt.preventDefault(); // prevent page to reload after form submission
+        add_func(shoppingForm);
+    }
+
 
     return (
 
-        <form >
+        <form onSubmit={handleSubmit}>
+
             <h1>Product is: {shoppingForm.name}</h1>
             <label htmlFor="name">Product Name: </label>
             <input onChange={handleChange} type="text" id='name' name="name" placeholder="name" value={shoppingForm.name} />
@@ -24,7 +30,7 @@ export default function ShoppingListForm() {
             <label htmlFor="quantity">Quantity: </label>
             <input onChange={handleChange} type="number" id='quantity' name="quantity" placeholder="quantity" value={shoppingForm.quantity} />
 
-            <button>Submit</button>
+            <button >Submit</button>
 
         </form>
 

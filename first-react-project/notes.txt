@@ -847,3 +847,21 @@ After submission, we will instantenously have access to form data
 
 can also rewrite as
 return { ...currData, [event.target.name]: event.target.value }
+
+
+
+661. Shopping List Component
+
+add item state to be created on main component. but called from child component.
+pass the function to add item as a prop to the child component.
+
+call the function from the form's onSubmit event.
+
+Also use preventDefault() to prevent the page from reloading after form submission.
+
+    const handleSubmit = (evt) => {
+        evt.preventDefault(); // prevent page to reload after form submission
+        add_func(shoppingForm);
+    }
+
+// <form onSubmit={(evt) => { evt.preventDefault(); add_func(shoppingForm); }}>

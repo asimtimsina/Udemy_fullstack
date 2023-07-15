@@ -40,7 +40,9 @@ import SignupForm from "./SignupForm";
 // import Username from "./Username";
 
 // import SignupFormBetter from "./SignupFormBetter"
-import ShoppingListForm from "./ShoppingListForm";
+// import ShoppingListForm from "./ShoppingListForm";
+import ShoppingListExercise from "./ShoppingListExercise";
+
 
 
 // function lessThan4(dice) {
@@ -116,8 +118,8 @@ function App() {
       {/* <Username /> */}
       {/* <SignupForm /> */}
       {/* <SignupFormBetter /> */}
-      <ShoppingListForm />
-
+      {/* <ShoppingListForm /> */}
+      <ShoppingListExercise />
     </>
   )
 }
