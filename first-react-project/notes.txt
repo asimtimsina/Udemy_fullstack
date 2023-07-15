@@ -746,3 +746,11 @@ The function is passed as a prop to a child component
 The child component invlokes the prop function
 The parent function is called, usually setting new state
 The parent component is re-rendered along with its children.
+
+
+
+654. Practice Passing State Updating Functions
+
+Cannot pass onClick function from the parent component to the child component.
+Need to pass the function as a prop to the child component.
+Then call the function from the child component.

@@ -3,8 +3,9 @@
 // import Cow from './cow'
 // import './cow.css'
 
-import Dice from "./Dice"
-import LuckyN from "./LuckyN"
+import BoxGrid from "./BoxGrid";
+// import Dice from "./Dice"
+// import LuckyN from "./LuckyN"
 
 // import EmojiClicker from "./EmojiClicker";
 // import ScoreKeeper from "./ScoreKeeper";
@@ -35,6 +36,7 @@ import LuckyN from "./LuckyN"
 // import ColorArray from "./ColorArray";
 // import UpdaterFUnc from "./UpdaterFUnc";
 import { d6, sum, getRolls } from "./utils"
+
 
 
 function lessThan4(dice) {
@@ -103,8 +105,12 @@ function App() {
       <Dice dice={[3, 4, 2]} />
       <Dice dice={[3, 4, 2]} /> */}
 
-      <LuckyN numDice={2} winCheck={lessThan4} />
-      <LuckyN numDice={2} winCheck={allSameValue} />
+      {/* <LuckyN numDice={2} winCheck={lessThan4} />
+      <LuckyN numDice={2} winCheck={allSameValue} /> */}
+      {/* <Box/> */}
+      <BoxGrid />
+
+
     </>
   )
 }
