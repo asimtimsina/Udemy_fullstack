@@ -924,3 +924,19 @@ Call the validation object like this
 
 useEffect is a hook that allows us to run side effects in a functional component.
 useEffect is called after the component is rendered for the first time and after every update.
+
+
+
+667. useEffect Dependencies
+
+useEffect(myCallbackFunc) -> runs after every render
+useEffect(myCallbackFunc, []) -> runs only on the first render
+useEffect(myCallbackFunc, [productId, userId]) -> runs only if productId and userId have changed.
+
+
+    useEffect(function myEffect() {
+        console.log("My Effect was called")
+    }, [count])
+
+[count] -> only runs if count has changed.
+doesn't run if name is changed.
