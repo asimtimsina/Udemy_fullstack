@@ -1041,3 +1041,12 @@ https://mui.com/components/text-fields/
 
 Can use sx prop to add custom styles to MUI components.
 https://mui.com/system/the-sx-prop/
+
+
+
+676. Creating The Application
+
+Create a new vite project
+Download all mui Dependencies
+
+npm run dev
