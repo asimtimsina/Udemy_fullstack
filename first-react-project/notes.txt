@@ -1000,3 +1000,23 @@ https://material-ui.com/
 MUI core documentation
 
 Similar to Bootstrap library for react.
+
+
+672. Installing Material UI
+
+https://mui.com/material-ui/getting-started/installation/
+Need to install dependencies manually. 
+
+<Button variant="text" onClick={() => alert('Hi')}>Text</Button>
+<Button variant="contained">Contained</Button>
+<Button variant="outlined">Outlined</Button>
+
+
+can use size property [small, medium and large] to set the size of the button.
+<Button size='large' color="error" variant="contained">Outlined</Button>
+
+can add Icon Buttons too. 
+
+<IconButton aria-label="delete">
+      <DeleteIcon />
+    </IconButton
