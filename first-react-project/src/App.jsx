@@ -3,6 +3,8 @@
 // import Cow from './cow'
 // import './cow.css'
 
+import MuiComp from "./MuiComp"
+
 // import BoxGrid from "./BoxGrid";
 // import CounterNew from "./CounterNew";
 // import QuoteFetcher from "./QuoteFetcher";
@@ -19,11 +21,6 @@
 //////////
 // Material UI
 
-import Stack from '@mui/material/Stack';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import DeleteIcon from '@mui/icons-material/Delete';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart'
 
 
 
@@ -137,21 +134,7 @@ function App() {
 
       {/* Material UI */}
 
-
-
-      <Button variant="text" onClick={() => alert('Hi')}>Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-      <Button color="success" size="small" variant="contained">Outlined</Button>
-      <Button size='large' color="error" variant="contained">Outlined</Button>
-
-
-
-
-      <IconButton aria-label="delete">
-        <DeleteIcon />
-      </IconButton>
-
+      <MuiComp />
 
 
 
