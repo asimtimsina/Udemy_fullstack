@@ -9,6 +9,11 @@ import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Slider from '@mui/material/Slider'
+import AppBar from '@mui/material/AppBar';
+
+import Toolbar from '@mui/material/Toolbar';
+import MenuIcon from '@mui/icons-material/Menu';
+
 
 import { useState } from "react";
 
@@ -64,9 +69,32 @@ export default function MuiComp() {
             <TextField id="outlined-basic" label="FirstName" value={FirstName} onChange={updateFName} variant="outlined" />
             <TextField id="outlined-basic" label="LastName" placeholder='test' variant="filled" />
 
-            <p>Volume Slider: {volume}</p>
-            <Slider value={volume} onChange={handleVolume} />
+            <Box sx={{ border: "1px solid red", m: 2, p: 2 }}>
+                <p>Volume Slider: {volume}</p>
+                <Slider value={volume} onChange={handleVolume} />
+            </Box>
 
+            {/* 675. The SX Prop and Custom Styles */}
+
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar position="static">
+                    <Toolbar>
+                        <IconButton
+                            size="large"
+                            edge="start"
+                            color="inherit"
+                            aria-label="menu"
+                            sx={{ mr: 2 }}
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                            News
+                        </Typography>
+                        <Button color="inherit">Login</Button>
+                    </Toolbar>
+                </AppBar>
+            </Box>
 
         </div>
 

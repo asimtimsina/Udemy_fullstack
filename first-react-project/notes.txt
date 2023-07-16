@@ -1034,3 +1034,10 @@ https://mui.com/components/rating/
 
 Can use TextField, Slider and Switch components from MUI to create forms.
 https://mui.com/components/text-fields/
+
+
+
+675. The SX Prop and Custom Styles
+
+Can use sx prop to add custom styles to MUI components.
+https://mui.com/system/the-sx-prop/
