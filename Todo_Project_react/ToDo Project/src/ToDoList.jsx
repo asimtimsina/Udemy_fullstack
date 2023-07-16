@@ -23,6 +23,15 @@ export default function ToDoList() {
         })
     }
 
+    const toggleToDo = (id) => {
+        setTodos(prevTodos => {
+            return prevTodos.map(each => {
+                if (each.id === id) return { ...each, completed: !each.completed }
+                return each;
+            })
+        })
+    }
+
     return (
         <>
 
@@ -30,7 +39,7 @@ export default function ToDoList() {
 
                 {todos.map(todo => {
 
-                    return <ToDoItem key={todo.id} todo={todo} removefunc={() => removeTodo(todo.id)} />
+                    return <ToDoItem key={todo.id} todo={todo} removefunc={() => removeTodo(todo.id)} toggleFunc={() => toggleToDo(todo.id)} />
                 })}
 
             </List>
