@@ -966,3 +966,28 @@ Don't actually need to rewrite the same function. Just call the fetchQuote (whic
 useEffect(() => {
     fetchQuote();
 }, [])
+
+
+669. Adding a Loader
+
+const [quote, setQuote] = useState({ text: "", author: "" });
+
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        async function fetchQuote() {
+
+            const res = await fetch(quoteURL);
+            const resJson = await res.json();
+            // console.log(resJson.quote.text)
+            setQuote(resJson.quote)
+
+        }
+
+        fetchQuote();
+        setIsLoading(false);
+
+    }, [])
+
+
+use useEffect to only load the Loader for the first render. 
