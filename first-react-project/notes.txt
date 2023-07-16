@@ -991,3 +991,12 @@ const [quote, setQuote] = useState({ text: "", author: "" });
 
 
 use useEffect to only load the Loader for the first render. 
+
+
+
+671. Introducing Material UI
+
+https://material-ui.com/
+MUI core documentation
+
+Similar to Bootstrap library for react.
