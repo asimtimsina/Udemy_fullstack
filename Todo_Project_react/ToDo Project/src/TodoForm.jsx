@@ -31,7 +31,7 @@ export default function TodoForm({ addfunc }) {
 
         <ListItem>
             <form onSubmit={handleSubmit}>
-                <TextField id="outlined-basic" label="Outlined" onChange={handleChange} value={item} variant="outlined"
+                <TextField id="outlined-basic" label="Add Todo Item" onChange={handleChange} value={item} variant="outlined"
                     InputProps={{
 
                         endAdornment: < InputAdornment position="end"  >

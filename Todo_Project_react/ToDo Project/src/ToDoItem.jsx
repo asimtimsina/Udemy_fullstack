@@ -5,6 +5,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import CommentIcon from '@mui/icons-material/Comment';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 
 export default function ToDoItem({ todo, removefunc, toggleFunc }) {
@@ -20,7 +21,7 @@ export default function ToDoItem({ todo, removefunc, toggleFunc }) {
         <ListItem
             secondaryAction={
                 <IconButton edge="end" onClick={removefunc} aria-label="comments">
-                    <CommentIcon />
+                    <DeleteIcon />
                 </IconButton>
             }
             disablePadding

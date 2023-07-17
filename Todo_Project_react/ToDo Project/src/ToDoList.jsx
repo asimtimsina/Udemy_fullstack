@@ -13,6 +13,8 @@ import { useState, useEffect } from "react";
 import ToDoItem from './ToDoItem';
 import TodoForm from './TodoForm';
 
+
+
 export default function ToDoList() {
 
 
@@ -41,7 +43,7 @@ export default function ToDoList() {
 
     const addTodo = (text) => {
         setTodos(prevTodos => {
-            return [...prevTodos, { text: text, id: 9, completed: false }]
+            return [...prevTodos, { text: text, id: crypto.randomUUID(), completed: false }]
         })
     }
 
