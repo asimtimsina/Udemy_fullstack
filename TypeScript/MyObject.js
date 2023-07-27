@@ -17,3 +17,4 @@ function createCourse(parameter) {
     var course = { name: 'reactjs', price: 399, isFree: false };
     return course;
 }
+function createNewUser(user) { }

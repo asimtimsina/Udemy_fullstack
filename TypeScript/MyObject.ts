@@ -23,4 +23,27 @@ function createCourse(parameter): { name: string, price: number } {
     const course = { name: 'reactjs', price: 399, isFree: false };
     return course;
 }
+
+
+// Type Aliases
+// Similar to Class
+type User = {
+    name: string;
+    email: string;
+    isActive: boolean
+}
+
+function createNewUser(user: User) { }
+
+// function createNewUserWithReturn(user: User): User { }
+
+
+
+
+
+
+
+
+
+
 export { }
