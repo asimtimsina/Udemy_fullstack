@@ -21,4 +21,9 @@ getUpper('asim');
 
 // type defination is string on function declaration : both for function and the parameters.
 
+function signUpUser(username: string, email: string, isPaid: boolean) { }
+
+let loginUser = (username: string, email: string, isPaid: boolean = false) => { }
+//bydefault isPaid is false
+
 export { }
