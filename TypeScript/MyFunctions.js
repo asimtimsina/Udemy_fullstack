@@ -18,3 +18,24 @@ function signUpUser(username, email, isPaid) { }
 var loginUser = function (username, email, isPaid) {
     if (isPaid === void 0) { isPaid = false; }
 };
+//bydefault isPaid is false
+//this could happen
+// use TS Union to solve this problem
+// function getValue(myVal: number): boolean {
+//     if (myVal > 5) { return true }
+//     return "200 OK";
+// }
+//return type in arrow function
+var getHello = function () { return "Hello"; };
+var heros = ["thor", "spiderman", "ironman"];
+// const heros = [1, 2, 3]
+heros.map(function (hero) {
+    return "hero is ".concat(hero);
+});
+function consoleError(errmsg) {
+    console.log(errmsg);
+}
+//some functions never returns a value
+function handleError(errmsg) {
+    throw new Error(errmsg);
+}
