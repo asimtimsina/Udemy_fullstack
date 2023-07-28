@@ -2,19 +2,38 @@ console.log("Typescript is here");
 console.log("Typescript is Awesome");
 
 
-class User {
-    email: string
-    name: string
-    readonly city: string = ""
+// class User {
+//     private email: string
+//     public name: string
+//     #name: string // can also use # to state private 
+//     readonly city: string = ""
 
-    constructor(email: string, name: string) {
+//     constructor(email: string, name: string) {
+//         this.email = email;
+//         this.name = name;
+//     }
+
+
+// }
+
+
+//better way of defining a class
+class User {
+    readonly city: string = ""
+    constructor(
+        public email: string,
+        public name: string,
+        private userId: string
+    ) {
         this.email = email;
         this.name = name;
+        this.userId = userId;
     }
-
-
 }
 
 
 const Asim = new User("Asim@gmail.com", "Asim")
 // Asim.city = "Irving" // not allowed cause readonly
+
+console.log(Asim.name)
+// console.log(Asim.email)

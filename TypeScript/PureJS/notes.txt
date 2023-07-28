@@ -1,5 +1,7 @@
 tsc --init
 
+Also npm init -y to create package.json file
+
 tsc -w 
 launch in launch mode
 saves the ts file in dist/ folder
@@ -7,3 +9,19 @@ saves the ts file in dist/ folder
 on tsconfig.json file
 update outDir to the output folder (js files)
 "outDir": "./dist", /* Specify an output folder for all emitted files. */
+
+
+
+//better way of defining a class
+class User {
+    readonly city: string = ""
+    constructor(
+        public email: string,
+        public name: string,
+        private userId: string
+    ) {
+        this.email = email;
+        this.name = name;
+        this.userId = userId;
+    }
+}
