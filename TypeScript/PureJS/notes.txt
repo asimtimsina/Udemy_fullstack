@@ -25,3 +25,25 @@ class User {
         this.userId = userId;
     }
 }
+
+
+Getter and Setter
+
+    get courseCount(): number {
+        return this._courseCount;
+    }
+
+    set courseCount(courseNum) {
+        if (courseNum <= 1) {
+            throw new Error("Course count should be more than 1")
+        }
+        this._courseCount = courseNum;
+    }
+
+setter cannot have a return type at all. Not even void or never
+
+Can have private methods too
+
+private deleteToken() {
+    return "Token deleted"
+}
