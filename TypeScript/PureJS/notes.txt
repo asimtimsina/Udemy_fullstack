@@ -63,3 +63,22 @@ class SubUser extends User {
         this._courseCount = 4;
     }
 }
+
+
+Why interface is important
+
+interface TakePhoto {
+
+    cameraMode: string
+    filter: string
+    burst: Number
+
+}
+
+
+class Instragram implements TakePhoto{
+
+}
+
+Class 'Instragram' incorrectly implements interface 'TakePhoto'.
+  Type 'Instragram' is missing the following properties from type 'TakePhoto': cameraMode, filter, burstts(2420)
