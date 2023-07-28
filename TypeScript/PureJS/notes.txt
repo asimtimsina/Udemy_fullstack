@@ -47,3 +47,19 @@ Can have private methods too
 private deleteToken() {
     return "Token deleted"
 }
+
+
+Inheritance
+
+Inherited class cannot acquire private properties of the parent class
+So we use protected instead of private
+
+
+class SubUser extends User {
+
+    isFamily: boolean = true;
+
+    changeCourseCount() {
+        this._courseCount = 4;
+    }
+}

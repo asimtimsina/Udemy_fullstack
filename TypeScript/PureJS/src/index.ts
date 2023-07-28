@@ -20,7 +20,7 @@ console.log("Typescript is Awesome");
 //better way of defining a class
 class User {
 
-    private _courseCount = 1
+    protected _courseCount = 1
     readonly city: string = ""
     constructor(
         public email: string,
@@ -60,3 +60,13 @@ const Asim = new User("Asim@gmail.com", "Asim", "Asimo")
 
 console.log(Asim.name)
 // console.log(Asim.email)
+
+
+class SubUser extends User {
+
+    isFamily: boolean = true;
+
+    changeCourseCount() {
+        this._courseCount = 4;
+    }
+}

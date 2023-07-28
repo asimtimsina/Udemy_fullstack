@@ -43,3 +43,12 @@ const Asim = new User("Asim@gmail.com", "Asim", "Asimo");
 // Asim.city = "Irving" // not allowed cause readonly
 console.log(Asim.name);
 // console.log(Asim.email)
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
+    }
+}
