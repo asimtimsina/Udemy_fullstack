@@ -1,0 +1,9 @@
+tsc --init
+
+tsc -w 
+launch in launch mode
+saves the ts file in dist/ folder
+
+on tsconfig.json file
+update outDir to the output folder (js files)
+"outDir": "./dist", /* Specify an output folder for all emitted files. */
