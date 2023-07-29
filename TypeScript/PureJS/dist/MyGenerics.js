@@ -21,3 +21,21 @@ function getSearchProducts(products) {
 const getSearchProducts1 = (products) => {
     return products[3];
 };
+//Generic Classes
+function anotherFunction(valOne, valTwo) {
+    return {
+        valOne,
+        valTwo
+    };
+}
+// anotherFunction(3, "4") // error
+anotherFunction(3, 4); // works
+anotherFunction("3", 3); // works
+class Sellable {
+    constructor() {
+        this.cart = [];
+    }
+    addToCart(product) {
+        this.cart.push(product);
+    }
+}
