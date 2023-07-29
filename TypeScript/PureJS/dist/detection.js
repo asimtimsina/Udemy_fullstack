@@ -29,3 +29,15 @@ function checkIfAdmin(account) {
         return account.isAdmin;
     }
 }
+// instanceof is used where a object is created with new keyword
+function logValue(x) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+    }
+    else {
+        console.log(x.toUpperCase());
+    }
+}
+function isFish(pet) {
+    return pet.swim !== undefined;
+}
