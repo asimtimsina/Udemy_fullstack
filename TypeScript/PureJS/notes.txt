@@ -82,3 +82,31 @@ class Instragram implements TakePhoto{
 
 Class 'Instragram' incorrectly implements interface 'TakePhoto'.
   Type 'Instragram' is missing the following properties from type 'TakePhoto': cameraMode, filter, burstts(2420)
+
+
+Cannot make an instance from an abstract class
+
+
+
+Generics
+
+function identityThree<Type>(val: Type): Type {
+    return val;
+}
+
+function identityFour<T>(val: T): T {
+    return val;
+}
+// identityThree and identityFour are exactly the same
+identityThree(true)
+
+function getSearchProducts<T>(products: T[]): T {
+    return products[3]
+}
+
+// converting same function to arrow function
+
+const getSearchProducts1 = <T>(products: T[]): T => {
+    return products[3]
+
+}

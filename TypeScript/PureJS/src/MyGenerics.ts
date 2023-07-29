@@ -16,7 +16,16 @@ function identityThree<Type>(val: Type): Type {
 function identityFour<T>(val: T): T {
     return val;
 }
-
 // identityThree and identityFour are exactly the same
-
 identityThree(true)
+
+function getSearchProducts<T>(products: T[]): T {
+    return products[3]
+}
+
+// converting same function to arrow function
+
+const getSearchProducts1 = <T>(products: T[]): T => {
+    return products[3]
+
+}

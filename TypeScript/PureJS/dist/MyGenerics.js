@@ -14,3 +14,10 @@ function identityFour(val) {
 }
 // identityThree and identityFour are exactly the same
 identityThree(true);
+function getSearchProducts(products) {
+    return products[3];
+}
+// converting same function to arrow function
+const getSearchProducts1 = (products) => {
+    return products[3];
+};
